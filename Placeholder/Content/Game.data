@@ -1,0 +1,21 @@
+GameSession = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Archetyped = 
+	{
+		string Name = "52dcd202c64c97c9:Game",
+	},
+	Viewports = 
+	{
+	},
+	LevelManager = 
+	{
+		string levelTable = "52a98332fa4f5ebe:LevelTable",
+	},
+	Score = 
+	{
+	},
+},

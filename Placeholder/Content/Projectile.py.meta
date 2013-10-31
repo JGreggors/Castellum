@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "Projectile",
+		uint64 ResourceId = 52dcd798736643f0,
+	},
+},

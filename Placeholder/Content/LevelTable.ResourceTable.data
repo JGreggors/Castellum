@@ -1,0 +1,28 @@
+ResourceTable = 
+{
+	string ResourceType = "Level",
+	Array EntryList = 
+	[
+		{
+			string Name = "Test",
+			string Value = "52d8bb94dc227e33:StartScreen",
+			float Weight = 1,
+		},
+		{
+			string Name = "EndLevel",
+			string Value = "52da3fc125e2c862:SampleLevel",
+			float Weight = 1,
+		},
+		{
+			string Name = "This is another level",
+			string Value = "520a5af2e8608a85:EndLevel",
+			float Weight = 1,
+		},
+		{
+			string Name = "Name4",
+			string Value = "52d8bb94dc227e33:StartScreen",
+			float Weight = 1,
+		},
+	],
+	float MaxWeight = 1,
+},

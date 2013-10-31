@@ -1,0 +1,8 @@
+FontContent = 
+{
+	FontBuilder = 
+	{
+		string Name = "anklepants",
+		uint64 ResourceId = 52d8b2af097ae33e,
+	},
+},

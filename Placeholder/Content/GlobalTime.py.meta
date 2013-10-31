@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "GlobalTime",
+		uint64 ResourceId = 52dcdae5e27676b0,
+	},
+},

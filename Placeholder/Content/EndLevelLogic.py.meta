@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "EndLevelLogic",
+		uint64 ResourceId = 52c7448c1f3e6b90,
+	},
+},

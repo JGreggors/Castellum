@@ -1,0 +1,35 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Hook",
+	},
+	Archetyped = 
+	{
+		string Name = "52d0dea236f74d7a:Hook",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-5.92101, -8.90161, 40],
+		Vec3 Scale = [0.449411, 0.449411, 0.449411],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		string SpriteSource = "52d0d96d3e7a35bf:Hook",
+		bool FlipX = false,
+		bool FlipY = false,
+		Vec4 Color = [1, 1, 1, 1],
+		bool Visible = true,
+		bool OnTop = true,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+	},
+},

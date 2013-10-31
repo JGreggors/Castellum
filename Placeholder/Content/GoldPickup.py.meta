@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "GoldPickup",
+		uint64 ResourceId = 5200e12679a10238,
+	},
+},

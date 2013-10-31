@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "GrappleCollisionYes",
+		uint64 ResourceId = 52dcd4793e90c111,
+	},
+},

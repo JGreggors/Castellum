@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "BatTime",
+		uint64 ResourceId = 52dcd365f3d18ada,
+	},
+},

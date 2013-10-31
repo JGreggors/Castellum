@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "MusicLogic",
+		uint64 ResourceId = 52c751f4762f8ea5,
+	},
+},

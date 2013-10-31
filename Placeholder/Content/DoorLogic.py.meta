@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "DoorLogic",
+		uint64 ResourceId = 52dca4bee7dc213b,
+	},
+},

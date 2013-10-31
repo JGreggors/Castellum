@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "MasterPlayerContr",
+		uint64 ResourceId = 52dcd3add631ae8d,
+	},
+},

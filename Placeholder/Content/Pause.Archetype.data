@@ -1,0 +1,36 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Pause",
+	},
+	Archetyped = 
+	{
+		string Name = "520a63c9ea3784a9:Pause",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [46.6562, -0.345912, -3.03713e-006],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteText = 
+	{
+		SpriteGeometryMode GeometryMode = ZPlane,
+		TextPositionMode Position = Centered,
+		string FontName = "4e7bac697bec55c5:Verdana",
+		uint FontSize = 80,
+		Vec4 Color = [1, 1, 1, 1],
+		bool Visible = true,
+		string Text = "Pause",
+		bool OnTop = true,
+		BlendMode BlendMode = Alpha,
+		Vec2 Size = [0, 0],
+		TextAlign Align = Left,
+		float PixelsPerUnit = 64,
+	},
+},

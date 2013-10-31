@@ -1,0 +1,35 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Rope",
+	},
+	Archetyped = 
+	{
+		string Name = "520a7dcf99721ba3:Rope",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-2.918, 9.85646, 0],
+		Vec3 Scale = [0.1, 0.1, 0.1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		string SpriteSource = "520a7c79b253c22a:Rope",
+		bool FlipX = false,
+		bool FlipY = false,
+		Vec4 Color = [1, 1, 1, 1],
+		bool Visible = true,
+		bool OnTop = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+	},
+},

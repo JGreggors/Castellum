@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "StartScreenLogic",
+		uint64 ResourceId = 52d8ba3836858310,
+	},
+},

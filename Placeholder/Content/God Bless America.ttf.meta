@@ -1,0 +1,8 @@
+FontContent = 
+{
+	FontBuilder = 
+	{
+		string Name = "God Bless America",
+		uint64 ResourceId = 52d8acdf4f5409ca,
+	},
+},

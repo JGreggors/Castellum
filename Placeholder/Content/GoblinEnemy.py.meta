@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "GoblinEnemy",
+		uint64 ResourceId = 52dcd1a2a18a2001,
+	},
+},
