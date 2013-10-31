@@ -5,48 +5,56 @@ import VectorMath
 import Property
 
 class Timer:
-    par = Property.Float(120.0)
+    #level par
+    par = Property.Float(45.0)
     def Initialize(self, initializer):
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
         
-        self.hudSpace = Zero.Game.FindSpaceByName("HUDSpace")
+        self.totalDeath = 0
+        self.gold = 0
         self.totalTime = 0.0
+        
+        #for the clock
         self.secondsPassed = 0.0
         self.carry = 0
-        self.par = 80
         
     def OnLogicUpdate(self, UpdateEvent):
+        #start the timer
         self.secondsPassed += UpdateEvent.Dt
         self.totalTime += UpdateEvent.Dt
             
-        
-        if(not self.hudSpace):
-            print("you ain't got no hudSpace...or maybe i just couldn't find it :(")
-            return
+        #find the hud
+       #----------------------------------------------------------------------------
+        hudSpace = Zero.Game.FindSpaceByName("HUDSpace")
+        if(not hudSpace):
+            pass
             
-        timeObject = self.hudSpace.FindObjectByName("Timer")
+        timeObject = hudSpace.FindObjectByName("Timer")
             
-        carryObject = self.hudSpace.FindObjectByName("Carry")
+        carryObject = hudSpace.FindObjectByName("Carry")
         
         timeObject.SpriteText.Text = str(round(self.secondsPassed, 1))
+       #----------------------------------------------------------------------------
         
+        #When there is no carry
         if(self.carry == 0):
             carryObject.SpriteText.Text = "0"
-        
+        #after 60 seconds add a carry and reset to zero
         if(self.secondsPassed > 60.0):
             self.secondsPassed = 0.0
             self.carry += 1
             if(self.carry == 1):
                 carryObject.SpriteText.Text = "I"
-            elif(self.carry == 2):
+            if(self.carry == 2):
                 carryObject.SpriteText.Text = "II"
-            elif(self.carry == 3):
+            if(self.carry == 3):
                 carryObject.SpriteText.Text = "III"
-            elif(self.carry == 4):
+            if(self.carry == 4):
                 carryObject.SpriteText.Text = "VI"
-            elif(self.carry == 5):
+            if(self.carry == 5):
                 carryObject.SpriteText.Text = "V"
-                
+        
+        #If you time is greater than the par of the level YOU DIE!
         if(self.totalTime > self.par):
             self.Space.FindObjectByName("Player").Health.Health = 0
             self.carry = 0
