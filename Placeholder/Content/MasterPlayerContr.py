@@ -75,7 +75,10 @@ class MasterPlayerContr:
         #Sets if mouse is being held down
         self.MouseDown = True
         #Checks Grapple counter to see if able to grapple
+        if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+            self.grappleCounter += 1
         if(self.grappleCounter > 0):
+            
             self.grappleCounter -= 1
             self.StopGrapple()
             self.playerGrappleShot = True
@@ -133,6 +136,7 @@ class MasterPlayerContr:
             self.moveRight = False
         if(KeyboardEvent.Key == Zero.Keys.Space):
             self.jumpIsPressed = False
+            self.StopGrapple()
         #Key Logic (JB)
         if(KeyboardEvent.Key == Zero.Keys.R):
             #if(self.keyAttached):
@@ -144,6 +148,8 @@ class MasterPlayerContr:
                 self.spaceIsPressed = False
         if(KeyboardEvent.Key == Zero.Keys.Shift):
                 self.RIsPressed = False
+            
+
 #--------------------------------------------------------------------------------------------
 
     def OnLogicUpdate(self, UpdateEvent):
@@ -177,12 +183,18 @@ class MasterPlayerContr:
     def swingPlayer(self, ray):
         if(self.swingRight and self.swingDown):
             self.Pendulum = VectorMath.Vec3(math.fabs(ray.y), -math.fabs(ray.x), 0)
-            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
+            else:
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(ray.x < 0):
                 self.swingDown = False
         elif(self.swingRight and not self.swingDown):
             self.Pendulum = VectorMath.Vec3(math.fabs(ray.y), math.fabs(ray.x), 0)
-            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
+            else:
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(self.Owner.Transform.Translation.y > self.rayY):
                 #print("STOP GRAPPLE")
                 self.StopGrapple()
@@ -190,12 +202,18 @@ class MasterPlayerContr:
                 self.Swing = False
         elif(not self.swingRight and self.swingDown):
             self.Pendulum = VectorMath.Vec3(-math.fabs(ray.y), -math.fabs(ray.x), 0)
-            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
+            else:
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(ray.x > 0):
                 self.swingDown = False
         elif(not self.swingRight and not self.swingDown):
             self.Pendulum = VectorMath.Vec3(-math.fabs(ray.y), math.fabs(ray.x), 0)
-            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
+            else:
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(self.Owner.Transform.Translation.y > self.rayY):
                 self.StopGrapple()
                 #print("STOP GRAPPLE")
@@ -222,8 +240,11 @@ class MasterPlayerContr:
         ray.Start = self.Owner.Transform.Translation
         #Increase grapple length if nothing has been hit
         if(self.grappleHit == 0):
-            #Grapple speed (can be adjusted if needed)
-            self.grappleDistance += self.DeltaTime * 13
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.grappleDistance += self.DeltaTime * 25
+            else:
+                #Grapple speed (can be adjusted if needed)
+                self.grappleDistance += self.DeltaTime * 13
         else:
             self.grappleDistance = math.sqrt(math.pow((ray.Start.x - self.grapplePoint.x), 2) + math.pow((ray.Start.y - self.grapplePoint.y), 2))
             self.Owner.RigidBody.Kinematic = True
@@ -232,7 +253,10 @@ class MasterPlayerContr:
 #Pendulum Related
             if(not self.Swing):
                 if(self.MouseDown == True):
-                    self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 10)
+                    if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 14)
+                    else:
+                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 12)
                 else:
                     self.rayY = self.Owner.Transform.Translation.y
                     self.Swing = True
@@ -275,7 +299,7 @@ class MasterPlayerContr:
                     #sets grapplePoint to end position so where it hit something
                     self.grapplePoint = endPosition
             #Prevents grapple from hitting player and the key
-            elif(castResult.ObjectHit.Name != "Player" and castResult.ObjectHit.Name != "Key" and castResult.ObjectHit.Name != "AOE" and castResult.ObjectHit.Name != "GateAOE" and castResult.ObjectHit.Name != "GWall"):
+            elif(castResult.ObjectHit.Name != "Player" and castResult.ObjectHit.Name != "Key" and castResult.ObjectHit.Name != "AOE" and castResult.ObjectHit.Name != "GateAOE" and castResult.ObjectHit.Name != "GWall"  and castResult.ObjectHit.Name != "Projectile"):
                 if(castResult.Distance < self.grappleDistance):
                     self.StopGrapple()
             else:
@@ -413,9 +437,6 @@ class MasterPlayerContr:
             self.Owner.RigidBody.ApplyLinearVelocity(VectorMath.Vec3(0,4,0))
             
 #----------------------------------------------------------
-#Stops Grapple if player jumps:
-        if(self.jumpIsPressed):
-            self.StopGrapple()
 #----------------------------------------------------------
 #--------------------------------------------------------------------------------------------
 
@@ -458,7 +479,7 @@ class MasterPlayerContr:
     def OnCollisionStarted(self, CollisionEvent):
         targetObject = CollisionEvent.OtherObject
         #Stops grapple if hits object
-        if(self.Swing):
+        if self.Swing and targetObject.Name != "Projectile":
             self.StopGrapple()
             
         if(targetObject.Name == "Goblin"):

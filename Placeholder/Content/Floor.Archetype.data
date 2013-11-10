@@ -14,13 +14,13 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-13.5, -2, 0],
+		Vec3 Translation = [-300.302, -3.74551, 40],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "52d8a0cf0ff7ccc4:grapplestone",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
 		bool FlipX = false,
 		bool FlipY = false,
 		Vec4 Color = [1, 1, 1, 1],
