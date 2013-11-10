@@ -57,7 +57,6 @@ ContentLibrary =
 		"NGWall.Archetype.data",
 		"NextLevel.py",
 		"Pause.Archetype.data",
-		"PlayGameButton.py",
 		"Player.Archetype.data",
 		"Projectile.Archetype.data",
 		"Projectile.py",

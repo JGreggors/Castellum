@@ -183,9 +183,6 @@ Level =
 			bool Active = true,
 			bool CaptureMouse = true,
 		},
-		PlayGameButton = 
-		{
-		},
 		UIButton = 
 		{
 			Vec4 DefaultColor = [1, 1, 1, 1],
@@ -245,9 +242,6 @@ Level =
 			Vec4 HoverColor = [1, 1, 0, 0.25],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 		},
-		PlayGameButton = 
-		{
-		},
 	},
 	Cog = 
 	{
@@ -300,9 +294,6 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [1, 1, 0, 0.25],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-		},
-		PlayGameButton = 
-		{
 		},
 	},
 },

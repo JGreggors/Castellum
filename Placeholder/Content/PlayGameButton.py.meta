@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "PlayGameButton",
-		uint64 ResourceId = 52c8e6e1c7ea8093,
-	},
-},

@@ -12,14 +12,16 @@ class UIButton:
     DownColor = Property.Vector4(default = Vec4(1,1,1,0.5))
     
     def Initialize(self, initializer):
-        #to make color change when mouse hovers or clicks
+        #to make color change when mouse hovers
+        #and make level change when clicks
         Zero.Connect(self.Owner, Events.MouseEnter, self.OnMouseEnter)
         Zero.Connect(self.Owner, Events.MouseExit, self.OnMouseExit)
         Zero.Connect(self.Owner, Events.MouseUp, self.OnMouseUp)
         Zero.Connect(self.Owner, Events.MouseDown, self.OnMouseDown)
         
         self.DefaultState()
-        
+#----------------------------------------------------------------------
+#Color Stuff
     def DefaultState(self):
         self.Owner.SpriteText.Color = self.DefaultColor
         
@@ -34,16 +36,25 @@ class UIButton:
         
     def OnMouseExit(self, ViewportMouseEvent):
         self.DefaultState()
-        
+#---------------------------------------------------------------------
+
+#---------------------------------------------------------------------
+#For Changing Levels & additional color changes
     def OnMouseUp(self, ViewportMouseEvent):
         self.HoverState()
-        #this way when after mouse has clicked can be able to change levels
-        clickedUIButtonEvent = Zero.ScriptEvent()
-        clickedUIButtonEvent.object = self.Owner
-        #sends event for PlayGameButton script
-        self.Owner.DispatchEvent("ClickedUIButton", clickedUIButtonEvent)
+        #Basically if object is called " " go to " " level
+        #can change as needed 
+        if(self.Owner.Name == "Start"):
+            self.Space.LoadLevel("InfiniteGrap")
+            
+        elif(self.Owner.Name == "LevelSelect"):
+            self.Space.LoadLevel("Level")
+            
+        elif(self.Owner.Name == "Credits"):
+            self.Space.LoadLevel("SampleLevel")
+
        
     def OnMouseDown(self, ViewportMouseEvent):
         self.DownState()
-        
+#--------------------------------------------------------------------
 Zero.RegisterComponent("UIButton", UIButton)
