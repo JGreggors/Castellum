@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "UIButton",
+		uint64 ResourceId = 52c8e387532443e5,
+	},
+},
