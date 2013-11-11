@@ -37,6 +37,7 @@ class DoorLogic:
                 self.startGate1 = self.gate1.Transform.Translation
                 self.startGate2 = self.gate2.Transform.Translation
                 self.Space.FindObjectByName("Player").MasterPlayerContr.keyAttached = False
+                self.Space.FindObjectByName("Player").MasterPlayerContr.CanShoot = True
                 key.Destroy()
 
       

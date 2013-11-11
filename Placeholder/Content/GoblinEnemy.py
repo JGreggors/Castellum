@@ -14,8 +14,9 @@ class GoblinEnemy:
     #Chasing Properties 
     ChaseTriggerDistance = Property.Float(7.0)
     ChaseSpeed = Property.Float(5.0)
-    Health = Property.Int()
     Stun = Property.Int(5)
+    MaxPaceDistance = Property.Float(5.0)
+    #jumpHeight = Property.Int(1)
     
     HomeQ = True
     StunState = False
@@ -27,16 +28,20 @@ class GoblinEnemy:
         
         self.PaceDirection = Vec3(1,0,0)
         self.StartPosition = self.Owner.Transform.Translation
+        self.DistanceFromHome = 0.0
         self.DistanceFromTarget = 0.0
+        self.homeDirection = Vec3(0,0,0)
         self.ChaseDirection = Vec3(0,0,0)
         self.OriginalColor = self.Owner.Sprite.Color
         self.ChaseColor = Color.Blue
         self.StunTimer = 0.0
+        self.AfterAttack = False
         #self.StunCounter = 0
         
-        Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
-        Zero.Connect(self.Owner, Events.CollisionEnded, self.OnCollisionEnd)
+        #self.OnGround = False
         
+        Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
+
     def OnLogicUpdate(self, UpdateEvent):
         #print(self.ChaseDirection)
         #We will re-evaluate this every logic update 
@@ -55,11 +60,16 @@ class GoblinEnemy:
             self.CalculateChaseDirectionAndDistance()
             #Determines whether or not to chase of pace 
             targetIsWithinRange = (self.DistanceFromTarget <= self.ChaseTriggerDistance)
+            reachMaxRange = (self.DistanceFromHome >= self.MaxMoveDistance)
             
             #If valid object and target is within range 
-            if(targetIsWithinRange):
-                self.HomeQ = False
-                self.ChaseTarget(UpdateEvent)
+
+            if(targetIsWithinRange and self.AfterAttack == False):
+                if(reachMaxRange):
+                    self.AfterAttack = True
+                else:
+                    self.HomeQ = False
+                    self.ChaseTarget(UpdateEvent)
             else:
                 if(self.HomeQ == False):
                     self.GoHome()
@@ -83,6 +93,8 @@ class GoblinEnemy:
         
         if(direction.length() <= 0.5):
             self.HomeQ = True
+            self.AfterAttack = False
+            
         
         direction.normalize()
         self.Owner.Transform.Translation += direction * 0.25
@@ -95,7 +107,7 @@ class GoblinEnemy:
         
         #We want to change direction after 
         #reaching the max move distance from starting position 
-        if(distanceFromStart >= self.MaxMoveDistance):
+        if(distanceFromStart >= self.MaxPaceDistance):
             self.PaceDirection = -displacement
             
             #Only want unti length direction
@@ -110,30 +122,62 @@ class GoblinEnemy:
         self.Owner.Sprite.Color = self.ChaseColor
         #Apply movement 
         self.Owner.Transform.Translation += self.ChaseDirection * UpdateEvent.Dt * self.ChaseSpeed
+        #if(self.ChaseDirection.y > self.Owner.Transform.Translation.y):
+            #self.Owner.RigidBody.ApplyLinearVelocity(VectorMath.Vec3(0,self.jumpHeight,0))
+            
+#------------------------------------------------------------------------------------------------------------
+    #def CanJump(self):
+    #    canJump = self.OnGround
+    #    return canJump
         
+    #def UpdateGroundState(self):
+    #    self.OnGround = False
+    #    #Testing if objects are 'ground'
+    #    for ContactHolder in self.Owner.Collider.Contacts:
+    #        #Ignore ghost objects
+    #        if(ContactHolder.IsGhost):
+    #            continue
+    #        objectHit = ContactHolder.OtherObject
+    #        surfaceNormal = -ContactHolder.FirstPoint.WorldNormalTowardsOther
+    #        #If the object is considered walkable
+    #        if(self.IsGround(surfaceNormal)):
+    #            self.OnGround = True
+    #            return
+                
+    #def GetDegreeDifference(self, surfaceNormal):
+    #    #Using angles to test if something is 'Ground'
+    #    UpDirection = Vec3(0,1,0)
+    #    cosTheta = surfaceNormal.dot(UpDirection)
+    #    radians = math.acos(cosTheta)
+    #    degrees = math.degrees(radians)
+    #    return degrees
         
+    #def IsGround(self, surfaceNormal):
+    #    #defines what is ground
+    #    degrees = self.GetDegreeDifference(surfaceNormal)
+    #    return degrees < 60.0
+        
+#---------------------------------------------------------------------------------------------------------------
     def CalculateChaseDirectionAndDistance(self):
         targetObject = self.Space.FindObjectByName("Player") 
         #Get direction towards target 
         self.ChaseDirection = targetObject.Transform.Translation - self.Owner.Transform.Translation
-        self.ChaseDirection *= Vec3(1,0,1)
+        self.homeDirection = self.StartPosition - self.Owner.Transform.Translation
         #Get distance from target 
         self.DistanceFromTarget = self.ChaseDirection.length()
+        self.DistanceFromHome = self.homeDirection.length()
         #Only want unit length direction 
+        self.homeDirection.normalize()
         self.ChaseDirection.normalize()
            
         
     def OnCollisionStart(self, CollisionEvent):
         
-        if(CollisionEvent.OtherObject.Name == "Player"):
-            self.Owner.Sprite.Color = Color.Blue
         if(CollisionEvent.OtherObject.Name == "Projectile"):
             self.StunState = True
             self.StunTimer = 5
-            
-    def OnCollisionEnd(self, CollisionEvent):
         if(CollisionEvent.OtherObject.Name == "Player"):
-            self.Owner.Sprite.Color
-            
+            self.AfterAttack = True
+
 
 Zero.RegisterComponent("GoblinEnemy", GoblinEnemy)

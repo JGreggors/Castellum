@@ -4,28 +4,33 @@ ResourceTable =
 	Array EntryList = 
 	[
 		{
-			string Name = "Test",
-			string Value = "52c91d1eafeb949d:MainMenu",
+			string Name = "Tutorial1",
+			string Value = "521582dffb5c46a5:Level3",
 			float Weight = 1,
 		},
 		{
-			string Name = "EndLevel",
-			string Value = "52da3fc125e2c862:SampleLevel",
+			string Name = "Tutorial2",
+			string Value = "5215822af66532ec:Level2",
 			float Weight = 1,
 		},
 		{
-			string Name = "This is another level",
+			string Name = "Tutorial3",
+			string Value = "521582dffb5c46a5:Level3",
+			float Weight = 1,
+		},
+		{
+			string Name = "Tutorial4",
+			string Value = "521582cdf87735d2:Level4",
+			float Weight = 1,
+		},
+		{
+			string Name = "Tut5/FirstReal",
+			string Value = "521582c7fdbec54c:Level5",
+			float Weight = 1,
+		},
+		{
+			string Name = "Score",
 			string Value = "520a5af2e8608a85:EndLevel",
-			float Weight = 1,
-		},
-		{
-			string Name = "Name4",
-			string Value = "52d8bb94dc227e33:StartScreen",
-			float Weight = 1,
-		},
-		{
-			string Name = "Name5",
-			string Value = "52c3b3abf8353087:InfiniteGrap",
 			float Weight = 1,
 		},
 	],

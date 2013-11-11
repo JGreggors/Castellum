@@ -53,8 +53,6 @@ class Health:
         if(self.PlayerSpawned == False):
             self.Space.CreateAtPosition("Death", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y, -5))
             self.Owner.Transform.Translation = self.StartPlace
-            self.Owner.RigidBody.Velocity = VectorMath.Vec3(0,0,0)
-            self.Space.FindObjectByName("Player").MasterPlayerContr.StopGrapple()
             self.Health = self.MaxHealth
             self.PlayerSpawned = True
         #if you aren't dead you're fine
@@ -70,7 +68,19 @@ class Health:
         
         if(Zero.Keyboard.KeyIsPressed(Zero.Keys.Nine)):
             self.Health += 1000000000
+#--------------------------------------------------------------------
+# for death counter
+        hudSpace = Zero.Game.FindSpaceByName("HUDSpace")
 
+        if(not hudSpace):
+            pass
+        
+        else:
+            
+            deathObject = hudSpace.FindObjectByName("DCounter")
+        
+        #Death Counter
+            deathObject.SpriteText.Text = str(self.totalDeath)
                 
                 
     def OnCollisionStart(self, CollisionEvent):

@@ -10,14 +10,15 @@ Vec3 = VectorMath.Vec3
 class MasterPlayerContr:
     
     moveSpeed = Property.Float(10.0)
-    jumpSpeed = Property.Float(10.0)
+    jumpHeight = Property.Float(2.0)
     ShootSpeed = Property.Float(5.0)
+    Overheat = Property.Float(150.0)
+    CooldownSpeed = Property.Int(50)
     
     def Initialize(self, initializer):
         #Creating LogicUpdate, CollisionStarted, Collision Persisted (JB)
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
-        Zero.Connect(self.Owner, Zero.Events.CollisionStarted, self.OnCollisionStarted)
-        Zero.Connect(self.Owner, Zero.Events.CollisionPersisted, self.OnCollisionPersisted)
+        Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStarted)
         Zero.Connect(self.Owner, Events.CollisionPersisted, self.OnButtonPress)
 #----------------------------------------------------------
 #Player Movement Related:
@@ -55,10 +56,13 @@ class MasterPlayerContr:
 #Shooting (JB)
         #For shooting
         Zero.Connect(self.Space, Events.RightMouseDown, self.OnRightClick)
+        self.Heat = 0.0
+        self.CanShoot = True
         self.Shoot = 0.0
         self.spaceIsPressed = False
-        self.shiftIsPressed = False
+        self.ShiftIsPressed = False
         self.RIsPressed = False
+        self.EIsPressed = False
 #----------------------------------------------------------
         self.Key = self.Space.FindObjectByName("Key")
 #--------------------------------------------------------------------------------------------
@@ -75,10 +79,7 @@ class MasterPlayerContr:
         #Sets if mouse is being held down
         self.MouseDown = True
         #Checks Grapple counter to see if able to grapple
-        if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
-            self.grappleCounter += 1
         if(self.grappleCounter > 0):
-            
             self.grappleCounter -= 1
             self.StopGrapple()
             self.playerGrappleShot = True
@@ -93,13 +94,20 @@ class MasterPlayerContr:
 #----------------------------------------------------------
 #Shooting:
     def OnRightClick(self, ViewportMouseEvent):
-        self.Space.SoundSpace.PlayCue("gunsound1")
-        #Assigns Shoot
-        Shoot = self.Space.CreateAtPosition("Projectile", self.Owner.Transform.Translation)
-        #Assigns Shoot direction
-        Shoot.Projectile.Direction = self.mousePosition - self.Owner.Transform.Translation
-        #Normalizes speed, sorry its really long. That's what he said.
-        Shoot.Projectile.Direction = Vec3(Shoot.Projectile.Direction.x / Shoot.Projectile.Direction.length(), Shoot.Projectile.Direction.y / Shoot.Projectile.Direction.length(), 0) * self.ShootSpeed
+        # if you can't shoot it makes funny noises
+        if(self.CanShoot == False):
+            self.Space.SoundSpace.PlayCue("Overheat")
+            
+        else:
+            self.Space.SoundSpace.PlayCue("gunsound1")
+            # Adds heat
+            self.Heat += 50.0
+            #Assigns Shoot
+            Shoot = self.Space.CreateAtPosition("Projectile", self.Owner.Transform.Translation)
+            #Assigns Shoot direction
+            Shoot.Projectile.Direction = self.mousePosition - self.Owner.Transform.Translation
+            #Normalizes speed, sorry its really long. That's what he said.
+            Shoot.Projectile.Direction = Vec3(Shoot.Projectile.Direction.x / Shoot.Projectile.Direction.length(), Shoot.Projectile.Direction.y / Shoot.Projectile.Direction.length(), 0) * self.ShootSpeed
 #----------------------------------------------------------
     def OnMouseUp(self, ViewportMouseEvent):
         #Sets if mouse is not being held down
@@ -120,12 +128,12 @@ class MasterPlayerContr:
         #Key Logic (JB)
         if(KeyboardEvent.Key == Zero.Keys.R):
             #if(self.keyAttached):
-                self.shiftIsPressed = True
+                self.RIsPressed = True
         if(KeyboardEvent.Key == Zero.Keys.E):
             #if(self.keyAttached == False):
-                self.spaceIsPressed = True
+                self.EIsPressed = True
         if(KeyboardEvent.Key == Zero.Keys.Shift):
-                self.RIsPressed = True
+                self.ShiftIsPressed = True
             
 
                 
@@ -140,16 +148,12 @@ class MasterPlayerContr:
         #Key Logic (JB)
         if(KeyboardEvent.Key == Zero.Keys.R):
             #if(self.keyAttached):
-                self.spaceIsPressed = False
-                self.shiftIsPressed = False
+                self.RIsPressed = False
         if(KeyboardEvent.Key == Zero.Keys.E):
             #if(self.keyAttached == False):
-                self.shiftIsPressed = False
-                self.spaceIsPressed = False
+                self.EIsPressed = False
         if(KeyboardEvent.Key == Zero.Keys.Shift):
-                self.RIsPressed = False
-            
-
+                self.ShiftIsPressed = False
 #--------------------------------------------------------------------------------------------
 
     def OnLogicUpdate(self, UpdateEvent):
@@ -161,8 +165,24 @@ class MasterPlayerContr:
         if(self.keyAttached):
             self.Key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0,1,0)
             
-        if(self.RIsPressed == True):
+        if(self.ShiftIsPressed == True):
+            if(not Zero.Game.FindSpaceByName("HUDSpace")):
+                pass
+            else:
+                Zero.Game.FindSpaceByName("HUDSpace").Destroy()
             self.Space.ReloadLevel()
+#----------------------------------------------------------
+#This is for the gold timer, yeah i know. Shut up.
+        hudSpace = Zero.Game.FindSpaceByName("HUDSpace")
+        if(not hudSpace):
+            pass
+            
+        else:
+            
+            goldObject = hudSpace.FindObjectByName("GCounter")
+        
+        #Gold counter
+            goldObject.SpriteText.Text = str(self.gold)
 
 #----------------------------------------------------------
 #Grappling Hook Related:
@@ -178,23 +198,41 @@ class MasterPlayerContr:
             self.grappleCounter = 1
 #----------------------------------------------------------
 
+#----------------------------------------------------------
+        # Overheat gun Related:
+        #Cooldown procedure
+        
+        # Debug
+        #print(self.Heat)
+        if(self.keyAttached == True):
+            self.CanShoot = False
+        else:
+            #If there is heat, start cooling down
+            if(self.Heat > 0.0):
+                self.Heat -= self.CooldownSpeed * UpdateEvent.Dt
+            #if heat reaches Zero, stop cooling and allow shooting if you couldn't shoot
+            if(self.Heat < 0.0):
+                self.Heat = 0.0
+                self.CanShoot = True
+            #if heat excedes Overheat threshold, you can't shoot.
+            if(self.Heat >= self.Overheat):
+                self.Heat = self.Overheat
+                self.CanShoot = False
+            
+
+#----------------------------------------------------------
+
 #--------------------------------------------------------------------------------------------
 #Pendulum for Grappling Hook
     def swingPlayer(self, ray):
         if(self.swingRight and self.swingDown):
             self.Pendulum = VectorMath.Vec3(math.fabs(ray.y), -math.fabs(ray.x), 0)
-            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
-            else:
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(ray.x < 0):
                 self.swingDown = False
         elif(self.swingRight and not self.swingDown):
             self.Pendulum = VectorMath.Vec3(math.fabs(ray.y), math.fabs(ray.x), 0)
-            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
-            else:
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(self.Owner.Transform.Translation.y > self.rayY):
                 #print("STOP GRAPPLE")
                 self.StopGrapple()
@@ -202,18 +240,12 @@ class MasterPlayerContr:
                 self.Swing = False
         elif(not self.swingRight and self.swingDown):
             self.Pendulum = VectorMath.Vec3(-math.fabs(ray.y), -math.fabs(ray.x), 0)
-            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
-            else:
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(ray.x > 0):
                 self.swingDown = False
         elif(not self.swingRight and not self.swingDown):
             self.Pendulum = VectorMath.Vec3(-math.fabs(ray.y), math.fabs(ray.x), 0)
-            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
-            else:
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(self.Owner.Transform.Translation.y > self.rayY):
                 self.StopGrapple()
                 #print("STOP GRAPPLE")
@@ -240,11 +272,8 @@ class MasterPlayerContr:
         ray.Start = self.Owner.Transform.Translation
         #Increase grapple length if nothing has been hit
         if(self.grappleHit == 0):
-            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
-                self.grappleDistance += self.DeltaTime * 25
-            else:
-                #Grapple speed (can be adjusted if needed)
-                self.grappleDistance += self.DeltaTime * 13
+            #Grapple speed (can be adjusted if needed)
+            self.grappleDistance += self.DeltaTime * 13
         else:
             self.grappleDistance = math.sqrt(math.pow((ray.Start.x - self.grapplePoint.x), 2) + math.pow((ray.Start.y - self.grapplePoint.y), 2))
             self.Owner.RigidBody.Kinematic = True
@@ -253,10 +282,7 @@ class MasterPlayerContr:
 #Pendulum Related
             if(not self.Swing):
                 if(self.MouseDown == True):
-                    if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
-                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 14)
-                    else:
-                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 12)
+                    self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 10)
                 else:
                     self.rayY = self.Owner.Transform.Translation.y
                     self.Swing = True
@@ -299,7 +325,7 @@ class MasterPlayerContr:
                     #sets grapplePoint to end position so where it hit something
                     self.grapplePoint = endPosition
             #Prevents grapple from hitting player and the key
-            elif(castResult.ObjectHit.Name != "Player" and castResult.ObjectHit.Name != "Key" and castResult.ObjectHit.Name != "AOE" and castResult.ObjectHit.Name != "GateAOE" and castResult.ObjectHit.Name != "GWall"  and castResult.ObjectHit.Name != "Projectile"):
+            elif(castResult.ObjectHit.Name != "Player" and castResult.ObjectHit.Name != "Key" and castResult.ObjectHit.Name != "AOE" and castResult.ObjectHit.Name != "GateAOE" and castResult.ObjectHit.Name != "GWall"):
                 if(castResult.Distance < self.grappleDistance):
                     self.StopGrapple()
             else:
@@ -434,9 +460,8 @@ class MasterPlayerContr:
             #self.Owner.RigidBody.ApplyLinearImpulse(Vec3(0,4,0))
             #Other Jumping Prototypes
             #self.Owner.RigidBody.ApplyLinearImpulse(Vec3(0,1,0) * self.jumpSpeed)
-            self.Owner.RigidBody.ApplyLinearVelocity(VectorMath.Vec3(0,4,0))
+            self.Owner.RigidBody.ApplyLinearVelocity(VectorMath.Vec3(0,self.jumpHeight,0))
             
-#----------------------------------------------------------
 #----------------------------------------------------------
 #--------------------------------------------------------------------------------------------
 
@@ -478,19 +503,40 @@ class MasterPlayerContr:
 #Object Collision (Jason can add stuff here):
     def OnCollisionStarted(self, CollisionEvent):
         targetObject = CollisionEvent.OtherObject
+        Gob = targetObject.Name == "Goblin"
+        Bat = targetObject.Name == "Bat"
+        
+        key = self.Space.FindObjectByName("Key")
+        otherObject = CollisionEvent.OtherObject
+        
+        displacementX = targetObject.Transform.Translation.x - self.Owner.Transform.Translation.x
+        displacementY = targetObject.Transform.Translation.y - self.Owner.Transform.Translation.y
         #Stops grapple if hits object
-        if self.Swing and targetObject.Name != "Projectile":
+        if(self.Swing):
             self.StopGrapple()
             
-        if(targetObject.Name == "Goblin"):
-            self.Owner.RigidBody.ApplyForce(VectorMath.Vec3(-300,0,0))
-            targetObject.RigidBody.ApplyForce(VectorMath.Vec3(300,0,0))
+        if(Gob):
+            self.Owner.RigidBody.ApplyForce(VectorMath.Vec3((displacementX * -100),(displacementY * -250),0))
+            targetObject.RigidBody.ApplyForce(VectorMath.Vec3((displacementX * 250),(displacementY * 50),0))
+        if(Bat):
+            self.Owner.RigidBody.ApplyForce(VectorMath.Vec3((displacementX * -150),(displacementY * -150),0))
+            targetObject.RigidBody.ApplyForce(VectorMath.Vec3((displacementX * 150),(displacementY * 150),0))
             
-    def OnCollisionPersisted(self, CollisionEvent):
-    #    targetObject = CollisionEvent.OtherObject
-    #    if(
-        pass
-            
+        if(self.keyAttached == True and otherObject.Name == "Bat"):
+            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1, 0, 0)
+            key.RigidBody.Static = False
+            self.keyAttached = False
+            self.CanShoot = True
+        elif(self.keyAttached == True and otherObject.Name == "Goblin"):
+            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1, 0, 0)
+            key.RigidBody.Static = False
+            self.keyAttached = False
+            self.CanShoot = True
+        elif(self.keyAttached == True and otherObject.Name == "Pit"):
+            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 1, 0)
+            key.RigidBody.Static = False
+            self.keyAttached = False
+            self.CanShoot = True
 #--------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------
@@ -498,32 +544,22 @@ class MasterPlayerContr:
     def OnButtonPress(self, CollisionEvent):
         otherObject = CollisionEvent.OtherObject
         key = self.Space.FindObjectByName("Key")
-        #print(self.keyAttached)
         if(not otherObject):
             return
         
-        if(otherObject.Name == "AOE" and self.spaceIsPressed and self.keyAttached == False):
-            #key.AttachToRelative(self.Owner)
-            
+        if(otherObject.Name == "AOE" and self.EIsPressed and self.keyAttached == False):
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 1, 0)
             key.RigidBody.Static = True
             self.keyAttached = True
-        elif(self.keyAttached == True and self.shiftIsPressed):
-            
-            #key.Detach()
-            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(2, 0, 0)
+            #self.CanShoot = False
+
+        elif(self.keyAttached == True and self.RIsPressed):
+            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 0, 0)
             key.RigidBody.Static = False
             self.keyAttached = False
-        elif(self.keyAttached == True and otherObject.Name == "Bat"):
-            #key.Detach()
-            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1, 0, 0)
-            key.RigidBody.Static = False
-            self.keyAttached = False
-        elif(self.keyAttached == True and otherObject.Name == "Goblin"):
-            #key.Detach()
-            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1, 0, 0)
-            key.RigidBody.Static = False
-            self.keyAttached = False
+            self.CanShoot = True
+
+
         elif(otherObject.Name == "Gold"):
             self.gold += 1
 #--------------------------------------------------------------------------------------------

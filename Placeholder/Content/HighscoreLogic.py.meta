@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "HighscoreLogic",
+		uint64 ResourceId = 522dcaedfc6c9853,
+	},
+},

@@ -14,16 +14,16 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-10.6357, -2.54264, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [-14.9749, -2.33098, 0],
+		Vec3 Scale = [1.2, 1.5, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "529e85721da02d8e:knight",
 		bool FlipX = false,
 		bool FlipY = false,
-		Vec4 Color = [0.625, 0.1125, 0.1125, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		bool Visible = true,
 		bool OnTop = false,
 		bool AnimationActive = true,
@@ -44,24 +44,29 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	BoxCollider = 
+	MasterPlayerContr = 
+	{
+		float oveSpeed = 6.5,
+		float jumpHeight = 3,
+		float ShootSpeed = 30,
+		float Overheat = 150,
+		int CooldownSpeed = 50,
+	},
+	Health = 
+	{
+		float MaxHealth = 150,
+		int RegenCounter = 3,
+	},
+	CapsuleCollider = 
 	{
 		bool Ghost = false,
 		bool SendsMessages = true,
 		bool Seamless = false,
 		string MaterialName = "4faa6050b8692851:HardMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
-	},
-	MasterPlayerContr = 
-	{
-		float oveSpeed = 10,
-		float ShootSpeed = 30,
-	},
-	Health = 
-	{
-		float MaxHealth = 150,
-		int RegenCounter = 3,
+		Vec3 Offset = [-0.08, -0.01, 0],
+		float Radius = 0.45,
+		float Height = 0.0001,
+		uint Direction = 1,
 	},
 },

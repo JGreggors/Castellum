@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "NoChaseBat",
+		uint64 ResourceId = 521577c2bdf147f2,
+	},
+},

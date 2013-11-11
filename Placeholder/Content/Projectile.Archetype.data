@@ -23,7 +23,7 @@ Cog =
 		string SpriteSource = "5274db4c2e7c11f9:Circle",
 		bool FlipX = false,
 		bool FlipY = false,
-		Vec4 Color = [0, 0, 0, 1],
+		Vec4 Color = [1, 0, 0, 1],
 		bool Visible = true,
 		bool OnTop = false,
 		bool AnimationActive = true,
@@ -32,19 +32,10 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 	},
-	SphereCollider = 
-	{
-		bool Ghost = true,
-		bool SendsMessages = true,
-		bool Seamless = false,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.1,
-	},
 	Projectile = 
 	{
 		float Speed = 1,
+		float timedDestruction = 3.5,
 	},
 	RigidBody = 
 	{
@@ -57,5 +48,15 @@ Cog =
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	SphereCollider = 
+	{
+		bool Ghost = true,
+		bool SendsMessages = true,
+		bool Seamless = false,
+		string MaterialName = "4faa6050b8692851:HardMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		float Radius = 0.1,
 	},
 },

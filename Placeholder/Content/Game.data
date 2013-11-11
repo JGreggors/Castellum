@@ -17,5 +17,6 @@ GameSession =
 	},
 	Score = 
 	{
+		bool tutorial = true,
 	},
 },

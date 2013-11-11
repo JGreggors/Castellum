@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [3.03523, 2.62873, 0],
+		Vec3 Translation = [-0.00185563, 1.09375, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -59,7 +59,6 @@ Cog =
 		float axMoveDistance = 5,
 		float ChaseTriggerDistance = 7,
 		float ChaseSpeed = 5,
-		int Health = 3,
 		float PaceLength = 25,
 		float PaceSpeed = 1,
 		int Stun = 5,
