@@ -52,9 +52,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.417498, -4.9725, 50],
+			Vec3 Translation = [1.9225, 0.567499, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.17557e-008, -0, 1],
+			Quat Rotation = [0, -2.14577e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -64,7 +64,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 21,
+			float Size = 15,
 		},
 		EditorCameraController = 
 		{
@@ -72,7 +72,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.4175, -4.9725, 1.82495e-008],
+			Vec3 LookTarget = [1.9225, 0.567499, 8.40352e-008],
 		},
 		EditorRenderer = 
 		{
@@ -91,7 +91,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -5, 40],
+			Vec3 Translation = [0, 0, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -114,27 +114,51 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Level1",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.4175, -4.9725, -5],
-			Vec3 Scale = [80.8719, 80.8719, 80.8719],
+			Vec3 Translation = [-6.91473, 5.82946, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		SpriteText = 
 		{
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [0.72, 0.4032, 0.36, 0],
-			bool Visible = true,
-			bool OnTop = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 100,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Level 1",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 1,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [2.85, -1, 0],
+			Vec3 Size = [2.8, 0.65, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = true,
 		},
 	},
 	Cog = 
@@ -145,12 +169,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Start",
+			string Name = "Level2",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.75318, 0.821765, 1.82495e-008],
-			Vec3 Scale = [2.44019, 2.44019, 2.44019],
+			Vec3 Translation = [-6.91473, 3.5969, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -158,16 +182,23 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = UpperLeft,
 			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 50,
+			uint FontSize = 100,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = "Start",
-			bool OnTop = true,
+			string Text = "Level 2",
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
-			TextAlign Align = Center,
+			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 2,
 		},
 		BoxCollider = 
 		{
@@ -176,20 +207,13 @@ Level =
 			bool Seamless = false,
 			string MaterialName = "4faa6050b8692851:HardMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [1.37, -0.5, 0],
-			Vec3 Size = [1.45, 0.5, 0.5],
+			Vec3 Offset = [3.1, -1, 0],
+			Vec3 Size = [3, 0.65, 0.5],
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = true,
-		},
-		UIButton = 
-		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [1, 1, 0, 0.25],
-			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 1,
 		},
 	},
 	Cog = 
@@ -200,12 +224,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Credits",
+			string Name = "Level3",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.50594, -5.03948, 1.82495e-008],
-			Vec3 Scale = [2.44019, 2.44019, 2.44019],
+			Vec3 Translation = [-6.91473, 1.48837, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -213,16 +237,23 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = UpperLeft,
 			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 50,
+			uint FontSize = 100,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = "Credits",
-			bool OnTop = true,
+			string Text = "Level 3",
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 3,
 		},
 		BoxCollider = 
 		{
@@ -231,20 +262,13 @@ Level =
 			bool Seamless = false,
 			string MaterialName = "4faa6050b8692851:HardMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [1.75, -0.5, 0],
-			Vec3 Size = [1.75, 0.5, 0.5],
+			Vec3 Offset = [3.1, -1, 0],
+			Vec3 Size = [3, 0.65, 0.5],
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = true,
-		},
-		UIButton = 
-		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [1, 1, 0, 0.25],
-			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 8,
 		},
 	},
 	Cog = 
@@ -255,12 +279,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "LevelSelect",
+			string Name = "Level4",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.74996, -2.1926, 1.82495e-008],
-			Vec3 Scale = [2.44019, 2.44019, 2.44019],
+			Vec3 Translation = [-6.91473, -0.682171, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -268,16 +292,23 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = UpperLeft,
 			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 50,
+			uint FontSize = 100,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = "Level Select",
-			bool OnTop = true,
+			string Text = "Level 4",
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 4,
 		},
 		BoxCollider = 
 		{
@@ -286,20 +317,123 @@ Level =
 			bool Seamless = false,
 			string MaterialName = "4faa6050b8692851:HardMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [2.75, -0.5, 0],
-			Vec3 Size = [2.75, 0.5, 0.5],
+			Vec3 Offset = [3.1, -1, 0],
+			Vec3 Size = [3, 0.65, 0.5],
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = true,
 		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "Level5",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.91473, -2.82171, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 100,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Level 5",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
 		UIButton = 
 		{
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [1, 1, 0, 0.25],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 7,
+			uint LevelNumber = 5,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [3.1, -1, 0],
+			Vec3 Size = [3, 0.65, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Named = 
+		{
+			string Name = "Back",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.92248, 1.30233, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 100,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Back",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [2.25, -1, 0],
+			Vec3 Size = [2.3, 0.65, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = true,
 		},
 	},
 },

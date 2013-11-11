@@ -4,6 +4,11 @@ ResourceTable =
 	Array EntryList = 
 	[
 		{
+			string Name = "MainMenu",
+			string Value = "52c91d1eafeb949d:MainMenu",
+			float Weight = 1,
+		},
+		{
 			string Name = "Tutorial1",
 			string Value = "5215822df75d9266:Level1",
 			float Weight = 1,
@@ -24,13 +29,23 @@ ResourceTable =
 			float Weight = 1,
 		},
 		{
-			string Name = "Tut5/FirstReal",
+			string Name = "Tut/FirstReal",
 			string Value = "521582c7fdbec54c:Level5",
 			float Weight = 1,
 		},
 		{
 			string Name = "Score",
 			string Value = "520a5af2e8608a85:EndLevel",
+			float Weight = 1,
+		},
+		{
+			string Name = "LevelSelect",
+			string Value = "5236bb3703d5f7b6:LevelSelect",
+			float Weight = 1,
+		},
+		{
+			string Name = "Credits",
+			string Value = "5236bf68af72f904:Credits",
 			float Weight = 1,
 		},
 	],
