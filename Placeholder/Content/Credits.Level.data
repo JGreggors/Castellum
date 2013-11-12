@@ -52,9 +52,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [-2.18557e-006, 0, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Quat Rotation = [0, -2.18557e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -104,6 +104,61 @@ Level =
 			float NearPlane = 0.5,
 			float FarPlane = 200,
 			float Size = 20,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Back",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.92248, 1.30233, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 100,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Back",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [2.25, -1, 0],
+			Vec3 Size = [2.3, 0.65, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = true,
 		},
 	},
 },
