@@ -4,8 +4,13 @@ ResourceTable =
 	Array EntryList = 
 	[
 		{
+			string Name = "Main Menu",
+			string Value = "52c91d1eafeb949d:MainMenu",
+			float Weight = 1,
+		},
+		{
 			string Name = "Tutorial1",
-			string Value = "521582dffb5c46a5:Level3",
+			string Value = "5215822df75d9266:Level1",
 			float Weight = 1,
 		},
 		{
@@ -31,6 +36,11 @@ ResourceTable =
 		{
 			string Name = "Score",
 			string Value = "520a5af2e8608a85:EndLevel",
+			float Weight = 1,
+		},
+		{
+			string Name = "grapplelevel",
+			string Value = "52c3b3abf8353087:InfiniteGrap",
 			float Weight = 1,
 		},
 	],

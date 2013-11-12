@@ -14,6 +14,8 @@ class NoChaseBat:
     Stun = Property.Int(5)
     MoveDirection = Property.Vector3(Vec3(0,0,0))
     
+    stunDelay = Property.Float(1.0)
+    
     StunState = False
     
     def Initialize(self, initializer):
@@ -26,6 +28,8 @@ class NoChaseBat:
         self.StunTimer = 0.0
         
         Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
+        
+        self.nextPing = 0.0
         
     def OnLogicUpdate(self, UpdateEvent):
         #print(self.ChaseDirection)
@@ -49,6 +53,11 @@ class NoChaseBat:
             self.Owner.Sprite.Color = Color.Yellow
             #For Grapple
             self.Owner.Name = ("Floor")
+            
+        if(UpdateEvent.CurrentTime > self.nextPing):
+            self.nextPing = UpdateEvent.CurrentTime + self.stunDelay
+            if(self.StunState == True):
+                self.Space.SoundSpace.PlayCue("stun")
         
     def PaceBackAndForth(self, UpdateEvent):
             

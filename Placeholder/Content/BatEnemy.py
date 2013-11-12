@@ -20,6 +20,7 @@ class BatEnemy:
     PaceSpeed = Property.Float(1.0)
     Stun = Property.Int(5)
     ReturnSpeed = Property.Float(10.0)
+    stunDelay = Property.Float(1.0)
     
     HomeQ = True #is he home?
     StunState = False
@@ -38,6 +39,9 @@ class BatEnemy:
         self.player = self.Space.FindObjectByName("Player")
         self.AfterAttack = False
         self.LeaveTime = 0.0
+        
+        self.alerted = False
+        self.nextPing = 0.0
        #-----------------------------------------------------------------------------
         
         Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
@@ -57,6 +61,7 @@ class BatEnemy:
             self.Owner.Sprite.Color = Color.Yellow
             #For Grapple
             self.Owner.Name = ("Floor")
+            self.alerted = False
 
         else:
             #print("UnStun")
@@ -68,6 +73,7 @@ class BatEnemy:
             
             #If valid object and target is within range 
             if(targetIsWithinRange and self.AfterAttack == False):
+                self.alerted = True
                 self.HomeQ = False
                 self.ChaseTarget(UpdateEvent)
             else:
@@ -76,11 +82,18 @@ class BatEnemy:
                         self.GoUp(UpdateEvent)
                     else:
                         self.GoHome(UpdateEvent)
-                        
                 else:
                     self.Owner.Sprite.Color = self.OriginalColor
                     self.IdleMovePattern(UpdateEvent)
             self.Owner.Name = ("Bat")
+            
+            
+        if(UpdateEvent.CurrentTime > self.nextPing):
+            self.nextPing = UpdateEvent.CurrentTime + self.stunDelay
+            if(self.StunState == True):
+                self.Space.SoundSpace.PlayCue("stun")
+            if(self.alerted == True):
+                self.Space.SoundSpace.PlayCue("alertedenemy")
             
     def GoHome(self, UpdateEvent):
         
@@ -91,6 +104,7 @@ class BatEnemy:
             self.HomeQ = True
             self.AfterAttack = False
             self.UpQ = False
+            self.alerted = False
         
         direction.normalize()
         self.Owner.Transform.Translation += direction * UpdateEvent.Dt * self.ReturnSpeed

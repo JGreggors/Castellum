@@ -160,7 +160,7 @@ class MasterPlayerContr:
         self.ApplyMovement()
         self.UpdateGroundState()
         self.ApplyJumping()
-        #self.Owner.Sprite.FlipX=self.playerDirection
+        self.Owner.Sprite.FlipX = self.playerDirection
         
         if(self.keyAttached):
             self.Key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0,1,0)
@@ -282,8 +282,10 @@ class MasterPlayerContr:
 #Pendulum Related
             if(not self.Swing):
                 if(self.MouseDown == True):
+                    #self.Space.SoundSpace.PlayCue("hookpull")
                     self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 10)
                 else:
+                    #self.Space.SoundSpace.PlayCue("swing")
                     self.rayY = self.Owner.Transform.Translation.y
                     self.Swing = True
                     if(ray.Direction.x > 0):
@@ -298,6 +300,7 @@ class MasterPlayerContr:
                         self.swingDown  = True
                         self.swingPlayer(ray.Direction)
             else:
+                #self.Space.SoundSpace.PlayCue("swing")
                 self.swingPlayer(ray.Direction)
 #----------------------------------------------------------
   
@@ -324,6 +327,7 @@ class MasterPlayerContr:
                     self.grappleHit = 1
                     #sets grapplePoint to end position so where it hit something
                     self.grapplePoint = endPosition
+                    self.Space.SoundSpace.PlayCue("hooked")
             #Prevents grapple from hitting player and the key
             elif(castResult.ObjectHit.Name != "Player" and castResult.ObjectHit.Name != "Key" and castResult.ObjectHit.Name != "AOE" and castResult.ObjectHit.Name != "GateAOE" and castResult.ObjectHit.Name != "GWall"):
                 if(castResult.Distance < self.grappleDistance):
@@ -367,6 +371,7 @@ class MasterPlayerContr:
                 if (castResult.ObjectHit.Name == "Floor"):
                     #code for stopping grapple
                     self.StopGrapple()
+
             #DebugDraw.DrawSphere(ray.Start + ray.Direction * maxRayCastDistance, 0.25)
         #Collider 2
             ray2 = VectorMath.Ray()
@@ -384,6 +389,7 @@ class MasterPlayerContr:
                 endPosition = castResult.WorldPosition
                 if (castResult.ObjectHit.Name == "Floor"):
                     self.StopGrapple()
+
             #DebugDraw.DrawSphere(ray2.Start + ray2.Direction * maxRayCastDistance, 0.25)
         #Collider 3
             ray3 = VectorMath.Ray()
@@ -401,6 +407,7 @@ class MasterPlayerContr:
                 endPosition = castResult.WorldPosition
                 if (castResult.ObjectHit.Name == "Floor"):
                     self.StopGrapple()
+
             #DebugDraw.DrawSphere(ray3.Start + ray3.Direction * maxRayCastDistance, 0.25)
         #Collider 4
             ray4 = VectorMath.Ray()
@@ -461,6 +468,7 @@ class MasterPlayerContr:
             #Other Jumping Prototypes
             #self.Owner.RigidBody.ApplyLinearImpulse(Vec3(0,1,0) * self.jumpSpeed)
             self.Owner.RigidBody.ApplyLinearVelocity(VectorMath.Vec3(0,self.jumpHeight,0))
+            self.Space.SoundSpace.PlayCue("jump")
             
 #----------------------------------------------------------
 #--------------------------------------------------------------------------------------------
@@ -548,12 +556,14 @@ class MasterPlayerContr:
             return
         
         if(otherObject.Name == "AOE" and self.EIsPressed and self.keyAttached == False):
+            self.Space.SoundSpace.PlayCue("pickupkey")
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 1, 0)
             key.RigidBody.Static = True
             self.keyAttached = True
             #self.CanShoot = False
 
         elif(self.keyAttached == True and self.RIsPressed):
+            self.Space.SoundSpace.PlayCue("menuNo")
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 0, 0)
             key.RigidBody.Static = False
             self.keyAttached = False
@@ -562,6 +572,7 @@ class MasterPlayerContr:
 
         elif(otherObject.Name == "Gold"):
             self.gold += 1
+            self.Space.SoundSpace.PlayCue("gold")
 #--------------------------------------------------------------------------------------------
 
 

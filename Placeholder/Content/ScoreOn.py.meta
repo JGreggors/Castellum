@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "ScoreOn",
+		uint64 ResourceId = 52ecaca47525650e,
+	},
+},

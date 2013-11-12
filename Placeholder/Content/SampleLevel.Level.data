@@ -68,9 +68,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.98744, -8.05, 50],
+			Vec3 Translation = [-24.2374, 5.295, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.14577e-008, -0, 1],
+			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -80,7 +80,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 25,
+			float Size = 34,
 		},
 		EditorCameraController = 
 		{
@@ -88,7 +88,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.98744, -8.05, -1.3059e-007],
+			Vec3 LookTarget = [-24.2374, 5.295, -1.05946e-006],
 		},
 		EditorRenderer = 
 		{
@@ -230,6 +230,7 @@ Level =
 		{
 			float MaxHealth = 150,
 			int RegenCounter = 3,
+			float pingDelay = 1,
 		},
 	},
 	ArchetypeInstance = 
@@ -4213,8 +4214,9 @@ Level =
 			float MaxMoveDistance = 1,
 			float ChaseTriggerDistance = 8,
 			float ChaseSpeed = 6,
-			int Health = 3,
 			int Stun = 5,
+			float MaxPaceDistance = 5,
+			float stunDelay = 1,
 		},
 		BoxCollider = 
 		{
@@ -49309,6 +49311,7 @@ Level =
 			float PaceSpeed = 0.5,
 			int Stun = 5,
 			float ReturnSpeed = 10,
+			float stunDelay = 1,
 		},
 		Reactive = 
 		{
