@@ -78,6 +78,8 @@ class MasterPlayerContr:
     def OnMouseDown(self, ViewportMouseEvent):
         #Sets if mouse is being held down
         self.MouseDown = True
+        if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+            self.grappleCounter += 1
         #Checks Grapple counter to see if able to grapple
         if(self.grappleCounter > 0):
             self.grappleCounter -= 1
@@ -227,12 +229,18 @@ class MasterPlayerContr:
     def swingPlayer(self, ray):
         if(self.swingRight and self.swingDown):
             self.Pendulum = VectorMath.Vec3(math.fabs(ray.y), -math.fabs(ray.x), 0)
-            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
+            else:
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(ray.x < 0):
                 self.swingDown = False
         elif(self.swingRight and not self.swingDown):
             self.Pendulum = VectorMath.Vec3(math.fabs(ray.y), math.fabs(ray.x), 0)
-            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
+            else:
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(self.Owner.Transform.Translation.y > self.rayY):
                 #print("STOP GRAPPLE")
                 self.StopGrapple()
@@ -240,12 +248,18 @@ class MasterPlayerContr:
                 self.Swing = False
         elif(not self.swingRight and self.swingDown):
             self.Pendulum = VectorMath.Vec3(-math.fabs(ray.y), -math.fabs(ray.x), 0)
-            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
+            else:
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(ray.x > 0):
                 self.swingDown = False
         elif(not self.swingRight and not self.swingDown):
             self.Pendulum = VectorMath.Vec3(-math.fabs(ray.y), math.fabs(ray.x), 0)
-            self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
+            else:
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
             if(self.Owner.Transform.Translation.y > self.rayY):
                 self.StopGrapple()
                 #print("STOP GRAPPLE")
@@ -273,7 +287,11 @@ class MasterPlayerContr:
         #Increase grapple length if nothing has been hit
         if(self.grappleHit == 0):
             #Grapple speed (can be adjusted if needed)
-            self.grappleDistance += self.DeltaTime * 13
+            if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                self.grappleDistance += self.DeltaTime * 25
+            else:
+                #Grapple speed (can be adjusted if needed)
+                self.grappleDistance += self.DeltaTime * 13
         else:
             self.grappleDistance = math.sqrt(math.pow((ray.Start.x - self.grapplePoint.x), 2) + math.pow((ray.Start.y - self.grapplePoint.y), 2))
             self.Owner.RigidBody.Kinematic = True
@@ -282,8 +300,10 @@ class MasterPlayerContr:
 #Pendulum Related
             if(not self.Swing):
                 if(self.MouseDown == True):
-                    #self.Space.SoundSpace.PlayCue("hookpull")
-                    self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 10)
+                    if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 14)
+                    else:
+                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 12)
                 else:
                     #self.Space.SoundSpace.PlayCue("swing")
                     self.rayY = self.Owner.Transform.Translation.y
