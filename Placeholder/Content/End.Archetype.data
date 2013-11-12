@@ -8,19 +8,15 @@ Cog =
 	{
 		string Name = "End",
 	},
-	Archetyped = 
-	{
-		string Name = "523438c6167e65ca:End",
-	},
 	Transform = 
 	{
-		Vec3 Translation = [12.4013, -2.13248, 0],
-		Vec3 Scale = [0.4, 0.4, 1],
+		Vec3 Translation = [-35.83, -3.94749, -1.56617e-006],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "529e8b081d0ceca0:door",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
 		bool FlipX = false,
 		bool FlipY = false,
 		Vec4 Color = [1, 1, 1, 1],
@@ -31,30 +27,5 @@ Cog =
 		uint StartFrame = 0,
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
-	},
-	NextLevel = 
-	{
-	},
-	RigidBody = 
-	{
-		bool Static = true,
-		bool Asleep = false,
-		bool Kinematic = false,
-		bool RotationLocked = false,
-		bool Mode2D = true,
-		bool AllowSleep = true,
-		bool Inherit2DMode = true,
-		Vec3 Velocity = [0, 0, 0],
-		Vec3 AngularVelocity = [0, 0, 0],
-	},
-	BoxCollider = 
-	{
-		bool Ghost = true,
-		bool SendsMessages = true,
-		bool Seamless = false,
-		string MaterialName = "4faa6050b8692851:HardMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [2, 2, 0.5],
 	},
 },

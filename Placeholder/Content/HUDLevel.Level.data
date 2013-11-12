@@ -52,9 +52,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.142502, 6.28918, 50],
+			Vec3 Translation = [-2.18557e-006, 1.82668, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.19047e-008, -0, 1],
+			Quat Rotation = [0, -2.18557e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -64,7 +64,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 17,
+			float Size = 24,
 		},
 		EditorCameraController = 
 		{
@@ -72,7 +72,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.1425, 6.28918, -6.22887e-009],
+			Vec3 LookTarget = [0, 1.82668, 0],
 		},
 		EditorRenderer = 
 		{
@@ -91,7 +91,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -2.10342, 40],
+			Vec3 Translation = [0, -2.56041, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -118,7 +118,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 5.6134, 0],
+			Vec3 Translation = [0, 5.60086, 0],
 			Vec3 Scale = [2, 1.25, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -157,17 +157,16 @@ Level =
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
+			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 40,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = " ",
+			string Text = "Time",
 			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
-			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -221,139 +220,7 @@ Level =
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 40,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = " ",
-			bool OnTop = true,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "THeader",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-0.00537563, 7.38984, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 40,
-			Vec4 Color = [0.00382501, 0.765, 0.0571074, 1],
-			bool Visible = true,
-			string Text = "T",
-			bool OnTop = true,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 9,
-		},
-		Named = 
-		{
-			string Name = "DHeader",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-1.50538, 7.38984, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 40,
-			Vec4 Color = [0.62, 0, 0.0558001, 1],
-			bool Visible = true,
-			string Text = "D",
-			bool OnTop = true,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Named = 
-		{
-			string Name = "GHeader",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.51792, 7.38984, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 40,
-			Vec4 Color = [0.855, 0.671602, 0.021375, 1],
-			bool Visible = true,
-			string Text = "G",
-			bool OnTop = true,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 11,
-		},
-		Named = 
-		{
-			string Name = "DCounter",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-1.54301, 6.6497, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
+			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 40,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
@@ -363,40 +230,6 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 12,
-		},
-		Named = 
-		{
-			string Name = "GCounter",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.50896, 6.6497, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 40,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = " 0",
-			bool OnTop = true,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
 		},
 	},
 },

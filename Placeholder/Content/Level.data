@@ -120,17 +120,15 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 200,
-			float Size = 40,
+			float Size = 14.9,
 		},
 		smartcamera = 
 		{
 			uint targetObject = 4,
 			float horizontalTriggerDistance = 2,
-			float verticalTriggerDistance = 5,
 			float smoothMoveSpeed = 3,
 			bool smoothMovement = true,
 			bool oveCamera = true,
-			bool fixedCamera = true,
 		},
 	},
 	ArchetypeInstance = 
@@ -142,7 +140,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-30.1285, -1.77378, 0],
+			Vec3 Translation = [-16, 6, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -291,10 +289,10 @@ Level =
 			float axMoveDistance = 5,
 			float ChaseTriggerDistance = 7,
 			float ChaseSpeed = 5,
+			int Health = 3,
 			float PaceLength = 25,
 			float PaceSpeed = 1,
 			int Stun = 5,
-			float ReturnSpeed = 10,
 		},
 	},
 	Cog = 
@@ -349,8 +347,8 @@ Level =
 			float MaxMoveDistance = 5,
 			float ChaseTriggerDistance = 10,
 			float ChaseSpeed = 8,
+			int Health = 3,
 			int Stun = 5,
-			float MaxPaceDistance = 5,
 		},
 		BoxCollider = 
 		{
@@ -515,8 +513,8 @@ Level =
 			float MaxMoveDistance = 5,
 			float ChaseTriggerDistance = 10,
 			float ChaseSpeed = 8,
+			int Health = 3,
 			int Stun = 5,
-			float MaxPaceDistance = 5,
 		},
 		BoxCollider = 
 		{

@@ -1,8 +1,0 @@
-TextContent = 
-{
-	TextBuilder = 
-	{
-		string Name = "DefaultHighScore",
-		uint64 ResourceId = 522dcbe70ec1d5c1,
-	},
-},

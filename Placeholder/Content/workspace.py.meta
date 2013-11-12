@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "workspace",
-		uint64 ResourceId = 52ecc32b0a0e44e4,
-	},
-},

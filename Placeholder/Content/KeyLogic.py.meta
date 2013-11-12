@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "KeyLogic",
-		uint64 ResourceId = 52157aec3b167739,
-	},
-},

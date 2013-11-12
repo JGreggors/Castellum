@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "ScoreOff",
-		uint64 ResourceId = 52eca185804c582e,
-	},
-},

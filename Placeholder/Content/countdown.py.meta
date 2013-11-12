@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "countdown",
-		uint64 ResourceId = 52ec7e1cc1dd55ec,
-	},
-},

@@ -4,68 +4,28 @@ ResourceTable =
 	Array EntryList = 
 	[
 		{
-			string Name = "MainMenu",
+			string Name = "Test",
 			string Value = "52c91d1eafeb949d:MainMenu",
 			float Weight = 1,
 		},
 		{
-			string Name = "Tutorial1",
-			string Value = "5215822df75d9266:Level1",
+			string Name = "EndLevel",
+			string Value = "52da3fc125e2c862:SampleLevel",
 			float Weight = 1,
 		},
 		{
-			string Name = "Tutorial2",
-			string Value = "5215822af66532ec:Level2",
-			float Weight = 1,
-		},
-		{
-			string Name = "Tutorial3",
-			string Value = "521582dffb5c46a5:Level3",
-			float Weight = 1,
-		},
-		{
-			string Name = "Tutorial4",
-			string Value = "521582cdf87735d2:Level4",
-			float Weight = 1,
-		},
-		{
-			string Name = "Tut/FirstReal",
-			string Value = "521582c7fdbec54c:Level5",
-			float Weight = 1,
-		},
-		{
-			string Name = "Score",
+			string Name = "This is another level",
 			string Value = "520a5af2e8608a85:EndLevel",
 			float Weight = 1,
 		},
 		{
-			string Name = "LevelSelect",
-			string Value = "5236bb3703d5f7b6:LevelSelect",
+			string Name = "Name4",
+			string Value = "52d8bb94dc227e33:StartScreen",
 			float Weight = 1,
 		},
 		{
-			string Name = "Credits",
-			string Value = "5236bf68af72f904:Credits",
-			float Weight = 1,
-		},
-		{
-			string Name = "TutLvlSelect",
-			string Value = "52ec5ec4ee87dd2d:Tutorials",
-			float Weight = 1,
-		},
-		{
-			string Name = "Lvl 6-10",
-			string Value = "52ec580f13bc3814:sixten",
-			float Weight = 1,
-		},
-		{
-			string Name = "Lvl 11-15",
-			string Value = "52ec594878c3a51b:elevenfifteen",
-			float Weight = 1,
-		},
-		{
-			string Name = "Lvl 16-20",
-			string Value = "52ec590f4aec2093:sixteentwenty",
+			string Name = "Name5",
+			string Value = "52c3b3abf8353087:InfiniteGrap",
 			float Weight = 1,
 		},
 	],

@@ -23,13 +23,13 @@ class LeverLogic:
     def OnLogicUpdate(self, UpdateEvent):
         # If open gates move
         if(self.access == True):
-            #self.Space.SoundSpace.PlayCue("level_door1")
             self.yAxis += UpdateEvent.Dt
+            self.Space.FindObjectByName("Lever").Sprite.Color = Color.Black
             self.Switchgate2.Transform.Translation = self.startGate2 + VectorMath.Vec3(0, -self.yAxis, 0)
             self.Switchgate1.Transform.Translation = self.startGate1 + VectorMath.Vec3(0, self.yAxis, 0)
             #Until max then set doors there
             if(self.yAxis > 3):
-                #print("blamo")
+                print("blamo")
                 self.yAxis += 0
                 self.startGate1 = self.Switchgate1.Transform.Translation
                 self.startGate2 = self.Switchgate2.Transform.Translation

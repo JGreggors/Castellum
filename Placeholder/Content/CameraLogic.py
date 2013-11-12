@@ -17,7 +17,7 @@ class CameraLogic:
         #Get target object's translation
             targetTranslation = self.targetObject.Transform.Translation
         #Use x component of target translation with our y and z translation
-            newTranslation = VectorMath.Vec3(targetTranslation.x, currentTranslation.y, currentTranslation.z)
+            newTranslation = VectorMath.Vec3(targetTranslation.x, -5, currentTranslation.z)
         #Update our translation with the new translation
             self.Owner.Transform.Translation = newTranslation
         if(Zero.Keyboard.KeyIsPressed(Zero.Keys.M)):

@@ -9,25 +9,18 @@ class EndLevelLogic:
     def Initialize(self, initializer):
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
         
-        
         self.levelProgression = 0.0 #This is the timer for adding the score
         self.startTimeScore = 0 #This sets beginning score from time to 0
         self.startGoldScore = 0 #This sets beginning score from Gold to 0
         self.startDeathScore = 0 #This sets beginning score from deaths to 0
         
-        self.timeIsDone = False
-        self.goldIsDone = False
-        
         self.getStats = False #Should I get stats immediately?
         self.endLevel = False # Should I end level?
-        
-        self.LevelFinalScore = 0 #your total score for the level
         
     def OnLogicUpdate(self, UpdateEvent):
         #If Space is pressed Add up score
         if(Zero.Keyboard.KeyIsPressed(Keys.Space)):
             self.getStats = True
-
             
        #--------------------------------------------------------
         #Start timer
@@ -45,11 +38,11 @@ class EndLevelLogic:
        #--------------------------------------------------------
         
         #Calculate time score
-        self.tscore = (round(self.par - self.finalTime)) * 22500
+        self.tscore = (round(self.par - self.finalTime)) * 2250
         #Calculate gold score
-        self.tgold = self.finalGold * 32250
+        self.tgold = self.finalGold * 3225
         #Calculate Death score
-        self.tdeath = self.finalDeaths * 50000
+        self.tdeath = self.finalDeaths * 500
        #--------------------------------------------------------
         #This is the spritetext that prints your time score
         clock = self.Space.FindObjectByName("tTime").SpriteText
@@ -68,9 +61,7 @@ class EndLevelLogic:
             deaths.Text = str(round(-self.tdeath))
             total.Text = str(round(self.tscore + self.tgold - self.tdeath))
             #if you press Space again end level
-            if((Zero.Keyboard.KeyIsPressed(Keys.Space) and self.endLevel) or (self.timeIsDone == True and self.goldIsDone == True)):
-                self.LevelFinalScore = self.tscore + self.tgold - self.tdeath
-                Zero.Game.Score.FinalScore += self.LevelFinalScore
+            if(Zero.Keyboard.KeyIsPressed(Keys.Space) and self.endLevel):
                 Zero.Game.LevelManager.LoadNextLevel()
                 
             self.endLevel = True
@@ -81,20 +72,13 @@ class EndLevelLogic:
             if(self.levelProgression > 1 and self.startTimeScore <= self.tscore):
                 self.startTimeScore += 1 * (UpdateEvent.Dt * 100000)
                 clock.Text = str(round(self.startTimeScore))
-            if(self.startTimeScore >= self.tscore):
-                clock.Text = str(round(self.tscore))
-                self.timeIsDone = True
             #Slowly add up gold score
             if(self.levelProgression > 2 and self.startGoldScore <= self.tgold):
                 if(self.finalGold == 0):
                     gold.Text = "0"
-                    self.goldIsDone = True
                 else:
                     self.startGoldScore += 1 * (UpdateEvent.Dt * 1000)
                     gold.Text = str(round(self.startGoldScore))
-                    if(self.startGoldScore >= self.tgold):
-                        gold.Text = str(round(self.tgold))
-                        self.goldIsDone = True
             #slowly add up death score
             if(self.levelProgression > 3 and self.startDeathScore <= self.tdeath):
                 if(self.finalDeaths == 0):
@@ -103,7 +87,7 @@ class EndLevelLogic:
                     self.startDeathScore += 1 * (UpdateEvent.Dt * 100)
                     deaths.Text = str(round(-self.startDeathScore))
             #add up total
-            if(self.timeIsDone == True and self.goldIsDone == True):
-                total.Text = str(round(self.tscore + self.tgold - self.tdeath))
+            if(self.levelProgression > 1):
+                total.Text = str(round(self.startTimeScore + self.startGoldScore - self.startDeathScore))
 
 Zero.RegisterComponent("EndLevelLogic", EndLevelLogic)

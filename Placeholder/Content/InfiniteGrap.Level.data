@@ -57,7 +57,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-21.9283, -5.18705, 50],
+			Vec3 Translation = [-20.2827, -4.6425, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
@@ -204,12 +204,19 @@ Level =
 			float UnitsPerTile = 1,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "52ec4774adc3bc27:Floor2",
 		LinkId = 
 		{
 			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "Floor",
+		},
+		Archetyped = 
+		{
+			string Name = "52da0ba655798945:Floor",
 		},
 		Transform = 
 		{
@@ -217,9 +224,8 @@ Level =
 			Vec3 Scale = [1, 16, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Floor",
 			string SpriteSource = "5275aa4d802dd6dc:Square",
 			bool FlipX = false,
 			bool FlipY = false,
@@ -327,7 +333,6 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-41, -6.01595, 0],
-			Vec3 Scale = [1.90418, 1.90418, 1.90418],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -631,8 +636,6 @@ Level =
 			float PaceLength = 25,
 			float PaceSpeed = 1,
 			int Stun = 5,
-			float ReturnSpeed = 10,
-			float ReturnSpeed = 10,
 		},
 	},
 	Cog = 
@@ -739,35 +742,6 @@ Level =
 			bool Inherit2DMode = true,
 			Vec3 Velocity = [0, 0, 0],
 			Vec3 AngularVelocity = [0, 0, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 19,
-		},
-		Named = 
-		{
-			string Name = "Floor",
-		},
-		Archetyped = 
-		{
-			string Name = "52da0ba655798945:Floor",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-41.4133, -8.20205, 0],
-			Vec3 Scale = [2.16954, 2.16954, 2.16954],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = true,
-		},
-		GrappleCollisionYes = 
-		{
 		},
 	},
 },

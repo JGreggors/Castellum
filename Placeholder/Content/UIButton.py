@@ -10,7 +10,6 @@ class UIButton:
     DefaultColor = Property.Vector4(default = Vec4(1,1,1,1))
     HoverColor = Property.Vector4(default = Vec4(1,1,0,0.25))
     DownColor = Property.Vector4(default = Vec4(1,1,1,0.5))
-    LevelNumber = Property.Uint(0)
     
     def Initialize(self, initializer):
         #to make color change when mouse hovers
@@ -46,64 +45,14 @@ class UIButton:
         #Basically if object is called " " go to " " level
         #can change as needed 
         if(self.Owner.Name == "Start"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
+            self.Space.LoadLevel("InfiniteGrap")
             
         elif(self.Owner.Name == "LevelSelect"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-
+            self.Space.LoadLevel("Level")
             
         elif(self.Owner.Name == "Credits"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-            
-        elif(self.Owner.Name == "Tutorials"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-            
-        elif(self.Owner.Name == "sixten"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-            
-        elif(self.Owner.Name == "elevenfifteen"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
+            self.Space.LoadLevel("SampleLevel")
 
-        elif(self.Owner.Name == "sixteentwenty"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-            
-        elif(self.Owner.Name == "Back"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menuNo")
-            
-      #Levels
-#----------------------------------------------------------------------------------
-        elif(self.Owner.Name == "Level1"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-            
-        elif(self.Owner.Name == "Level2"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-           
-        elif(self.Owner.Name == "Level3"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-           
-        elif(self.Owner.Name == "Level4"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-            
-        elif(self.Owner.Name == "Level5"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-            
-        elif(self.Owner.Name == "Level13"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            self.Space.SoundSpace.PlayCue("menu")
-#----------------------------------------------------------------------------------
        
     def OnMouseDown(self, ViewportMouseEvent):
         self.DownState()

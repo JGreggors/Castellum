@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-17.8054, -1.41872, 0],
-		Vec3 Scale = [1.25, 1.25, 41.6881],
+		Vec3 Translation = [66.4212, -3.48239, -2.00875e-006],
+		Vec3 Scale = [8, 9, 41.6881],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -54,161 +54,45 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
 	},
-	LeverLogic = 
+	DoorLogic = 
 	{
 	},
 	Hierarchy = 
 	{
-		Cog = 
+		ArchetypeInstance = 
 		{
+			string Name = "52aec407497cd9b9:SwitchGate1",
 			LinkId = 
 			{
 				uint Id = 2,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.00509262, 0.16498, -2.4869e-014],
+				Vec3 Scale = [0.25, 0.333333, 0.0239877],
+				Quat Rotation = [0, 0, 0, 1],
 			},
 			Named = 
 			{
 				string Name = "SwitchGate1",
 			},
-			Archetyped = 
-			{
-				string Name = "52aec407497cd9b9:SwitchGate1",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [6.23476, 3.12102, -2.4869e-014],
-				Vec3 Scale = [1.6, 2.4, 0.0239877],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				string SpriteSource = "52d8aa05647f864c:gatetemp2",
-				bool FlipX = false,
-				bool FlipY = false,
-				Vec4 Color = [1, 1, 1, 1],
-				bool Visible = true,
-				bool OnTop = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-			},
-			RigidBody = 
-			{
-				bool Static = true,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = false,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.5, 0.5, 0.5],
-			},
 		},
-		Cog = 
+		ArchetypeInstance = 
 		{
+			string Name = "52aec4144c7b0e14:SwitchGate2",
 			LinkId = 
 			{
 				uint Id = 3,
 			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.00508976, -0.164925, -3.55271e-015],
+				Vec3 Scale = [0.25, 0.333333, 0.0239877],
+				Quat Rotation = [0, 0, 0, 1],
+			},
 			Named = 
 			{
 				string Name = "SwitchGate2",
-			},
-			Archetyped = 
-			{
-				string Name = "52aec4144c7b0e14:SwitchGate2",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [6.23477, 0.745703, -3.55271e-015],
-				Vec3 Scale = [1.6, 2.4, 0.0239877],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				string SpriteSource = "52d8aa05647f864c:gatetemp2",
-				bool FlipX = false,
-				bool FlipY = false,
-				Vec4 Color = [1, 1, 1, 1],
-				bool Visible = true,
-				bool OnTop = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-			},
-			RigidBody = 
-			{
-				bool Static = true,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = false,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.5, 0.5, 0.5],
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 4,
-			},
-			Named = 
-			{
-				string Name = "Lever",
-			},
-			Archetyped = 
-			{
-				string Name = "52aec4d879fd04b0:Lever",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0.00216579, -0.0205573, 0],
-				Vec3 Scale = [0.8, 0.8, 0.0239877],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				string SpriteSource = "5275aa4d802dd6dc:Square",
-				bool FlipX = false,
-				bool FlipY = false,
-				Vec4 Color = [1, 1, 1, 1],
-				bool Visible = true,
-				bool OnTop = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-			},
-			Hierarchy = 
-			{
 			},
 		},
 	},

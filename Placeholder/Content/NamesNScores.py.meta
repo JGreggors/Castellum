@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "NamesNScores",
-		uint64 ResourceId = 52c31d1a5e0ece06,
-	},
-},

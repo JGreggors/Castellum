@@ -52,7 +52,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.417498, -4.9725, 50],
+			Vec3 Translation = [0.417497, -4.9725, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, -2.17557e-008, -0, 1],
 		},
@@ -167,7 +167,6 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
-			bool Smoothing = true,
 		},
 		BoxCollider = 
 		{
@@ -189,7 +188,6 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [1, 1, 0, 0.25],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 1,
 		},
 	},
 	Cog = 
@@ -222,7 +220,6 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
-			bool Smoothing = true,
 		},
 		BoxCollider = 
 		{
@@ -244,7 +241,6 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [1, 1, 0, 0.25],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 8,
 		},
 	},
 	Cog = 
@@ -277,7 +273,6 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
-			bool Smoothing = true,
 		},
 		BoxCollider = 
 		{
@@ -299,7 +294,6 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [1, 1, 0, 0.25],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 7,
 		},
 	},
 },
