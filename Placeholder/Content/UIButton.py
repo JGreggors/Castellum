@@ -51,71 +51,57 @@ class UIButton:
             
         elif(self.Owner.Name == "LevelSelect"):
             Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-            
-            self.Space.LoadLevel("LevelSelect")
             self.Space.SoundSpace.PlayCue("menu")
-            #self.Space.LoadLevel("Level")
+
             
         elif(self.Owner.Name == "Credits"):
             Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
             
         elif(self.Owner.Name == "Tutorials"):
-            self.Space.LoadLevel("Tutorials")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
             
         elif(self.Owner.Name == "sixten"):
-            self.Space.LoadLevel("fiveten")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
             
         elif(self.Owner.Name == "elevenfifteen"):
-            self.Space.LoadLevel("elevenfifteen")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
-            
-        elif(self.Owner.Name == "Level1"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-        elif(self.Owner.Name == "Level2"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-        elif(self.Owner.Name == "Level3"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-        elif(self.Owner.Name == "Level4"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-        elif(self.Owner.Name == "Level5"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
-        elif(self.Owner.Name == "Back"):
-            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
+
         elif(self.Owner.Name == "sixteentwenty"):
-            self.Space.LoadLevel("sixteentwenty")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
             
         elif(self.Owner.Name == "Back"):
-            self.Space.LoadLevel("MainMenu")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menuNo")
             
       #Levels
 #----------------------------------------------------------------------------------
         elif(self.Owner.Name == "Level1"):
-            self.Space.LoadLevel("Level1")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
             
         elif(self.Owner.Name == "Level2"):
-            self.Space.LoadLevel("Level2")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
            
         elif(self.Owner.Name == "Level3"):
-            self.Space.LoadLevel("Level3")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
            
         elif(self.Owner.Name == "Level4"):
-            self.Space.LoadLevel("Level4")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
             
         elif(self.Owner.Name == "Level5"):
-            self.Space.LoadLevel("Level5")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
             
         elif(self.Owner.Name == "Level13"):
-            self.Space.LoadLevel("Level13")
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
 #----------------------------------------------------------------------------------
        

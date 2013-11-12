@@ -5,7 +5,7 @@ ResourceTable =
 	[
 		{
 			string Name = "MainMenu",
-			string Value = "52c3b3abf8353087:InfiniteGrap",
+			string Value = "52c91d1eafeb949d:MainMenu",
 			float Weight = 1,
 		},
 		{
@@ -46,6 +46,26 @@ ResourceTable =
 		{
 			string Name = "Credits",
 			string Value = "5236bf68af72f904:Credits",
+			float Weight = 1,
+		},
+		{
+			string Name = "TutLvlSelect",
+			string Value = "52ec5ec4ee87dd2d:Tutorials",
+			float Weight = 1,
+		},
+		{
+			string Name = "Lvl 6-10",
+			string Value = "52ec580f13bc3814:sixten",
+			float Weight = 1,
+		},
+		{
+			string Name = "Lvl 11-15",
+			string Value = "52ec594878c3a51b:elevenfifteen",
+			float Weight = 1,
+		},
+		{
+			string Name = "Lvl 16-20",
+			string Value = "52ec590f4aec2093:sixteentwenty",
 			float Weight = 1,
 		},
 	],
