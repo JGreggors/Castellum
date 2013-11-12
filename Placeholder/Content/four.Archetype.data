@@ -1,0 +1,55 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "four",
+	},
+	Archetyped = 
+	{
+		string Name = "52ec7e9cdc9b44f5:four",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteText = 
+	{
+		SpriteGeometryMode GeometryMode = ZPlane,
+		TextPositionMode Position = Centered,
+		string FontName = "52d8b2af097ae33e:anklepants",
+		uint FontSize = 35,
+		Vec4 Color = [0.98, 1, 0, 1],
+		bool Visible = true,
+		string Text = "4",
+		bool OnTop = true,
+		BlendMode BlendMode = Alpha,
+		Vec2 Size = [0, 0],
+		TextAlign Align = Left,
+		float PixelsPerUnit = 64,
+		bool Smoothing = true,
+	},
+	countdown = 
+	{
+		float alphaTimer = 0.01,
+		int destroyTimer = 50,
+		float upSpeed = 3,
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = false,
+		bool Mode2D = false,
+		bool AllowSleep = false,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 4, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+},

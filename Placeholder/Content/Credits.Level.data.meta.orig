@@ -1,0 +1,15 @@
+DataContent = 
+{
+	DataBuilder = 
+	{
+		string Name = "Credits",
+<<<<<<< HEAD
+		uint64 ResourceId = 5236bf68af72f904,
+=======
+		uint64 ResourceId = 52ec611813d88fb0,
+>>>>>>> 3b5525912a678aa1bd434c98c7c3c8f6d6aeff49
+		string LoaderType = "Level",
+		uint Version = 0,
+		bool ShowInEditor = true,
+	},
+},

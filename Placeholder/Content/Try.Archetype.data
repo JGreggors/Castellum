@@ -1,0 +1,76 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Try",
+	},
+	Archetyped = 
+	{
+		string Name = "5212c8105ff13ba2:Try",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-12.2346, -2.13264, -3.12863e-007],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteText = 
+	{
+		SpriteGeometryMode GeometryMode = ZPlane,
+		TextPositionMode Position = Centered,
+		string FontName = "52d8b2af097ae33e:anklepants",
+		uint FontSize = 80,
+		Vec4 Color = [0, 0, 0, 1],
+		bool Visible = true,
+		string Text = "      TRY       A and D",
+		bool OnTop = true,
+		BlendMode BlendMode = Alpha,
+		Vec2 Size = [8, 10],
+		TextAlign Align = Center,
+		float PixelsPerUnit = 64,
+		bool Smoothing = true,
+	},
+	Hierarchy = 
+	{
+		ArchetypeInstance = 
+		{
+			string Name = "5212c8534d5c066f:FadeIn",
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-6.36247, 1.44601, -1.13687e-013],
+				Vec3 Scale = [2, 10, 6],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "FadeIn",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5212c87f50e63da8:FadeOut",
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [4.14525, 1.44601, 0],
+				Vec3 Scale = [2, 10, 6],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "FadeOut",
+			},
+		},
+	},
+},

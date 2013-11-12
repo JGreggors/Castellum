@@ -527,32 +527,4 @@ Level =
 			float PixelsPerUnit = 64,
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 17,
-		},
-		Named = 
-		{
-			string Name = "TileMap",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			BlendMode BlendMode = Alpha,
-		},
-		TileMap = 
-		{
-			string SourceName = "52c3b17050004694:EndLevel_TileMap00",
-			float UnitsPerTile = 1,
-		},
-	},
 },

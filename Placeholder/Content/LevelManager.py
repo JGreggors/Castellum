@@ -33,5 +33,14 @@ class LevelManager:
         
         
         self.gameSpace.LoadLevel(levelResourceName)
+        
+    def LoadSpecificLevel(self, levelIndex):
+        numberOfLevelInTable = self.GetLevelCount()
+        print(numberOfLevelInTable)
+        if(levelIndex <= numberOfLevelInTable - 1):
+            levelResourceName = self.levelTable.GetResourceAt(levelIndex)
+            self.gameSpace.LoadLevel(levelResourceName)
+            
+        
 
 Zero.RegisterComponent("LevelManager", LevelManager)

@@ -10,6 +10,7 @@ class DoorLogic:
     def Initialize(self, initializer):
         Zero.Connect(self.Owner, Events.CollisionPersisted, self.OnCollisionPersisted)
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
+        Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
         self.gate1 = self.Space.FindObjectByName("Gate1")
         self.gate2 = self.Space.FindObjectByName("Gate2")
         self.startGate1 = self.gate1.Transform.Translation
@@ -37,8 +38,12 @@ class DoorLogic:
                 self.startGate1 = self.gate1.Transform.Translation
                 self.startGate2 = self.gate2.Transform.Translation
                 self.Space.FindObjectByName("Player").MasterPlayerContr.keyAttached = False
+                self.Space.FindObjectByName("Player").MasterPlayerContr.CanShoot = True
                 key.Destroy()
-
+    def OnCollisionStart(self, CollisionEvent):
+        keyAttached = self.Space.FindObjectByName("Player").MasterPlayerContr.keyAttached
+        if(CollisionEvent.OtherObject.Name == "Player" and keyAttached == True):
+            self.Space.SoundSpace.PlayCue("opengate")
       
             
 

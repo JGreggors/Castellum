@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [12.0186, -5.87696, -0.00781197],
+		Vec3 Translation = [5.88237, -1.3418, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -37,9 +37,9 @@ Cog =
 		bool Static = false,
 		bool Asleep = false,
 		bool Kinematic = false,
-		bool RotationLocked = false,
+		bool RotationLocked = true,
 		bool Mode2D = true,
-		bool AllowSleep = true,
+		bool AllowSleep = false,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
@@ -47,18 +47,18 @@ Cog =
 	GoblinEnemy = 
 	{
 		float PaceSpeed = 2,
-		float MaxMoveDistance = 5,
+		float MaxMoveDistance = 3,
 		float ChaseTriggerDistance = 10,
-		float ChaseSpeed = 8,
-		int Health = 3,
+		float ChaseSpeed = 4,
 		int Stun = 5,
+		float MaxPaceDistance = 4,
 	},
 	BoxCollider = 
 	{
 		bool Ghost = false,
 		bool SendsMessages = true,
 		bool Seamless = false,
-		string MaterialName = "4faa6050b8692851:HardMaterial",
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],

@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "InLogic",
+		uint64 ResourceId = 5212c94288e52ed9,
+	},
+},
