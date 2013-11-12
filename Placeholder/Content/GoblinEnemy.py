@@ -17,6 +17,7 @@ class GoblinEnemy:
     Stun = Property.Int(5)
     MaxPaceDistance = Property.Float(5.0)
     #jumpHeight = Property.Int(1)
+    stunDelay = Property.Float(1.0)
     
     HomeQ = True
     StunState = False
@@ -37,6 +38,15 @@ class GoblinEnemy:
         self.StunTimer = 0.0
         self.AfterAttack = False
         #self.StunCounter = 0
+        self.alerted = False
+        self.nextPing = 0.0
+        
+        
+        self.five = False
+        self.four = False
+        self.three = False
+        self.two = False
+        self.one = False
         
         #self.OnGround = False
         
@@ -50,6 +60,8 @@ class GoblinEnemy:
         if(self.StunTimer <= 0):
             self.StunState = False
             self.StunTimer = 0
+            
+
             
         if(self.StunState == False):
             
@@ -68,6 +80,7 @@ class GoblinEnemy:
                 if(reachMaxRange):
                     self.AfterAttack = True
                 else:
+                    self.alerted = True
                     self.HomeQ = False
                     self.ChaseTarget(UpdateEvent)
             else:
@@ -80,12 +93,20 @@ class GoblinEnemy:
             self.PaceBackAndForth(UpdateEvent)
             
         if(self.StunState == True):
+            self.StunLogic()
             #print("Stun")
             self.Owner.Sprite.Color = Color.Yellow
             #For Grapple
             self.Owner.Name = ("Floor")
-
-
+            self.alerted = False
+            
+            
+        if(UpdateEvent.CurrentTime > self.nextPing):
+            self.nextPing = UpdateEvent.CurrentTime + self.stunDelay
+            if(self.StunState == True):
+                self.Space.SoundSpace.PlayCue("stun")
+            #if(self.alerted == True):
+            #    self.Space.SoundSpace.PlayCue("alertedenemy")
         
     def GoHome(self):
         
@@ -94,6 +115,7 @@ class GoblinEnemy:
         if(direction.length() <= 0.5):
             self.HomeQ = True
             self.AfterAttack = False
+            self.alerted = False
             
         
         direction.normalize()
@@ -169,6 +191,29 @@ class GoblinEnemy:
         #Only want unit length direction 
         self.homeDirection.normalize()
         self.ChaseDirection.normalize()
+        
+        
+    def StunLogic(self):
+        self.five = True
+        self.four = True
+        self.three = True
+        self.two = True
+        self.one = True
+        if(self.StunTimer > 4.8 and self.StunTimer < 5):
+            self.Space.CreateAtPosition("five", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.five = False
+        elif(self.StunTimer > 3.8 and self.StunTimer < 4):
+            self.Space.CreateAtPosition("four", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.four = False
+        elif(self.StunTimer > 2.8 and self.StunTimer < 3):
+            self.Space.CreateAtPosition("three", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.three = False
+        elif(self.StunTimer > 1.8 and self.StunTimer < 2):
+            self.Space.CreateAtPosition("two", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.two = False
+        elif(self.StunTimer > 0.8 and self.StunTimer < 1):
+            self.Space.CreateAtPosition("one", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.one = False
            
         
     def OnCollisionStart(self, CollisionEvent):

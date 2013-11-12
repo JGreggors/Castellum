@@ -25,7 +25,7 @@ class Projectile:
         
     def OnCollisionStart(self, CollisionEvent):
         otherObject = CollisionEvent.OtherObject
-        if(otherObject.Name != "Player" and (otherObject.Name != "Gold" or otherObject.Name != "GateAOE" or otherObject.Name != "SwitchGateAOE" or otherObject.Name != "FadeIn" or otherObject.Name != "FadeOut")):
+        if(otherObject.Name != "Player" and (otherObject.Name == "Key" and otherObject.Name == "AOE" and otherObject.Name != "Gold" and otherObject.Name != "GateAOE" and otherObject.Name != "SwitchGateAOE" and otherObject.Name != "FadeIn" and otherObject.Name != "FadeOut")):
             self.Owner.Destroy()
 
 

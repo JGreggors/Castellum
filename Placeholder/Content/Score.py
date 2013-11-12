@@ -4,7 +4,7 @@ import Property
 import VectorMath
 
 class Score:
-    tutorial = Property.Bool(False)
+    tutorial = Property.Bool(True)
     def Initialize(self, initializer):
         Zero.Connect(self.Owner, Events.GameStarted, self.OnGameStarted)
         self.FinalScore = 0

@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "LeverOnLogic",
+		uint64 ResourceId = 52ec922b1119e91e,
+	},
+},

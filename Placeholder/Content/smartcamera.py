@@ -7,6 +7,7 @@ Vec3 = VectorMath.Vec3
 
 class smartcamera:
     
+    
     targetObject = Property.Cog()
     horizontalTriggerDistance = Property.Float(5.0)
     verticalTriggerDistance = Property.Float(5.0)
@@ -37,7 +38,7 @@ class smartcamera:
             if(verticalDistance > self.verticalTriggerDistance):
                 followTarget = True
                 
-            if(verticalDistance > -(self.verticalTriggerDistance + 8)):
+            if(verticalDistance > -(self.verticalTriggerDistance)):
                 followTarget = True
             
         if(self.moveCamera):
@@ -50,7 +51,5 @@ class smartcamera:
 
             else:
                 self.Owner.Transform.Translation = self.newTranslation
-        
-        
 
 Zero.RegisterComponent("smartcamera", smartcamera)
