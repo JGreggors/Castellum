@@ -66,9 +66,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.68006, 6.94751, 50],
+			Vec3 Translation = [-20.0874, 0.89501, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.38419e-008, -0, 1],
+			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -78,7 +78,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 45,
+			float Size = 11,
 		},
 		EditorCameraController = 
 		{
@@ -86,7 +86,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [6.68006, 6.94751, 2.91986e-007],
+			Vec3 LookTarget = [-20.0874, 0.89501, -8.78059e-007],
 		},
 		EditorRenderer = 
 		{
@@ -121,7 +121,7 @@ Level =
 		},
 		smartcamera = 
 		{
-			uint targetObject = 0,
+			uint targetObject = 4,
 			float horizontalTriggerDistance = 1,
 			float verticalTriggerDistance = 0,
 			float smoothMoveSpeed = 4,
@@ -134,7 +134,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -163,7 +163,7 @@ Level =
 		string Name = "523438c6167e65ca:End",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -181,7 +181,7 @@ Level =
 		string Name = "52da04e9fee8902d:Player",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 4,
 		},
 		Transform = 
 		{

@@ -68,6 +68,11 @@ ResourceTable =
 			string Value = "52ec590f4aec2093:sixteentwenty",
 			float Weight = 1,
 		},
+		{
+			string Name = "Name14",
+			string Value = "52c3b3abf8353087:InfiniteGrap",
+			float Weight = 1,
+		},
 	],
 	float MaxWeight = 1,
 },
