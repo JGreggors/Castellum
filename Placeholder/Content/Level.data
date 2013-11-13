@@ -69,7 +69,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-16.99, -1.35, 50],
+			Vec3 Translation = [-14.77, 3.75, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
@@ -89,7 +89,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-16.99, -1.35, -7.42657e-007],
+			Vec3 LookTarget = [-14.77, 3.75, -6.45618e-007],
 		},
 		EditorRenderer = 
 		{
@@ -295,6 +295,7 @@ Level =
 			float PaceSpeed = 1,
 			int Stun = 5,
 			float ReturnSpeed = 10,
+			float stunDelay = 1,
 		},
 	},
 	Cog = 
@@ -351,6 +352,7 @@ Level =
 			float ChaseSpeed = 8,
 			int Stun = 5,
 			float MaxPaceDistance = 5,
+			float stunDelay = 1,
 		},
 		BoxCollider = 
 		{
@@ -517,6 +519,7 @@ Level =
 			float ChaseSpeed = 8,
 			int Stun = 5,
 			float MaxPaceDistance = 5,
+			float stunDelay = 1,
 		},
 		BoxCollider = 
 		{

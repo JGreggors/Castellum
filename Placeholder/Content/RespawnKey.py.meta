@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "RespawnKey",
+		uint64 ResourceId = 52ee2dc973291b03,
+	},
+},

@@ -10,7 +10,6 @@ class DoorLogic:
     def Initialize(self, initializer):
         Zero.Connect(self.Owner, Events.CollisionPersisted, self.OnCollisionPersisted)
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
-        Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
         self.gate1 = self.Space.FindObjectByName("Gate1")
         self.gate2 = self.Space.FindObjectByName("Gate2")
         self.startGate1 = self.gate1.Transform.Translation
@@ -32,7 +31,7 @@ class DoorLogic:
             self.gate2.Transform.Translation = self.startGate2 + VectorMath.Vec3(0, -self.yAxis, 0)
             self.gate1.Transform.Translation = self.startGate1 + VectorMath.Vec3(0, self.yAxis, 0)
 
-            if(self.yAxis > 0.5):
+            if(self.yAxis > 0.8):
                 #print("blamo")
                 self.yAxis += 0
                 self.startGate1 = self.gate1.Transform.Translation
@@ -44,7 +43,6 @@ class DoorLogic:
         keyAttached = self.Space.FindObjectByName("Player").MasterPlayerContr.keyAttached
         if(CollisionEvent.OtherObject.Name == "Player" and keyAttached == True):
             self.Space.SoundSpace.PlayCue("opengate")
-      
             
 
 Zero.RegisterComponent("DoorLogic", DoorLogic)

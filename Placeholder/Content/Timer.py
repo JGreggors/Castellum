@@ -13,8 +13,8 @@ class Timer:
         self.totalTime = 0.0
         
         #for the clock
-        self.secondsPassed = self.par - (60.0 * round(self.par / 60))
-        self.carry = round(self.par / 60)
+        self.secondsPassed = self.par - (60.0 * (round(self.par / 60) - 1))
+        self.carry = (round(self.par / 60) - 1)
         
         self.starttime = self.secondsPassed
         self.startcarry = self.carry
@@ -25,7 +25,7 @@ class Timer:
         #print(self.carry)
         self.secondsPassed -= UpdateEvent.Dt
         self.totalTime += UpdateEvent.Dt
-        
+        #print(round(self.par / 60 ) - 1)
 
             
         #find the hud

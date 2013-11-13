@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-22.9109, -0.218468, -0.000999692],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +24,7 @@ Cog =
 		TextPositionMode Position = Centered,
 		string FontName = "52d8b2af097ae33e:anklepants",
 		uint FontSize = 35,
-		Vec4 Color = [0.98, 1, 0, 1],
+		Vec4 Color = [0, 1, 0.0700002, 1],
 		bool Visible = true,
 		string Text = "5",
 		bool OnTop = true,
@@ -46,7 +46,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = false,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 4, 0],
