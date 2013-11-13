@@ -42,6 +42,12 @@ class BatEnemy:
         
         self.alerted = False
         self.nextPing = 0.0
+        
+        self.five = False
+        self.four = False
+        self.three = False
+        self.two = False
+        self.one = False
        #-----------------------------------------------------------------------------
         
         Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
@@ -57,8 +63,9 @@ class BatEnemy:
             self.StunTimer = 0
                     
         if(self.StunState):
+            self.StunLogic()
             #print("Stun")
-            self.Owner.Sprite.Color = Color.Yellow
+            self.Owner.Sprite.Color = Color.Green
             #For Grapple
             self.Owner.Name = ("Floor")
             self.alerted = False
@@ -77,6 +84,7 @@ class BatEnemy:
                 self.HomeQ = False
                 self.ChaseTarget(UpdateEvent)
             else:
+                self.alerted = False
                 if(self.HomeQ == False):
                     if(self.UpQ == False):
                         self.GoUp(UpdateEvent)
@@ -149,6 +157,28 @@ class BatEnemy:
         self.DistanceFromTarget = self.ChaseDirection.length()
         #Only want unit length direction 
         self.ChaseDirection.normalize()
+        
+    def StunLogic(self):
+        self.five = True
+        self.four = True
+        self.three = True
+        self.two = True
+        self.one = True
+        if(self.StunTimer > 4.95 and self.StunTimer < 5):
+            self.Space.CreateAtPosition("five", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.five = False
+        elif(self.StunTimer > 3.95 and self.StunTimer < 4):
+            self.Space.CreateAtPosition("four", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.four = False
+        elif(self.StunTimer > 2.95 and self.StunTimer < 3):
+            self.Space.CreateAtPosition("three", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.three = False
+        elif(self.StunTimer > 1.95 and self.StunTimer < 2):
+            self.Space.CreateAtPosition("two", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.two = False
+        elif(self.StunTimer > 0.95 and self.StunTimer < 1):
+            self.Space.CreateAtPosition("one", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.one = False
         
     def OnCollisionStart(self, CollisionEvent):
         #print("Sup Bitch")

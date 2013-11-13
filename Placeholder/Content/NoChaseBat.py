@@ -8,7 +8,6 @@ Vec3 = VectorMath.Vec3
 
 class NoChaseBat:
     
-    #Pacing Properties 
     PaceSpeed = Property.Float(5.0)
     MaxMoveDistance = Property.Float(5.0)
     Stun = Property.Int(5)
@@ -27,9 +26,15 @@ class NoChaseBat:
         self.OriginalColor = self.Owner.Sprite.Color
         self.StunTimer = 0.0
         
-        Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
-        
         self.nextPing = 0.0
+        
+        self.five = False
+        self.four = False
+        self.three = False
+        self.two = False
+        self.one = False
+        
+        Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
         
     def OnLogicUpdate(self, UpdateEvent):
         #print(self.ChaseDirection)
@@ -41,7 +46,7 @@ class NoChaseBat:
             self.StunTimer = 0
             
         if(self.StunState == False):
-            
+            self.Owner.Sprite.Color = self.OriginalColor
             targetIsWithinRange = False
             self.Owner.Name = ("Bat")
             
@@ -49,11 +54,12 @@ class NoChaseBat:
             self.PaceBackAndForth(UpdateEvent)
             
         if(self.StunState == True):
+            self.StunLogic()
             #print("Stun")
-            self.Owner.Sprite.Color = Color.Yellow
+            self.Owner.Sprite.Color = Color.Green
             #For Grapple
             self.Owner.Name = ("Floor")
-            
+        
         if(UpdateEvent.CurrentTime > self.nextPing):
             self.nextPing = UpdateEvent.CurrentTime + self.stunDelay
             if(self.StunState == True):
@@ -76,6 +82,28 @@ class NoChaseBat:
         
         #Apply movement 
         self.Owner.Transform.Translation += self.MoveDirection * UpdateEvent.Dt * self.PaceSpeed
+        
+    def StunLogic(self):
+        self.five = True
+        self.four = True
+        self.three = True
+        self.two = True
+        self.one = True
+        if(self.StunTimer > 4.95 and self.StunTimer < 5):
+            self.Space.CreateAtPosition("five", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.five = False
+        elif(self.StunTimer > 3.95 and self.StunTimer < 4):
+            self.Space.CreateAtPosition("four", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.four = False
+        elif(self.StunTimer > 2.95 and self.StunTimer < 3):
+            self.Space.CreateAtPosition("three", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.three = False
+        elif(self.StunTimer > 1.95 and self.StunTimer < 2):
+            self.Space.CreateAtPosition("two", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.two = False
+        elif(self.StunTimer > 0.95 and self.StunTimer < 1):
+            self.Space.CreateAtPosition("one", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
+            self.one = False
         
     def OnCollisionStart(self, CollisionEvent):
         

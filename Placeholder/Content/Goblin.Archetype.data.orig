@@ -1,0 +1,73 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Goblin",
+	},
+	Archetyped = 
+	{
+		string Name = "5232806d7efa6202:Goblin",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		string SpriteSource = "5234c7075269450a:skull",
+		bool FlipX = false,
+		bool FlipY = false,
+		Vec4 Color = [1, 1, 1, 1],
+		bool Visible = true,
+		bool OnTop = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = true,
+		bool Mode2D = false,
+		bool AllowSleep = false,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	GoblinEnemy = 
+	{
+		float PaceSpeed = 2,
+		float MaxMoveDistance = 5,
+		float ChaseTriggerDistance = 10,
+		float ChaseSpeed = 4,
+		int Stun = 5,
+<<<<<<< HEAD
+		float MaxPaceDistance = 4,
+=======
+		float MaxPaceDistance = 3,
+>>>>>>> d717faa6b62a65b82b5adf9602824538d819473e
+		float stunDelay = 1,
+	},
+	CapsuleCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = false,
+		string MaterialName = "52432738e74fe25a:slippery",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		float Radius = 0.5,
+		float Height = 0.0001,
+		uint Direction = 1,
+	},
+},

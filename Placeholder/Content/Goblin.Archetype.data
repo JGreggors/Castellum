@@ -47,21 +47,23 @@ Cog =
 	GoblinEnemy = 
 	{
 		float PaceSpeed = 2,
-		float MaxMoveDistance = 3,
+		float MaxMoveDistance = 5,
 		float ChaseTriggerDistance = 10,
 		float ChaseSpeed = 4,
 		int Stun = 5,
-		float MaxPaceDistance = 4,
+		float MaxPaceDistance = 3,
 		float stunDelay = 1,
 	},
-	BoxCollider = 
+	CapsuleCollider = 
 	{
 		bool Ghost = false,
 		bool SendsMessages = true,
 		bool Seamless = false,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string MaterialName = "52432738e74fe25a:slippery",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
+		float Radius = 0.5,
+		float Height = 0.0001,
+		uint Direction = 1,
 	},
 },
