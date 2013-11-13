@@ -38,7 +38,8 @@ class Timer:
             
         carryObject = hudSpace.FindObjectByName("Carry")
         
-        timeObject.SpriteText.Text = str(round(self.secondsPassed, 1))
+        if(timeObject):
+            timeObject.SpriteText.Text = str(round(self.secondsPassed, 1))
        #----------------------------------------------------------------------------
         
         #When there is no carry

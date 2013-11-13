@@ -8,7 +8,7 @@ class StartScreenLogic:
         Zero.Connect(self.Space, Events.LogicUpdate, self.onLogicUpdate)
         self.slideNum = 1
         self.swap = False
-        self.lastSlide = 6
+        self.lastSlide = 5
         
         
     def onLogicUpdate(self, UpdateEvent):

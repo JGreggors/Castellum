@@ -187,7 +187,8 @@ class MasterPlayerContr:
             goldObject = hudSpace.FindObjectByName("GCounter")
         
         #Gold counter
-            goldObject.SpriteText.Text = str(self.gold)
+            if(goldObject):
+                goldObject.SpriteText.Text = str(self.gold)
 
 #----------------------------------------------------------
 #Grappling Hook Related:

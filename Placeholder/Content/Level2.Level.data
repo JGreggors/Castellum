@@ -121,6 +121,15 @@ Level =
 		CameraLogic = 
 		{
 		},
+		SoundEmitter = 
+		{
+			bool StartPlaying = true,
+			int ExtraPriority = 0,
+			string CueName = "52c750016cfb1ca8:Background",
+			float Volume = 1,
+			float Pitch = 1,
+			bool Positional = false,
+		},
 	},
 	Cog = 
 	{

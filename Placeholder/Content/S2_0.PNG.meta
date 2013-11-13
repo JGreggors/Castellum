@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Slide5",
-		uint64 ResourceId = 52c742b33aabcc2d,
+		string Name = "S2_0",
+		uint64 ResourceId = 5234cf6300bd44a7,
 		uint64 AtlasId = 0000000000000000,
 		uint FrameSizeX = 0,
 		uint FrameSizeY = 0,
@@ -15,5 +15,6 @@ ImageContent =
 		bool Smoothing = true,
 		bool Looping = true,
 		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
 	},
 },

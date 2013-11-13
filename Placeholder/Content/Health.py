@@ -113,7 +113,8 @@ class Health:
             deathObject = hudSpace.FindObjectByName("DCounter")
         
         #Death Counter
-            deathObject.SpriteText.Text = str(self.totalDeath)
+            if(deathObject):
+                deathObject.SpriteText.Text = str(self.totalDeath)
                 
                 
     def OnCollisionStart(self, CollisionEvent):

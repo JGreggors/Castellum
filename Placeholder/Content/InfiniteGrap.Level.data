@@ -47,6 +47,20 @@ Level =
 		GlobalTime = 
 		{
 		},
+		Cheats = 
+		{
+		},
+		HUDCreator = 
+		{
+			string LevelForHUD = "52a7044c7cf6ef4b:HUDLevel",
+		},
+		Timer = 
+		{
+			float par = 45,
+		},
+		ScoreOn = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -60,9 +74,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-40.9302, -5.98751, 50],
+			Vec3 Translation = [4.95979, 0.21749, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -3.8147e-008, -0, 1],
+			Quat Rotation = [0, -2.38419e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -72,7 +86,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 2,
+			float Size = 8,
 		},
 		EditorCameraController = 
 		{
@@ -80,7 +94,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-40.9302, -5.98751, -1.7891e-006],
+			Vec3 LookTarget = [4.9598, 0.21749, 2.16811e-007],
 		},
 		EditorRenderer = 
 		{
@@ -785,7 +799,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.24505, -0.497347, 0],
+			Vec3 Translation = [6.24816, -0.85513, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0.71017, 0.70403],
 		},
@@ -1125,6 +1139,292 @@ Level =
 		Fireball = 
 		{
 			float Dropdistance = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Named = 
+		{
+			string Name = "SwitchGateAOE",
+		},
+		Archetyped = 
+		{
+			string Name = "52aec4187257faf1:SwitchGateAOE",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [53.2779, 0.528367, 3.8147e-006],
+			Vec3 Scale = [1.25, 1.25, 41.6881],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 0, 0, 0.505],
+			bool Visible = false,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = false,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		LeverLogic = 
+		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 28,
+				},
+				Named = 
+				{
+					string Name = "SwitchGate1",
+				},
+				Archetyped = 
+				{
+					string Name = "52aec407497cd9b9:SwitchGate1",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.38958, -1.66957, -2.4869e-014],
+					Vec3 Scale = [1.6, 2.4, 0.0239877],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					string SpriteSource = "52d8aa05647f864c:gatetemp2",
+					bool FlipX = false,
+					bool FlipY = false,
+					Vec4 Color = [1, 1, 1, 1],
+					bool Visible = true,
+					bool OnTop = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = false,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 29,
+				},
+				Named = 
+				{
+					string Name = "SwitchGate2",
+				},
+				Archetyped = 
+				{
+					string Name = "52aec4144c7b0e14:SwitchGate2",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.3896, -4.07877, -3.55271e-015],
+					Vec3 Scale = [1.6, 2.4, 0.0239877],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					string SpriteSource = "52d8aa05647f864c:gatetemp2",
+					bool FlipX = false,
+					bool FlipY = false,
+					Vec4 Color = [1, 1, 1, 1],
+					bool Visible = true,
+					bool OnTop = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = false,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 30,
+				},
+				Named = 
+				{
+					string Name = "Lever",
+				},
+				Archetyped = 
+				{
+					string Name = "52aec4d879fd04b0:Lever",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.00347853, 0.000144482, 0],
+					Vec3 Scale = [0.8, 0.8, 0.0239877],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					string SpriteSource = "52ec921404703861:lever1",
+					bool FlipX = false,
+					bool FlipY = false,
+					Vec4 Color = [1, 1, 1, 1],
+					bool Visible = true,
+					bool OnTop = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "523438c6167e65ca:End",
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [67.6239, -5.2113, 2.72848e-012],
+			Vec3 Scale = [0.53553, 0.53553, 1.33883],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "End",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 32,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [63.6579, -6.5, -0.1],
+			Vec3 Scale = [19.1106, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
 },

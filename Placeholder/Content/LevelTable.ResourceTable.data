@@ -5,7 +5,7 @@ ResourceTable =
 	[
 		{
 			string Name = "MainMenu",
-			string Value = "52c91d1eafeb949d:MainMenu",
+			string Value = "52d8bb94dc227e33:StartScreen",
 			float Weight = 1,
 		},
 		{
@@ -71,6 +71,16 @@ ResourceTable =
 		{
 			string Name = "Name14",
 			string Value = "52c3b3abf8353087:InfiniteGrap",
+			float Weight = 1,
+		},
+		{
+			string Name = "Name15",
+			string Value = "520a5af2e8608a85:EndLevel",
+			float Weight = 1,
+		},
+		{
+			string Name = "Name16",
+			string Value = "52c91d1eafeb949d:MainMenu",
 			float Weight = 1,
 		},
 	],

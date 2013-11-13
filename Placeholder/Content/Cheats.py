@@ -16,7 +16,8 @@ class Cheats:
                 player.Transform.Translation = Vec3(72, 33, 0)
             elif(self.Space.CurrentLevel.Name == "Level4"):
                 player.Transform.Translation = Vec3(112, -1, 0)
-                
+            elif(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+                player.Transform.Translation = Vec3(63.5, -5, 0)
             
         
         

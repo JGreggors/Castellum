@@ -14,13 +14,13 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [5.88237, -1.3418, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5234c7075269450a:skull",
 		bool FlipX = false,
 		bool FlipY = false,
 		Vec4 Color = [1, 1, 1, 1],
@@ -38,7 +38,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = false,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -52,6 +52,7 @@ Cog =
 		float ChaseSpeed = 4,
 		int Stun = 5,
 		float MaxPaceDistance = 4,
+		float stunDelay = 1,
 	},
 	BoxCollider = 
 	{

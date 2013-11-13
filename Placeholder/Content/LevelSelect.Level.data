@@ -110,6 +110,15 @@ Level =
 			float FarPlane = 200,
 			float Size = 20,
 		},
+		SoundEmitter = 
+		{
+			bool StartPlaying = true,
+			int ExtraPriority = 0,
+			string CueName = "52c750016cfb1ca8:Background",
+			float Volume = 1,
+			float Pitch = 1,
+			bool Positional = true,
+		},
 	},
 	Cog = 
 	{
@@ -368,7 +377,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [1, 1, 0, 0.25],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 0,
+			uint LevelNumber = 14,
 		},
 		BoxCollider = 
 		{
