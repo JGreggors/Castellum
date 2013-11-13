@@ -42,6 +42,12 @@ Level =
 		ScoreOff = 
 		{
 		},
+		GlobalTime = 
+		{
+		},
+		Cheats = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -55,9 +61,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-18.0224, 0.223695, 49.999],
+			Vec3 Translation = [75.2651, 32.0537, 49.999],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -1.90735e-008, -0, 1],
+			Quat Rotation = [0, -0, -0, 1],
 		},
 		Camera = 
 		{
@@ -67,7 +73,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36,
+			float Size = 13,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +81,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-18.0224, 0.223695, -0.00100078],
+			Vec3 LookTarget = [75.2651, 32.0537, -0.000996706],
 		},
 		EditorRenderer = 
 		{
@@ -108,22 +114,15 @@ Level =
 			float FarPlane = 200,
 			float Size = 10,
 		},
-		smartcamera = 
+		CameraLogic = 
 		{
-			uint targetObject = 4,
-			float horizontalTriggerDistance = 1,
-			float verticalTriggerDistance = 0,
-			float smoothMoveSpeed = 4,
-			bool smoothMovement = true,
-			bool oveCamera = true,
-			bool fixedCamera = false,
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -152,7 +151,7 @@ Level =
 		string Name = "523438c6167e65ca:End",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Transform = 
 		{
@@ -170,7 +169,7 @@ Level =
 		string Name = "52da04e9fee8902d:Player",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 6,
 		},
 		Transform = 
 		{

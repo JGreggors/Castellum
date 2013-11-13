@@ -15,16 +15,30 @@ class GlobalTime:
         Zero.Connect(Zero.Keyboard, Events.KeyDown, self.OnKeyDown)
         self.Pause = False
     def OnKeyDown(self, keyboardEvent):
-        vec = Vec3(self.Space.FindObjectByName("Player").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 6), 0)
+        vec = Vec3(self.Space.FindObjectByName("Player").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 5), 0)
+        vec2 = Vec3(self.Space.FindObjectByName("Player").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 4), 0)
+        vec3 = Vec3(self.Space.FindObjectByName("Player").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 3), 0)
         #If tab is pressed then toggle pausing the game
         if(keyboardEvent.Key == Keys.P and self.Pause == False):
             self.Space.CreateAtPosition("Pause", vec)
+            self.Space.CreateAtPosition("QuitLevel", vec3)
+            self.Space.CreateAtPosition("PauseBG", vec2)
             self.Pause = True
             self.Space.TimeSpace.TogglePause()
         elif(keyboardEvent.Key == Keys.P and self.Pause == True):
             self.Space.FindObjectByName("Pause").Destroy()
+            self.Space.FindObjectByName("PauseBG").Destroy()
+            self.Space.FindObjectByName("QuitLevel").Destroy()
             self.Pause = False
             self.Space.TimeSpace.TogglePause()
+        if(keyboardEvent.Key == Keys.Back):
+            self.Pause = False
+            self.Space.TimeSpace.TogglePause()
+            self.Space.LoadLevel("MainMenu")
+            
+
+            
+         
             
             
             
