@@ -34,7 +34,7 @@ class StartScreenLogic:
         if(self.slideNum == self.lastSlide + 1):
             self.fadeOut()
             if(self.prevSlide.Sprite.Color.w == 0):
-                self.Space.LoadLevel("SampleLevel")
+                self.Space.LoadLevel("MainMenu")
         else:
             if(self.prevSlide.Sprite.Color.w > 0):
                 self.fadeOut()

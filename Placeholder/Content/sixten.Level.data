@@ -52,9 +52,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.154398, 0.12198, 50],
+			Vec3 Translation = [-2.8331, -4.03302, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.19047e-008, -0, 1],
+			Quat Rotation = [0, -2.14577e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -64,7 +64,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27,
+			float Size = 4,
 		},
 		EditorCameraController = 
 		{
@@ -72,7 +72,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.1544, 0.12198, 2.95053e-008],
+			Vec3 LookTarget = [-2.8331, -4.03302, -1.01082e-007],
 		},
 		EditorRenderer = 
 		{
@@ -149,6 +149,16 @@ Level =
 			Vec4 HoverColor = [1, 1, 0, 0.25],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 13,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [2.5, 0.5, 0.5],
 		},
 	},
 	Cog = 
