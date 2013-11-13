@@ -14,19 +14,19 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-49.9876, -5.67738, -5],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "529e85721da02d8e:knight",
 		bool FlipX = false,
 		bool FlipY = false,
 		Vec4 Color = [0, 0, 0, 0.9999],
 		bool Visible = true,
 		bool OnTop = false,
-		bool AnimationActive = true,
+		bool AnimationActive = false,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 		BlendMode BlendMode = Alpha,
@@ -38,7 +38,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],

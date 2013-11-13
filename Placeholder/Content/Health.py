@@ -75,6 +75,7 @@ class Health:
             self.Owner.Transform.Translation = self.StartPlace
             self.Health = self.MaxHealth
             self.PlayerSpawned = True
+            self.Owner.MasterPlayerContr.StopGrapple()
         #if you aren't dead you're fine
         elif(self.PlayerSpawned == True):
                 pass
