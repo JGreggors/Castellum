@@ -52,9 +52,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [17.0294, -4.06302, 50],
+			Vec3 Translation = [0.154398, 0.12198, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -1.90735e-008, -0, 1],
+			Quat Rotation = [0, -2.19047e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -72,7 +72,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [17.0294, -4.06302, 7.67135e-007],
+			Vec3 LookTarget = [0.1544, 0.12198, 2.95053e-008],
 		},
 		EditorRenderer = 
 		{
@@ -91,7 +91,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 40],
+			Vec3 Translation = [0, -5, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -118,8 +118,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.5, 4.5, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-4, -4, 0],
+			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -163,8 +163,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 8, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [0, -1, 0],
+			Vec3 Scale = [0.671, 0.671, 0.671],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -196,8 +196,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.5, 2, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-4, -6, 0],
+			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -241,8 +241,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.5, -0.5, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-4, -8, 0],
+			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -286,8 +286,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.5, -3, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [3.5, -4, 0],
+			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -331,8 +331,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.5, -8.5, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [3.5, -8, 0],
+			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -376,8 +376,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.5, -5.5, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [3.5, -6, 0],
+			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -409,12 +409,19 @@ Level =
 			uint LevelNumber = 0,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "52d0d7f7cec0a5e2:Target",
 		LinkId = 
 		{
 			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "Target",
+		},
+		Archetyped = 
+		{
+			string Name = "52d0d7f7cec0a5e2:Target",
 		},
 		Transform = 
 		{
@@ -422,9 +429,87 @@ Level =
 			Vec3 Scale = [1, 1, 3],
 			Quat Rotation = [0, 0, 0, 1],
 		},
+		Sprite = 
+		{
+			string SpriteSource = "52da19bdf4098b1f:Target",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [0.049, 0.7, 0.0923999, 1],
+			bool Visible = true,
+			bool OnTop = true,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+		MouseTargetCont = 
+		{
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
 		Named = 
 		{
-			string Name = "Target",
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.1, -4.95368, 1.31134e-008],
+			Vec3 Scale = [10.2328, 10.2328, 10.2328],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5234f1e8385e67cb:menu",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.4175, -4.9725, -5],
+			Vec3 Scale = [80.8719, 80.8719, 80.8719],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [0, 0, 0, 0.9999],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
 		},
 	},
 },

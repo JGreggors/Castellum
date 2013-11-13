@@ -5,7 +5,7 @@ ResourceTable =
 	[
 		{
 			string Name = "MainMenu",
-			string Value = "52c3b3abf8353087:InfiniteGrap",
+			string Value = "52c91d1eafeb949d:MainMenu",
 			float Weight = 1,
 		},
 		{

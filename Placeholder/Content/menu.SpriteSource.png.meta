@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Hook",
-		uint64 ResourceId = 5234ecfef32b76e3,
+		string Name = "menu",
+		uint64 ResourceId = 5234f1e8385e67cb,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 32,
-		uint FrameSizeY = 32,
+		uint FrameSizeX = 200,
+		uint FrameSizeY = 100,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
-		float OriginX = 16,
-		float OriginY = 16,
+		float OriginX = 100,
+		float OriginY = 50,
 		float PixelsPerUnit = 64,
 		bool Smoothing = false,
 		bool Looping = true,

@@ -61,9 +61,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [75.2651, 32.0537, 49.999],
+			Vec3 Translation = [-24.3524, -1.48631, 49.999],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -0, -0, 1],
+			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -73,7 +73,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13,
+			float Size = 2,
 		},
 		EditorCameraController = 
 		{
@@ -81,7 +81,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [75.2651, 32.0537, -0.000996706],
+			Vec3 LookTarget = [-24.3524, -1.48631, -0.00100106],
 		},
 		EditorRenderer = 
 		{
@@ -164,12 +164,19 @@ Level =
 			string Name = "End",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "52da04e9fee8902d:Player",
 		LinkId = 
 		{
 			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+		Archetyped = 
+		{
+			string Name = "52da04e9fee8902d:Player",
 		},
 		Transform = 
 		{
@@ -177,16 +184,85 @@ Level =
 			Vec3 Scale = [1.2, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Player",
+			string SpriteSource = "5234e77c377cd0ef:player",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		MasterPlayerContr = 
+		{
+			float oveSpeed = 6.5,
+			float jumpHeight = 3,
+			float ShootSpeed = 30,
+			float Overheat = 150,
+			int CooldownSpeed = 50,
+		},
+		Health = 
+		{
+			float MaxHealth = 150,
+			int RegenCounter = 3,
+			float pingDelay = 1,
+		},
+		CapsuleCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [-0.08, -0.01, 0],
+			float Radius = 0.45,
+			float Height = 0.0001,
+			uint Direction = 1,
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5234ef29d5809c2a:arm",
+				LinkId = 
+				{
+					uint Id = 7,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.0234852, 0.0528066, 1],
+					Vec3 Scale = [0.625, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "arm",
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -250,7 +326,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -307,7 +383,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -364,7 +440,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 10,
+					uint Id = 11,
 				},
 				Named = 
 				{
@@ -405,7 +481,7 @@ Level =
 		string Name = "5232806d7efa6202:Goblin",
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 12,
 		},
 		Transform = 
 		{
@@ -422,7 +498,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -488,7 +564,7 @@ Level =
 		string Name = "520e054dd50e9c02:Key",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -505,7 +581,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -572,7 +648,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -633,7 +709,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 17,
 				},
 				Named = 
 				{
@@ -690,7 +766,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 17,
+					uint Id = 18,
 				},
 				Named = 
 				{
@@ -750,7 +826,7 @@ Level =
 		string Name = "52d0d7f7cec0a5e2:Target",
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 19,
 		},
 		Transform = 
 		{

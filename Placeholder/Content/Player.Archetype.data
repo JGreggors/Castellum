@@ -14,13 +14,13 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-14.9749, -2.33098, 0],
-		Vec3 Scale = [1.2, 1.5, 1],
+		Vec3 Translation = [-41, -6.01595, 0],
+		Vec3 Scale = [1.90418, 1.90418, 1.90418],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "529e85721da02d8e:knight",
+		string SpriteSource = "5234e77c377cd0ef:player",
 		bool FlipX = false,
 		bool FlipY = false,
 		Vec4 Color = [1, 1, 1, 1],
@@ -56,6 +56,7 @@ Cog =
 	{
 		float MaxHealth = 150,
 		int RegenCounter = 3,
+		float pingDelay = 1,
 	},
 	CapsuleCollider = 
 	{

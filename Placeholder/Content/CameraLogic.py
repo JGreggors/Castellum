@@ -31,8 +31,8 @@ class CameraLogic:
             elif(self.Space.CurrentLevel.Name != "Level2"):
                 newTranslation = VectorMath.Vec3(targetTranslation.x, targetTranslation.y + 3.4, currentTranslation.z)
             self.Owner.Transform.Translation = newTranslation
-        #if(Zero.Keyboard.KeyIsPressed(Zero.Keys.M)):
-        #    self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
+        if(Zero.Keyboard.KeyIsPressed(Zero.Keys.M)):
+            self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
         
     def onMouseUpdate(self, MouseEvent):
         if(MouseEvent.Scroll.y > 0 and not self.Owner.Camera.Size < 10):

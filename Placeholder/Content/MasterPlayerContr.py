@@ -16,6 +16,7 @@ class MasterPlayerContr:
     CooldownSpeed = Property.Int(50)
     
     def Initialize(self, initializer):
+        self.arm = self.Owner.FindChildByName("arm")
         #Creating LogicUpdate, CollisionStarted, Collision Persisted (JB)
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
         Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStarted)
@@ -105,9 +106,9 @@ class MasterPlayerContr:
             # Adds heat
             self.Heat += 50.0
             #Assigns Shoot
-            Shoot = self.Space.CreateAtPosition("Projectile", self.Owner.Transform.Translation)
+            Shoot = self.Space.CreateAtPosition("Projectile", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
             #Assigns Shoot direction
-            Shoot.Projectile.Direction = self.mousePosition - self.Owner.Transform.Translation
+            Shoot.Projectile.Direction = self.mousePosition - VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) 
             #Normalizes speed, sorry its really long. That's what he said.
             Shoot.Projectile.Direction = Vec3(Shoot.Projectile.Direction.x / Shoot.Projectile.Direction.length(), Shoot.Projectile.Direction.y / Shoot.Projectile.Direction.length(), 0) * self.ShootSpeed
 #----------------------------------------------------------
@@ -159,6 +160,8 @@ class MasterPlayerContr:
 #--------------------------------------------------------------------------------------------
 
     def OnLogicUpdate(self, UpdateEvent):
+        if(self.Space.CurrentLevel.Name == "MainMenu"):
+            self.StopGrapple()
         self.ApplyMovement()
         self.UpdateGroundState()
         self.ApplyJumping()
@@ -195,6 +198,7 @@ class MasterPlayerContr:
         self.MouseDirection = self.mousePosition - self.Owner.Transform.Translation
         self.PointDirection = math.atan2(self.MouseDirection.y, self.MouseDirection.x)
         self.MouseDirection.normalize()
+        self.arm.Transform.Rotation = VectorMath.Quat(0,0, self.PointDirection + math.radians(45))
         #Checks ground state for grapple counter
         if(self.OnGround):
             self.grappleCounter = 1
@@ -283,7 +287,7 @@ class MasterPlayerContr:
         ray.Direction.normalize()
         direction = math.atan2(direction.y, direction.x)
         #Setting starting point at player (can adjust if needed)
-        ray.Start = self.Owner.Transform.Translation
+        ray.Start = VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .25), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .25) + .15, 0) 
         #Increase grapple length if nothing has been hit
         if(self.grappleHit == 0):
             #Grapple speed (can be adjusted if needed)

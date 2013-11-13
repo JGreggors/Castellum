@@ -6,26 +6,26 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Hook",
+		string Name = "arm",
 	},
 	Archetyped = 
 	{
-		string Name = "52d0dea236f74d7a:Hook",
+		string Name = "5234ef29d5809c2a:arm",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [0.449411, 0.449411, 0.449411],
+		Vec3 Translation = [-0.00905188, 0.0699225, 1],
+		Vec3 Scale = [0.75, 0.75, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "5234ee8621ca3197:Hook",
+		string SpriteSource = "5234e40fd554dc11:arm",
 		bool FlipX = false,
 		bool FlipY = false,
 		Vec4 Color = [1, 1, 1, 1],
 		bool Visible = true,
-		bool OnTop = true,
+		bool OnTop = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,

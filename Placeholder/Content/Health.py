@@ -76,6 +76,7 @@ class Health:
             self.Health = self.MaxHealth
             self.PlayerSpawned = True
             self.Owner.MasterPlayerContr.StopGrapple()
+            self.Owner.RigidBody.Velocity = VectorMath.Vec3(0,0,0)
         #if you aren't dead you're fine
         elif(self.PlayerSpawned == True):
                 pass

@@ -63,7 +63,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10, 1.3725, 50],
+			Vec3 Translation = [-14.61, -2.365, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
@@ -75,7 +75,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12,
+			float Size = 2,
 		},
 		EditorCameraController = 
 		{
@@ -83,7 +83,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-10, 1.3725, -4.37113e-007],
+			Vec3 LookTarget = [-14.61, -2.365, -6.38623e-007],
 		},
 		EditorRenderer = 
 		{
@@ -163,12 +163,19 @@ Level =
 			bool CaptureMouse = false,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "52da04e9fee8902d:Player",
 		LinkId = 
 		{
 			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+		Archetyped = 
+		{
+			string Name = "52da04e9fee8902d:Player",
 		},
 		Transform = 
 		{
@@ -176,9 +183,78 @@ Level =
 			Vec3 Scale = [1.2, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Player",
+			string SpriteSource = "5234e77c377cd0ef:player",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		MasterPlayerContr = 
+		{
+			float oveSpeed = 6.5,
+			float jumpHeight = 3,
+			float ShootSpeed = 30,
+			float Overheat = 150,
+			int CooldownSpeed = 50,
+		},
+		Health = 
+		{
+			float MaxHealth = 150,
+			int RegenCounter = 3,
+			float pingDelay = 1,
+		},
+		CapsuleCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [-0.08, -0.01, 0],
+			float Radius = 0.45,
+			float Height = 0.0001,
+			uint Direction = 1,
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5234ef29d5809c2a:arm",
+				LinkId = 
+				{
+					uint Id = 6,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.0214062, 0.0744772, 1],
+					Vec3 Scale = [0.625, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "arm",
+				},
+			},
 		},
 	},
 	ArchetypeInstance = 
@@ -186,7 +262,7 @@ Level =
 		string Name = "523438c6167e65ca:End",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -203,7 +279,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -242,7 +318,7 @@ Level =
 				string Name = "5212c8534d5c066f:FadeIn",
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 9,
 				},
 				Transform = 
 				{
@@ -260,7 +336,7 @@ Level =
 				string Name = "5212c87f50e63da8:FadeOut",
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 10,
 				},
 				Transform = 
 				{
@@ -279,7 +355,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -318,7 +394,7 @@ Level =
 				string Name = "5212c8534d5c066f:FadeIn",
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 12,
 				},
 				Transform = 
 				{
@@ -336,7 +412,7 @@ Level =
 				string Name = "5212c87f50e63da8:FadeOut",
 				LinkId = 
 				{
-					uint Id = 12,
+					uint Id = 13,
 				},
 				Transform = 
 				{
@@ -356,7 +432,7 @@ Level =
 		string Name = "52d0d7f7cec0a5e2:Target",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -374,7 +450,7 @@ Level =
 		string Name = "5235009c1b6772b6:PauseBG",
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 15,
 		},
 		Transform = 
 		{

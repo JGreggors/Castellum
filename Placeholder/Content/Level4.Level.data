@@ -69,9 +69,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [112.26, -0.517491, 50],
+			Vec3 Translation = [-18.8525, -1.32249, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -0, -0, 1],
+			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -81,7 +81,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 15,
+			float Size = 2,
 		},
 		EditorCameraController = 
 		{
@@ -89,7 +89,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [112.26, -0.517491, 4.90703e-006],
+			Vec3 LookTarget = [-18.8525, -1.32249, -8.2408e-007],
 		},
 		EditorRenderer = 
 		{
@@ -846,6 +846,24 @@ Level =
 			int Stun = 5,
 			float ReturnSpeed = 5,
 			float stunDelay = 1,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5234ef29d5809c2a:arm",
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.7443, -1.00955, 1],
+			Vec3 Scale = [0.75, 0.75, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "arm",
 		},
 	},
 },
