@@ -74,9 +74,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.95979, 0.21749, 50],
+			Vec3 Translation = [-8.70019, -10.2375, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.38419e-008, -0, 1],
+			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -86,7 +86,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8,
+			float Size = 56,
 		},
 		EditorCameraController = 
 		{
@@ -94,7 +94,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.9598, 0.21749, 2.16811e-007],
+			Vec3 LookTarget = [-8.70019, -10.2375, -3.80287e-007],
 		},
 		EditorRenderer = 
 		{
@@ -132,7 +132,7 @@ Level =
 		},
 		SoundEmitter = 
 		{
-			bool StartPlaying = true,
+			bool StartPlaying = false,
 			int ExtraPriority = 0,
 			string CueName = "52c750016cfb1ca8:Background",
 			float Volume = 1,
@@ -558,7 +558,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -14.5, 0],
+			Vec3 Translation = [0, -42.0294, 0],
 			Vec3 Scale = [9397.32, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1425,6 +1425,119 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Named = 
+		{
+			string Name = "Pit",
+		},
+		Archetyped = 
+		{
+			string Name = "52c4be097e795f9c:Pit",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.54568, -14.1615, 0.1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Additive,
+			ParticleSortMode SortMode = None,
+			string Texture = "52c34acfb825f6de:FireCloud",
+			Vec4 Tint = [0.595, 0.246925, 0.246925, 1],
+			float VelocityScale = 1,
+			float LengthScale = 0,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [5, 5, 5],
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 5, 0],
+			Vec3 RandomForce = [0, 5, 0],
+			float Torque = 0,
+			float Growth = -0.5,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		BoxParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 600,
+			float EmitVariance = 0,
+			float Size = 2,
+			float SizeVariance = 2,
+			float Lifetime = 0.9,
+			float LifetimeVariance = 0,
+			float Spin = 0,
+			float SpinVariance = 0,
+			bool RandomSpin = false,
+			float Fill = 1,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 2, 0],
+			Vec3 RandomVelocity = [0, 1, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [100, 1, 1],
+			bool FastMovingEmitter = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [50, 1, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = false,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Named = 
+		{
+			string Name = "LevelGeometry",
+		},
+		Archetyped = 
+		{
+			string Name = "4de020863e84941e:Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		LevelGeometry = 
+		{
+			float LayerDepth = 1,
 		},
 	},
 },

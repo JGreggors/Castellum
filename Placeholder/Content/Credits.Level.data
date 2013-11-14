@@ -152,7 +152,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [1, 1, 0, 0.25],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 14,
+			uint LevelNumber = 15,
 		},
 		BoxCollider = 
 		{

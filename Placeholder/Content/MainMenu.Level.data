@@ -44,6 +44,9 @@ Level =
 			float Width = 16,
 			float Height = 9,
 		},
+		Cheats = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -69,7 +72,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 41,
+			float Size = 20,
 		},
 		EditorCameraController = 
 		{
@@ -163,7 +166,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.75318, -0.942941, 1.82495e-008],
+			Vec3 Translation = [-3.75318, -3.43706, 1.82495e-008],
 			Vec3 Scale = [2.44019, 2.44019, 2.44019],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -218,7 +221,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.50594, -6.80419, 1.82495e-008],
+			Vec3 Translation = [-4.50594, -8.07478, 1.82495e-008],
 			Vec3 Scale = [2.44019, 2.44019, 2.44019],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -273,7 +276,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.74996, -3.95731, 1.82495e-008],
+			Vec3 Translation = [-6.74996, -5.74554, 1.82495e-008],
 			Vec3 Scale = [2.44019, 2.44019, 2.44019],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -499,6 +502,39 @@ Level =
 			uint StartFrame = 0,
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.321421, -1.36137, -0.00299832],
+			Vec3 Scale = [2.41177, 2.41177, 2.41177],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 80,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Castellum",
+			bool OnTop = true,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 },

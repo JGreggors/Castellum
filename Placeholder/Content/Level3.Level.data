@@ -121,7 +121,7 @@ Level =
 		{
 			bool StartPlaying = true,
 			int ExtraPriority = 0,
-			string CueName = "4e1bd44008b4dc2a:DefaultCue",
+			string CueName = "52c750016cfb1ca8:Background",
 			float Volume = 1,
 			float Pitch = 1,
 			bool Positional = false,

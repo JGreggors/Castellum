@@ -199,7 +199,8 @@ class MasterPlayerContr:
         self.MouseDirection = self.mousePosition - self.Owner.Transform.Translation
         self.PointDirection = math.atan2(self.MouseDirection.y, self.MouseDirection.x)
         self.MouseDirection.normalize()
-        self.arm.Transform.Rotation = VectorMath.Quat(0,0, self.PointDirection + math.radians(45))
+        if(self.arm):
+            self.arm.Transform.Rotation = VectorMath.Quat(0,0, self.PointDirection + math.radians(45))
         #Checks ground state for grapple counter
         if(self.OnGround):
             self.grappleCounter = 1
@@ -354,7 +355,7 @@ class MasterPlayerContr:
                     self.grapplePoint = endPosition
                     self.Space.SoundSpace.PlayCue("hooked")
             #Prevents grapple from hitting player and the key
-            elif(castResult.ObjectHit.Name != "Player" and castResult.ObjectHit.Name != "Key" and castResult.ObjectHit.Name != "AOE" and castResult.ObjectHit.Name != "GateAOE" and castResult.ObjectHit.Name != "GWall"):
+            elif(castResult.ObjectHit.Name != "Player" and castResult.ObjectHit.Name != "Key" and castResult.ObjectHit.Name != "AOE" and castResult.ObjectHit.Name != "GateAOE" and castResult.ObjectHit.Name != "GWall" and castResult.ObjectHit.Name != "Gold" and castResult.ObjectHit.Name != "Checkpoint"):
                 if(castResult.Distance < self.grappleDistance):
                     self.StopGrapple()
             else:

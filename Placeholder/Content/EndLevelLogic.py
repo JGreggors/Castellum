@@ -27,6 +27,10 @@ class EndLevelLogic:
         #If Space is pressed Add up score
         if(Zero.Keyboard.KeyIsPressed(Keys.Space)):
             self.getStats = True
+        if(Zero.Keyboard.KeyIsPressed(Keys.N)):
+            self.Space.LoadLevel("MainMenu")
+        if(Zero.Keyboard.KeyIsPressed(Keys.B)):
+            self.Space.LoadLevel("EndSlide")
 
             
        #--------------------------------------------------------

@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "QuitLevel",
+		string Name = "QuitGame",
 	},
 	Archetyped = 
 	{
-		string Name = "5235023b5cf22a20:QuitLevel",
+		string Name = "5234040f6a5f8ccb:QuitGame",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-25.8775, 8.3325, -1.13114e-006],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -26,7 +26,7 @@ Cog =
 		uint FontSize = 40,
 		Vec4 Color = [1, 1, 1, 1],
 		bool Visible = true,
-		string Text = "Press Backspace to Exit to Main Menu",
+		string Text = "Hit Esc to Quit Game",
 		bool OnTop = true,
 		BlendMode BlendMode = Alpha,
 		Vec2 Size = [0, 0],

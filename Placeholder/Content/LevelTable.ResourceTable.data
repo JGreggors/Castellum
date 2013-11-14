@@ -30,7 +30,7 @@ ResourceTable =
 		},
 		{
 			string Name = "Tut/FirstReal",
-			string Value = "521582c7fdbec54c:Level5",
+			string Value = "520a5af2e8608a85:EndLevel",
 			float Weight = 1,
 		},
 		{
