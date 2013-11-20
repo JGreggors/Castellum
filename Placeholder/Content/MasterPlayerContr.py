@@ -62,8 +62,8 @@ class MasterPlayerContr:
         self.Shoot = 0.0
         self.spaceIsPressed = False
         self.ShiftIsPressed = False
-        self.RIsPressed = False
         self.EIsPressed = False
+        self.RIsPressed = False
 #----------------------------------------------------------
         self.Key = self.Space.FindObjectByName("Key")
 #--------------------------------------------------------------------------------------------
@@ -129,12 +129,13 @@ class MasterPlayerContr:
         if(KeyboardEvent.Key == Zero.Keys.Space):
             self.jumpIsPressed = True
         #Key Logic (JB)
-        if(KeyboardEvent.Key == Zero.Keys.R):
-            #if(self.keyAttached):
-                self.RIsPressed = True
-        if(KeyboardEvent.Key == Zero.Keys.E):
-            #if(self.keyAttached == False):
-                self.EIsPressed = True
+        if(KeyboardEvent.Key == Zero.Keys.E and self.keyAttached == True):
+            self.Space.SoundSpace.PlayCue("menuNo")
+            self.Key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1 * self.Owner.Transform.Scale.x, 0, 0)
+            self.Key.RigidBody.Static = False
+            self.keyAttached = False
+            self.Key.BoxCollider.Ghost = False
+            self.CanShoot = True
         if(KeyboardEvent.Key == Zero.Keys.Shift):
                 self.ShiftIsPressed = True
             
@@ -149,12 +150,12 @@ class MasterPlayerContr:
             self.jumpIsPressed = False
             self.StopGrapple()
         #Key Logic (JB)
-        if(KeyboardEvent.Key == Zero.Keys.R):
-            #if(self.keyAttached):
-                self.RIsPressed = False
-        if(KeyboardEvent.Key == Zero.Keys.E):
-            #if(self.keyAttached == False):
-                self.EIsPressed = False
+        #if(KeyboardEvent.Key == Zero.Keys.E and self.EIsPressed == True):
+        #    if(self.keyAttached):
+        #        self.EIsPressed = False
+        #if(KeyboardEvent.Key == Zero.Keys.E and self.EIsPressed == False):
+        #    if(self.keyAttached):
+        #        self.RIsPressed = False
         if(KeyboardEvent.Key == Zero.Keys.Shift):
                 self.ShiftIsPressed = False
 #--------------------------------------------------------------------------------------------
@@ -214,7 +215,7 @@ class MasterPlayerContr:
         # Debug
         #print(self.Heat)
         if(self.keyAttached == True):
-            self.CanShoot = False
+            self.CanShoot = True
         else:
             #If there is heat, start cooling down
             if(self.Heat > 0.0):
@@ -592,23 +593,24 @@ class MasterPlayerContr:
         otherObject = CollisionEvent.OtherObject
         key = self.Space.FindObjectByName("Key")
         if(not otherObject):
+            #Dan says this if funneh
             return
         
-        if(otherObject.Name == "AOE" and self.EIsPressed and self.keyAttached == False):
+        if(otherObject.Name == "AOE" and self.keyAttached == False and Zero.Keyboard.KeyIsPressed(Zero.Keys.E)):
             self.Space.SoundSpace.PlayCue("pickupkey")
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, .6  * self.Owner.Transform.Scale.y, 0)
             key.RigidBody.Static = True
             key.BoxCollider.Ghost = True
             self.keyAttached = True
-            #self.CanShoot = False
-
-        elif(self.keyAttached == True and self.RIsPressed):
-            self.Space.SoundSpace.PlayCue("menuNo")
-            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 0, 0)
-            key.RigidBody.Static = False
-            self.keyAttached = False
-            key.BoxCollider.Ghost = False
             self.CanShoot = True
+
+        #elif(self.keyAttached):
+        #    self.Space.SoundSpace.PlayCue("menuNo")
+        #    key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1 * self.Owner.Transform.Scale.x, 0, 0)
+        #    key.RigidBody.Static = False
+        #    self.keyAttached = True
+        #    key.BoxCollider.Ghost = False
+        #    self.CanShoot = True
 
 
         elif(otherObject.Name == "Gold"):
