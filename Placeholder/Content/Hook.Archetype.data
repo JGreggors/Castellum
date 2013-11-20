@@ -15,12 +15,12 @@ Cog =
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [0.449411, 0.449411, 0.449411],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "5234ee8621ca3197:Hook",
+		string SpriteSource = "5234ecfef32b76e3:Hook",
 		bool FlipX = false,
 		bool FlipY = false,
 		Vec4 Color = [1, 1, 1, 1],

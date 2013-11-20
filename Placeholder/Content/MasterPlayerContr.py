@@ -79,7 +79,7 @@ class MasterPlayerContr:
     def OnMouseDown(self, ViewportMouseEvent):
         #Sets if mouse is being held down
         self.MouseDown = True
-        if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
+        if(self.Space.CurrentLevel.Name == "InfiniteGrap" or self.Space.CurrentLevel.Name == "Tutorial1"):
             self.grappleCounter += 1
         #Checks Grapple counter to see if able to grapple
         if(self.grappleCounter > 0):
@@ -167,8 +167,9 @@ class MasterPlayerContr:
         self.ApplyJumping()
         self.Owner.Sprite.FlipX = self.playerDirection
         
+        
         if(self.keyAttached):
-            self.Key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0,1,0)
+            self.Key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0,.6 * self.Owner.Transform.Scale.y,0)
             
         if(self.ShiftIsPressed == True):
             if(not Zero.Game.FindSpaceByName("HUDSpace")):
@@ -238,7 +239,7 @@ class MasterPlayerContr:
             if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
                 self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
             else:
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
             if(ray.x < 0):
                 self.swingDown = False
         elif(self.swingRight and not self.swingDown):
@@ -246,7 +247,7 @@ class MasterPlayerContr:
             if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
                 self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
             else:
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
             if(self.Owner.Transform.Translation.y > self.rayY):
                 #print("STOP GRAPPLE")
                 self.StopGrapple()
@@ -257,7 +258,7 @@ class MasterPlayerContr:
             if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
                 self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
             else:
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
             if(ray.x > 0):
                 self.swingDown = False
         elif(not self.swingRight and not self.swingDown):
@@ -265,7 +266,7 @@ class MasterPlayerContr:
             if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
                 self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
             else:
-                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 12)
+                self.Owner.Transform.Translation += self.Pendulum * (self.DeltaTime * 14)
             if(self.Owner.Transform.Translation.y > self.rayY):
                 self.StopGrapple()
                 #print("STOP GRAPPLE")
@@ -281,15 +282,16 @@ class MasterPlayerContr:
         if(self.grappleHit == 0):
             direction = self.grappleDirection
         else:
-            direction = self.grapplePoint - self.Owner.Transform.Translation
+            direction = self.grapplePoint - VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .37*self.Owner.Transform.Scale.x), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .4*self.Owner.Transform.Scale.y) + .15, 0) 
 
         #Calculating vector for grapple
         direction.normalize()
         ray.Direction = direction
         ray.Direction.normalize()
         direction = math.atan2(direction.y, direction.x)
+        
         #Setting starting point at player (can adjust if needed)
-        ray.Start = VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .25), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .25) + .15, 0) 
+        ray.Start = VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .37*self.Owner.Transform.Scale.x), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .4*self.Owner.Transform.Scale.y) + .15, 0) 
         #Increase grapple length if nothing has been hit
         if(self.grappleHit == 0):
             #Grapple speed (can be adjusted if needed)
@@ -301,15 +303,18 @@ class MasterPlayerContr:
         else:
             self.grappleDistance = math.sqrt(math.pow((ray.Start.x - self.grapplePoint.x), 2) + math.pow((ray.Start.y - self.grapplePoint.y), 2))
             self.Owner.RigidBody.Kinematic = True
+            if(self.grappleDistance < 1):
+                self.StopGrapple()
+                
             
 #----------------------------------------------------------
 #Pendulum Related
             if(not self.Swing):
                 if(self.MouseDown == True):
                     if(self.Space.CurrentLevel.Name == "InfiniteGrap"):
-                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 14)
+                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 16)
                     else:
-                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 12)
+                        self.Owner.Transform.Translation += ray.Direction * (self.DeltaTime * 16)
                 else:
                     #self.Space.SoundSpace.PlayCue("swing")
                     self.rayY = self.Owner.Transform.Translation.y
@@ -385,7 +390,7 @@ class MasterPlayerContr:
             direction = Vec3(0.5, -0.5,0)
             direction = math.atan2(direction.y, direction.x)
             ray.Start = self.Owner.Transform.Translation
-            ray.Direction = Vec3(0.5, -0.5, 0)
+            ray.Direction = Vec3(0.5*self.Owner.Transform.Scale.x, -0.5*self.Owner.Transform.Scale.y, 0)
             ray.Direction.normalize()
             maxRayCastDistance = .75
             castResultRange = self.Space.PhysicsSpace.CastRayResults(ray, 1)
@@ -404,7 +409,7 @@ class MasterPlayerContr:
             direction = Vec3(0.5, 0.5,0)
             direction = math.atan2(direction.y, direction.x)
             ray2.Start = self.Owner.Transform.Translation
-            ray2.Direction = Vec3(0.5, 0.5, 0)
+            ray2.Direction = Vec3(0.5*self.Owner.Transform.Scale.x, 0.5*self.Owner.Transform.Scale.y, 0)
             ray2.Direction.normalize()
             maxRayCastDistance = .75 
             castResultRange = self.Space.PhysicsSpace.CastRayResults(ray2, 1)
@@ -422,7 +427,7 @@ class MasterPlayerContr:
             direction = Vec3(-0.5, 0.5,0)
             direction = math.atan2(direction.y, direction.x)
             ray3.Start = self.Owner.Transform.Translation
-            ray3.Direction = Vec3(-0.5, 0.5, 0)
+            ray3.Direction = Vec3(-0.5*self.Owner.Transform.Scale.x, 0.5*self.Owner.Transform.Scale.y, 0)
             ray3.Direction.normalize()
             maxRayCastDistance = .75
             castResultRange = self.Space.PhysicsSpace.CastRayResults(ray3, 1)
@@ -440,7 +445,7 @@ class MasterPlayerContr:
             direction = Vec3(-0.5, -0.5,0)
             direction = math.atan2(direction.y, direction.x)
             ray4.Start = self.Owner.Transform.Translation
-            ray4.Direction = Vec3(-0.5, -0.5, 0)
+            ray4.Direction = Vec3(-0.5*self.Owner.Transform.Scale.x, -0.5*self.Owner.Transform.Scale.y, 0)
             ray4.Direction.normalize()
             maxRayCastDistance = .75 
             castResultRange = self.Space.PhysicsSpace.CastRayResults(ray4, 1)
@@ -473,18 +478,23 @@ class MasterPlayerContr:
 #Applying Movement and Jumping 
     def ApplyMovement(self):
         moveDirection = Vec3(0,0,0)
+        currentArmTranslation = self.arm.Transform.Translation
         if(self.moveRight):
             if(self.OnGround):
                 moveDirection += Vec3(1,0,0)
             else:
                 moveDirection += Vec3(.5,0,0)
             self.playerDirection = False
+            self.arm.Transform.Translation = Vec3(-.03, currentArmTranslation.y, currentArmTranslation.z)
+            
         if(self.moveLeft):
             if(self.OnGround):
                 moveDirection += Vec3(-1,0,0)
             else:
                 moveDirection += Vec3(-.5,0,0)
             self.playerDirection = True
+            self.arm.Transform.Translation = Vec3(.03, currentArmTranslation.y, currentArmTranslation.z)
+            
 
         self.Owner.RigidBody.ApplyLinearVelocity(moveDirection * (self.moveSpeed/30))
         
@@ -560,16 +570,19 @@ class MasterPlayerContr:
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1, 0, 0)
             key.RigidBody.Static = False
             self.keyAttached = False
+            key.BoxCollider.Ghost = False
             self.CanShoot = True
         elif(self.keyAttached == True and otherObject.Name == "Goblin"):
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1, 0, 0)
             key.RigidBody.Static = False
             self.keyAttached = False
+            key.BoxCollider.Ghost = False
             self.CanShoot = True
         elif(self.keyAttached == True and otherObject.Name == "Pit"):
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 1, 0)
             key.RigidBody.Static = False
             self.keyAttached = False
+            key.BoxCollider.Ghost = False
             self.CanShoot = True
 #--------------------------------------------------------------------------------------------
 
@@ -583,8 +596,9 @@ class MasterPlayerContr:
         
         if(otherObject.Name == "AOE" and self.EIsPressed and self.keyAttached == False):
             self.Space.SoundSpace.PlayCue("pickupkey")
-            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 1, 0)
+            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, .6  * self.Owner.Transform.Scale.y, 0)
             key.RigidBody.Static = True
+            key.BoxCollider.Ghost = True
             self.keyAttached = True
             #self.CanShoot = False
 
@@ -593,6 +607,7 @@ class MasterPlayerContr:
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 0, 0)
             key.RigidBody.Static = False
             self.keyAttached = False
+            key.BoxCollider.Ghost = False
             self.CanShoot = True
 
 

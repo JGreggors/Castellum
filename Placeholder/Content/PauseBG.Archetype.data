@@ -14,16 +14,16 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-22.4296, 11.2099, -9.21325e-007],
-		Vec3 Scale = [17.2729, 5.98063, 6.74648],
+		Vec3 Translation = [-5.11289, 9.09669, 0],
+		Vec3 Scale = [5.77103, 4.64542, 5.24029],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5234f1e8385e67cb:menu",
 		bool FlipX = false,
 		bool FlipY = false,
-		Vec4 Color = [0.665, 0.056525, 0.056525, 0.9999],
+		Vec4 Color = [1, 1, 1, 0.9999],
 		bool Visible = true,
 		bool OnTop = true,
 		bool AnimationActive = true,

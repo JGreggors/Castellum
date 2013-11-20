@@ -142,6 +142,8 @@ ContentLibrary =
 		"Timer.py",
 		"Timer1.py",
 		"Try.Archetype.data",
+		"Tutorial1.Level.data",
+		"Tutorial1_TileMap00.TileMapSource.bin",
 		"Tutorials.Level.data",
 		"Twinkle.png",
 		"UIButton.py",

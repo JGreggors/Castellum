@@ -15,10 +15,10 @@ class GlobalTime:
         Zero.Connect(Zero.Keyboard, Events.KeyDown, self.OnKeyDown)
         self.Pause = False
     def OnKeyDown(self, keyboardEvent):
-        vec = Vec3(self.Space.FindObjectByName("Player").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 5), 0)
-        vec2 = Vec3(self.Space.FindObjectByName("Player").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 4), 0)
-        vec3 = Vec3(self.Space.FindObjectByName("Player").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 3), 0)
-        vec4 = Vec3(self.Space.FindObjectByName("Player").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 2), 0)
+        vec = Vec3(self.Space.FindObjectByName("Camera").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 8), 0)
+        vec2 = Vec3(self.Space.FindObjectByName("Camera").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 7), 0)
+        vec3 = Vec3(self.Space.FindObjectByName("Camera").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 6.5), 0)
+        vec4 = Vec3(self.Space.FindObjectByName("Camera").Transform.Translation.x, (self.Space.FindObjectByName("Player").Transform.Translation.y + 5.5), 0)
         #If tab is pressed then toggle pausing the game
         if(keyboardEvent.Key == Keys.P and self.Pause == False):
             self.Space.CreateAtPosition("Pause", vec)

@@ -29,7 +29,7 @@ class CameraLogic:
             elif(self.Space.CurrentLevel.Name == "InfiniteGrap"):
                 newTranslation = VectorMath.Vec3(targetTranslation.x, -5, currentTranslation.z)
             elif(self.Space.CurrentLevel.Name != "Level2"):
-                newTranslation = VectorMath.Vec3(targetTranslation.x, targetTranslation.y + 3.4, currentTranslation.z)
+                newTranslation = VectorMath.Vec3(targetTranslation.x, currentTranslation.y, currentTranslation.z)
             self.Owner.Transform.Translation = newTranslation
         if(Zero.Keyboard.KeyIsPressed(Zero.Keys.M)):
             self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
