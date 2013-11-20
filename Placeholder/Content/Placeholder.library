@@ -64,6 +64,8 @@ ContentLibrary =
 		"Hook.Archetype.data",
 		"Hook.SpriteSource.png",
 		"Howto.Archetype.data",
+		"IGLevel1.Level.data",
+		"IGLevel1_TileMap00.TileMapSource.bin",
 		"InLogic.py",
 		"InfiniteGrap.Level.data",
 		"InfiniteGrap_TileMap00.TileMapSource.bin",

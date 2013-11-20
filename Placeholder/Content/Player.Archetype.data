@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-41, -6.01595, 0],
-		Vec3 Scale = [1.90418, 1.90418, 1.90418],
+		Vec3 Translation = [-2.34692, -5.17032, 0],
+		Vec3 Scale = [3.14411, 3.14411, 3.14411],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -27,7 +27,7 @@ Cog =
 		bool Visible = true,
 		bool OnTop = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 1,
+		float AnimationSpeed = 0.8,
 		uint StartFrame = 0,
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
@@ -67,7 +67,45 @@ Cog =
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [-0.08, -0.01, 0],
 		float Radius = 0.45,
-		float Height = 0.0001,
+		float Height = 0.1,
 		uint Direction = 1,
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "arm",
+			},
+			Archetyped = 
+			{
+				string Name = "5234ef29d5809c2a:arm",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.0318108, 0.0615481, 0.0318055],
+				Vec3 Scale = [0.990702, 0.990702, 1.32094],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				string SpriteSource = "5234e40fd554dc11:arm",
+				bool FlipX = false,
+				bool FlipY = false,
+				Vec4 Color = [1, 1, 1, 1],
+				bool Visible = true,
+				bool OnTop = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+			},
+		},
 	},
 },

@@ -55,9 +55,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [18.7485, -6.33849, 50],
+			Vec3 Translation = [-0.799003, 0.0815098, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -1.90735e-008, -0, 1],
+			Quat Rotation = [0, -2.20537e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 39,
+			float Size = 23,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [18.7485, -6.33849, -3.96463e-007],
+			Vec3 LookTarget = [-0.799, 0.0815098, -1.25091e-006],
 		},
 		EditorRenderer = 
 		{
@@ -156,7 +156,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.34692, -5.17032, 0],
+			Vec3 Translation = [-6.70692, -5.17032, 0],
 			Vec3 Scale = [3.14411, 3.14411, 3.14411],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -214,19 +214,12 @@ Level =
 		},
 		Hierarchy = 
 		{
-			Cog = 
+			ArchetypeInstance = 
 			{
+				string Name = "5234ef29d5809c2a:arm",
 				LinkId = 
 				{
 					uint Id = 6,
-				},
-				Named = 
-				{
-					string Name = "arm",
-				},
-				Archetyped = 
-				{
-					string Name = "5234ef29d5809c2a:arm",
 				},
 				Transform = 
 				{
@@ -234,19 +227,9 @@ Level =
 					Vec3 Scale = [0.990702, 0.990702, 1.32094],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				Sprite = 
+				Named = 
 				{
-					string SpriteSource = "5234e40fd554dc11:arm",
-					bool FlipX = false,
-					bool FlipY = false,
-					Vec4 Color = [1, 1, 1, 1],
-					bool Visible = true,
-					bool OnTop = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
+					string Name = "arm",
 				},
 			},
 		},

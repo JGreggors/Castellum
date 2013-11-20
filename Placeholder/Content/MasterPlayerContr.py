@@ -135,7 +135,6 @@ class MasterPlayerContr:
             self.Key.RigidBody.Static = False
             self.keyAttached = False
             self.Key.BoxCollider.Ghost = False
-            self.CanShoot = True
         if(KeyboardEvent.Key == Zero.Keys.Shift):
                 self.ShiftIsPressed = True
             
@@ -214,20 +213,18 @@ class MasterPlayerContr:
         
         # Debug
         #print(self.Heat)
-        if(self.keyAttached == True):
-            self.CanShoot = True
-        else:
+ 
             #If there is heat, start cooling down
-            if(self.Heat > 0.0):
-                self.Heat -= self.CooldownSpeed * UpdateEvent.Dt
-            #if heat reaches Zero, stop cooling and allow shooting if you couldn't shoot
-            if(self.Heat < 0.0):
-                self.Heat = 0.0
-                self.CanShoot = True
-            #if heat excedes Overheat threshold, you can't shoot.
-            if(self.Heat >= self.Overheat):
-                self.Heat = self.Overheat
-                self.CanShoot = False
+        if(self.Heat > 0.0):
+            self.Heat -= self.CooldownSpeed * UpdateEvent.Dt
+        #if heat reaches Zero, stop cooling and allow shooting if you couldn't shoot
+        if(self.Heat < 0.0):
+            self.Heat = 0.0
+            self.CanShoot = True
+        #if heat excedes Overheat threshold, you can't shoot.
+        if(self.Heat >= self.Overheat):
+            self.Heat = self.Overheat
+            self.CanShoot = False
             
 
 #----------------------------------------------------------
@@ -572,19 +569,16 @@ class MasterPlayerContr:
             key.RigidBody.Static = False
             self.keyAttached = False
             key.BoxCollider.Ghost = False
-            self.CanShoot = True
         elif(self.keyAttached == True and otherObject.Name == "Goblin"):
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1, 0, 0)
             key.RigidBody.Static = False
             self.keyAttached = False
             key.BoxCollider.Ghost = False
-            self.CanShoot = True
         elif(self.keyAttached == True and otherObject.Name == "Pit"):
             key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, 1, 0)
             key.RigidBody.Static = False
             self.keyAttached = False
             key.BoxCollider.Ghost = False
-            self.CanShoot = True
 #--------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------
@@ -602,7 +596,6 @@ class MasterPlayerContr:
             key.RigidBody.Static = True
             key.BoxCollider.Ghost = True
             self.keyAttached = True
-            self.CanShoot = True
 
         #elif(self.keyAttached):
         #    self.Space.SoundSpace.PlayCue("menuNo")

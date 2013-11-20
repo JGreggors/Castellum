@@ -20,7 +20,7 @@ ResourceTable =
 		},
 		{
 			string Name = "Tutorial3",
-			string Value = "521582dffb5c46a5:Level3",
+			string Value = "523ba19b4a528646:IGLevel1",
 			float Weight = 1,
 		},
 		{
