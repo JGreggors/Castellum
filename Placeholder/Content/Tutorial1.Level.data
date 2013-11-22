@@ -55,9 +55,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.799003, 0.0815098, 50],
+			Vec3 Translation = [29.2585, -2.17599, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.20537e-008, -0, 1],
+			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 23,
+			float Size = 17,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.799, 0.0815098, -1.25091e-006],
+			Vec3 LookTarget = [29.2585, -2.17599, 6.29417e-008],
 		},
 		EditorRenderer = 
 		{
@@ -1317,7 +1317,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [30.1388, -2.27897, -5],
+			Vec3 Translation = [30.1388, -2.27897, -40],
 			Vec3 Scale = [0.281564, 0.281564, 0.281564],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1988,7 +1988,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.5901, -6.41444, 3.8147e-006],
+			Vec3 Translation = [89.5031, -6.41444, 3.8147e-006],
 			Vec3 Scale = [1.30498, 1.11486, 4.45946],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2561,7 +2561,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [105.093, 3.56512, 0],
+			Vec3 Translation = [105.093, 3.56512, -5],
 			Vec3 Scale = [1.63529, 1.63529, 1.63529],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2592,7 +2592,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [104.601, 4.57132, -5],
+			Vec3 Translation = [104.601, 4.57132, -4],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2605,7 +2605,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "P",
-			bool OnTop = true,
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -2625,7 +2625,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [104.322, 2.77752, -5],
+			Vec3 Translation = [104.322, 2.77752, -4],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2658,7 +2658,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [103.004, 0.991473, -5],
+			Vec3 Translation = [103.004, 0.991473, -4],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2671,7 +2671,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Shift",
-			bool OnTop = true,
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -2691,7 +2691,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [105.093, 1.77907, 0],
+			Vec3 Translation = [105.093, 1.77907, -5],
 			Vec3 Scale = [1.63529, 1.63529, 1.63529],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2722,7 +2722,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [105.261, -0.00697613, 0],
+			Vec3 Translation = [105.261, -0.00697613, -5],
 			Vec3 Scale = [5.36452, 1.63529, 1.63529],
 			Quat Rotation = [0, 0, 0, 1],
 		},

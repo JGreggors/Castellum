@@ -57,9 +57,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.46494, -5.6234, 50],
+			Vec3 Translation = [-2.22756, -5.0634, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.38419e-008, -0, 1],
+			Quat Rotation = [0, -2.14577e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -69,7 +69,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20,
+			float Size = 23,
 		},
 		EditorCameraController = 
 		{
@@ -77,7 +77,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [6.46494, -5.6234, 0],
+			Vec3 LookTarget = [-2.22756, -5.0634, -3.79961e-007],
 		},
 		EditorRenderer = 
 		{
@@ -132,8 +132,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.80885, -1.00583, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-9.50342, -2.57037, 0],
+			Vec3 Scale = [0.844962, 0.844962, 0.844962],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -187,8 +187,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.80885, -3.23839, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-9.50342, -4.4568, 0],
+			Vec3 Scale = [0.844962, 0.844962, 0.844962],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -199,7 +199,7 @@ Level =
 			uint FontSize = 100,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = "Level 6-10",
+			string Text = "Doug Mode",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
@@ -242,8 +242,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.80885, -5.34692, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-9.50342, -6.23843, 0],
+			Vec3 Scale = [0.844962, 0.844962, 0.844962],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -254,7 +254,7 @@ Level =
 			uint FontSize = 100,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = "Level 11-15",
+			string Text = "Adventurer",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
@@ -297,8 +297,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.80885, -7.51746, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-9.50342, -8.07245, 0],
+			Vec3 Scale = [0.844962, 0.844962, 0.844962],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -309,7 +309,7 @@ Level =
 			uint FontSize = 100,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = "Level 16-20",
+			string Text = "Dare Devil",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
@@ -496,6 +496,61 @@ Level =
 			uint StartFrame = 0,
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "Back",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-8.35422, 0.1203, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 100,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Select a Level pack",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 15,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [2.25, -1, 0],
+			Vec3 Size = [2.3, 0.65, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = true,
 		},
 	},
 },

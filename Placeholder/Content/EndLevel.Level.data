@@ -55,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.71, -5.715, 50],
+			Vec3 Translation = [-2.345, 0.340001, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, -2.14577e-008, -0, 1],
 		},
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.71, -5.715, 1.62169e-007],
+			Vec3 LookTarget = [-2.345, 0.340001, -1.02503e-007],
 		},
 		EditorRenderer = 
 		{
@@ -121,8 +121,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.74807, 0.874033, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [1.49052, 0.851279, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -139,6 +139,7 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -153,8 +154,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [204.8, 30, 1],
+			Vec3 Translation = [-0.0436718, 0.0841858, -4.33177],
+			Vec3 Scale = [179.742, 26.3294, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -184,15 +185,15 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 7.04241, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-0.0436718, 5.65162, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 120,
 			Vec4 Color = [0.385, 0.385, 0.385, 1],
 			bool Visible = true,
@@ -202,6 +203,7 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -216,8 +218,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 6.82647, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-0.0436718, 5.29483, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -234,6 +236,7 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -248,15 +251,15 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.64139, 0.0244182, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-3.99309, 0.674792, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 60,
 			Vec4 Color = [0.385, 0.385, 0.385, 1],
 			bool Visible = true,
@@ -266,6 +269,7 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 		Hierarchy = 
 		{
@@ -283,15 +287,15 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.26221, -3.02571, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-4.56098, -1.23229, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 60,
 			Vec4 Color = [0.385, 0.385, 0.385, 1],
 			bool Visible = true,
@@ -301,6 +305,7 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -311,28 +316,29 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "total",
+			string Name = "time",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.10283, -6.75065, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-3.92494, 2.71713, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 60,
 			Vec4 Color = [0.385, 0.385, 0.385, 1],
 			bool Visible = true,
-			string Text = "Total~  : ",
+			string Text = "Time : ",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -343,28 +349,29 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "time",
+			string Name = "grand",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.66838, 2.9126, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-6.04369, -3.86523, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 60,
 			Vec4 Color = [0.385, 0.385, 0.385, 1],
 			bool Visible = true,
-			string Text = "Time : ",
+			string Text = "Grand Total :",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -375,28 +382,29 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "grand",
+			string Name = "tTotal",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.20823, -5.40103, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [3.0281, -3.86523, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 60,
 			Vec4 Color = [0.385, 0.385, 0.385, 1],
 			bool Visible = true,
-			string Text = "~Grand",
+			string Text = "0",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -407,19 +415,19 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "tTotal",
+			string Name = "tDeaths",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.62868, -6.66966, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [3.0281, -1.23229, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 60,
 			Vec4 Color = [0.385, 0.385, 0.385, 1],
 			bool Visible = true,
@@ -429,6 +437,7 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -439,19 +448,19 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "tDeaths",
+			string Name = "tGold",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.63339, -3.0257, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [3.0281, 0.724353, 0.934118],
+			Vec3 Scale = [0.877648, 0.881773, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 60,
 			Vec4 Color = [0.385, 0.385, 0.385, 1],
 			bool Visible = true,
@@ -461,6 +470,7 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -471,19 +481,19 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "tGold",
+			string Name = "tTime",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.6428, 0.186378, 1],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [3.0281, 2.71713, 0.934118],
+			Vec3 Scale = [0.877648, 0.877648, 0.877648],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 60,
 			Vec4 Color = [0.385, 0.385, 0.385, 1],
 			bool Visible = true,
@@ -493,6 +503,7 @@ Level =
 			Vec2 Size = [0, 0],
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -503,28 +514,126 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "tTime",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.5, 2.76941, 1],
+			Vec3 Translation = [0.410639, 0.424533, 0],
+			Vec3 Scale = [11.5271, 11.5271, 11.5271],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5234f1e8385e67cb:menu",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.425, 2.46, -1.02503e-007],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = Centered,
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 60,
-			Vec4 Color = [0.385, 0.385, 0.385, 1],
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 38,
+			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = "0",
+			string Text = "x 5pts",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
-			TextAlign Align = Center,
+			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.425, 0.22, -1.02503e-007],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 38,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "x 5pts",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6, -2, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 38,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "x -20pts",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 },

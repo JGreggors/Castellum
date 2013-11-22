@@ -56,7 +56,7 @@ Level =
 		},
 		Timer = 
 		{
-			float par = 45,
+			float par = 90,
 		},
 		ScoreOn = 
 		{
@@ -86,7 +86,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 56,
+			float Size = 55,
 		},
 		EditorCameraController = 
 		{
@@ -1443,7 +1443,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.54568, -14.1615, 0.1],
+			Vec3 Translation = [5.5, -15, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1460,7 +1460,7 @@ Level =
 			float VelocityScale = 1,
 			float LengthScale = 0,
 			float MaxParticleSize = 100,
-			Vec3 SystemSize = [5, 5, 5],
+			Vec3 SystemSize = [100, 5, 5],
 		},
 		LinearParticleAnimator = 
 		{

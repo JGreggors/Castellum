@@ -49,11 +49,11 @@ class EndLevelLogic:
        #--------------------------------------------------------
         
         #Calculate time score
-        self.tscore = (round(self.par - self.finalTime)) * 22500
+        self.tscore = (round(self.par - self.finalTime)) * 5
         #Calculate gold score
-        self.tgold = self.finalGold * 32250
+        self.tgold = self.finalGold * 5
         #Calculate Death score
-        self.tdeath = self.finalDeaths * 50000
+        self.tdeath = self.finalDeaths * 30
        #--------------------------------------------------------
         #This is the spritetext that prints your time score
         clock = self.Space.FindObjectByName("tTime").SpriteText

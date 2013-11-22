@@ -20,10 +20,7 @@ class Cheats:
                 player.Transform.Translation = Vec3(63.5, -5, 0)
             elif(self.Space.CurrentLevel.Name == "Level13"):
                 player.Transform.Translation = Vec3(-24.6, 14.6, 0)
-        if(KeyboardEvent.Key == Zero.Keys.B):
-            self.Space.LoadLevel("EndSlide")
-        if(KeyboardEvent.Key == Zero.Keys.N):
-            self.Space.LoadLevel("MainMenu ")
+
             
         
         
