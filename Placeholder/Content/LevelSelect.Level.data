@@ -69,7 +69,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 23,
+			float Size = 35,
 		},
 		EditorCameraController = 
 		{
@@ -132,7 +132,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.50342, -2.57037, 0],
+			Vec3 Translation = [-9.50342, -2.57037, 0.2],
 			Vec3 Scale = [0.844962, 0.844962, 0.844962],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -155,7 +155,7 @@ Level =
 		UIButton = 
 		{
 			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 9,
 		},
@@ -187,7 +187,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.50342, -4.4568, 0],
+			Vec3 Translation = [-9.50342, -4.4568, 0.2],
 			Vec3 Scale = [0.844962, 0.844962, 0.844962],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -210,7 +210,7 @@ Level =
 		UIButton = 
 		{
 			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 10,
 		},
@@ -242,7 +242,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.50342, -6.23843, 0],
+			Vec3 Translation = [-9.50342, -6.23843, 0.2],
 			Vec3 Scale = [0.844962, 0.844962, 0.844962],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -265,7 +265,7 @@ Level =
 		UIButton = 
 		{
 			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 11,
 		},
@@ -297,7 +297,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.50342, -8.07245, 0],
+			Vec3 Translation = [-9.50342, -8.07245, 0.2],
 			Vec3 Scale = [0.844962, 0.844962, 0.844962],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -320,7 +320,7 @@ Level =
 		UIButton = 
 		{
 			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 12,
 		},
@@ -352,7 +352,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.19307, -4.6859, 0],
+			Vec3 Translation = [4.19307, -4.6859, 0.2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -375,7 +375,7 @@ Level =
 		UIButton = 
 		{
 			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [1, 1, 0, 0.25],
+			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 15,
 		},
@@ -448,7 +448,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.155148, -4.954, -6.28315e-008],
+			Vec3 Translation = [0, -4.954, 0.1],
 			Vec3 Scale = [10.233, 10.233, 10.233],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -510,7 +510,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.35422, 0.1203, 0],
+			Vec3 Translation = [-8.35422, 0.1203, 0.2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -530,13 +530,6 @@ Level =
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
 		},
-		UIButton = 
-		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [1, 1, 0, 0.25],
-			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 15,
-		},
 		BoxCollider = 
 		{
 			bool Ghost = false,
@@ -551,6 +544,34 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			BlendMode BlendMode = Alpha,
+		},
+		TileMap = 
+		{
+			string SourceName = "5227e10b319f09d4:LevelSelect_TileMap00",
+			float UnitsPerTile = 1,
 		},
 	},
 },

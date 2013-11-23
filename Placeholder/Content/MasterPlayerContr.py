@@ -86,7 +86,7 @@ class MasterPlayerContr:
             self.grappleCounter -= 1
             self.StopGrapple()
             self.playerGrappleShot = True
-            direction = self.MouseDirection 
+            direction = self.MouseDirection
             direction = math.atan2(direction.y, direction.x)
             self.grappleDirectionPoint = self.mousePosition
             #Grappling 'Rope' object

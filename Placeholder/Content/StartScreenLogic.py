@@ -8,21 +8,25 @@ class StartScreenLogic:
         Zero.Connect(self.Space, Events.LogicUpdate, self.onLogicUpdate)
         self.slideNum = 1
         self.swap = False
-        self.lastSlide = 5
-        
+        self.lastSlide = 2
+        self.maxcount = 4
+        self.count = 4
         
     def onLogicUpdate(self, UpdateEvent):
         self.slide = self.Space.FindObjectByName("Slide" + str(self.slideNum))
         
-        if(Zero.Keyboard.KeyIsPressed(Zero.Keys.Space)):
+        if(self.count <= 4):
+            self.count -= UpdateEvent.Dt
+        if(self.count < 0):
+            self.count = self.maxcount
             self.swap = True
             self.slideNum += 1
             self.prevSlide = self.Space.FindObjectByName("Slide" + str(self.slideNum-1))
-        if(Zero.Keyboard.KeyIsPressed(Zero.Keys.Back)):
-            if(self.slideNum != 1):
-                self.prevSlide = self.slide
-                self.slideNum -= 1
-                self.swap = True
+        #if(Zero.Keyboard.KeyIsPressed(Zero.Keys.Back)):
+        #    if(self.slideNum != 1):
+        #        self.prevSlide = self.slide
+        #        self.slideNum -= 1
+        #        self.swap = True
         
         if(self.swap):
             self.swapSlides()
