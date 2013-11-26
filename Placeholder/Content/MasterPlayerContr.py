@@ -79,7 +79,7 @@ class MasterPlayerContr:
     def OnMouseDown(self, ViewportMouseEvent):
         #Sets if mouse is being held down
         self.MouseDown = True
-        if(self.Space.CurrentLevel.Name == "InfiniteGrap" or self.Space.CurrentLevel.Name == "Tutorial1" or self.Space.CurrentLevel.Name == "IGLevel1"):
+        if(self.Space.CurrentLevel.Name == "InfiniteGrap" or self.Space.CurrentLevel.Name == "Tutorial1" or self.Space.CurrentLevel.Name == "IGLevel1" or self.Space.CurrentLevel.Name == "IGLevel2"):
             self.grappleCounter += 1
         #Checks Grapple counter to see if able to grapple
         if(self.grappleCounter > 0):
