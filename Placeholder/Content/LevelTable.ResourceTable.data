@@ -5,7 +5,7 @@ ResourceTable =
 	[
 		{
 			string Name = "MainMenu",
-			string Value = "52269d72e2f31ac4:IGLevel2",
+			string Value = "52d8bb94dc227e33:StartScreen",
 			float Weight = 1,
 		},
 		{
@@ -25,7 +25,7 @@ ResourceTable =
 		},
 		{
 			string Name = "4",
-			string Value = "52430b6c6b4aa67a:Level13",
+			string Value = "52269d72e2f31ac4:IGLevel2",
 			float Weight = 1,
 		},
 		{
