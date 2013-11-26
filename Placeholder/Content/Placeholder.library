@@ -26,6 +26,7 @@ ContentLibrary =
 		"EndLevel.Level.data",
 		"EndLevelLogic.py",
 		"EndLevel_TileMap00.TileMapSource.bin",
+		"EndLevel_TileMap01.TileMapSource.bin",
 		"EndSlide.Level.data",
 		"FadeIn.Archetype.data",
 		"FadeOut.Archetype.data",

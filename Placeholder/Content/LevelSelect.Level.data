@@ -57,7 +57,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.637561, -7.1609, 50],
+			Vec3 Translation = [-0.63756, -7.1609, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, -2.20537e-008, -0, 1],
 		},
@@ -157,7 +157,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 9,
+			uint LevelNumber = 4,
 		},
 		BoxCollider = 
 		{
@@ -212,7 +212,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 10,
+			uint LevelNumber = 5,
 		},
 		BoxCollider = 
 		{
@@ -267,7 +267,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 11,
+			uint LevelNumber = 6,
 		},
 		BoxCollider = 
 		{
@@ -322,7 +322,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 12,
+			uint LevelNumber = 7,
 		},
 		BoxCollider = 
 		{
@@ -377,7 +377,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 15,
+			uint LevelNumber = 1,
 		},
 		BoxCollider = 
 		{

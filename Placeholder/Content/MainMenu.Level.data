@@ -206,7 +206,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.43, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 1,
+			uint LevelNumber = 8,
 		},
 	},
 	Cog = 
@@ -261,7 +261,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 8,
+			uint LevelNumber = 3,
 		},
 	},
 	Cog = 
@@ -316,7 +316,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 7,
+			uint LevelNumber = 2,
 		},
 	},
 	Cog = 

@@ -55,9 +55,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.345, 0.340001, 50],
+			Vec3 Translation = [0.884998, -2.795, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.14577e-008, -0, 1],
+			Quat Rotation = [0, -2.20537e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 25,
+			float Size = 38,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.345, 0.340001, -1.02503e-007],
+			Vec3 LookTarget = [0.885, -2.795, 3.86848e-008],
 		},
 		EditorRenderer = 
 		{
@@ -634,6 +634,34 @@ Level =
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Named = 
+		{
+			string Name = "TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			BlendMode BlendMode = Alpha,
+		},
+		TileMap = 
+		{
+			string SourceName = "5222fbba38f9596b:EndLevel_TileMap01",
+			float UnitsPerTile = 1,
 		},
 	},
 },
