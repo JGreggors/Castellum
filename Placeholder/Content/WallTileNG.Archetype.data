@@ -18,12 +18,12 @@ Cog =
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
-	GrappleCollision = 
-	{
-	},
 	Reactive = 
 	{
 		bool Active = true,
 		bool CaptureMouse = true,
+	},
+	GrappleCollision = 
+	{
 	},
 },
