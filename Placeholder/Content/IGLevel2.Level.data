@@ -56,6 +56,11 @@ Level =
 		{
 			string LevelForHUD = "52a7044c7cf6ef4b:HUDLevel",
 		},
+		FixedAspectRatio = 
+		{
+			float Width = 16,
+			float Height = 9,
+		},
 	},
 	Cog = 
 	{
@@ -69,9 +74,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.0851, -7.15751, 50],
+			Vec3 Translation = [21.5449, -9.2575, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.38419e-008, -0, 1],
+			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -81,7 +86,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8,
+			float Size = 44,
 		},
 		EditorCameraController = 
 		{
@@ -89,7 +94,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-4.0851, -7.15751, -1.7856e-007],
+			Vec3 LookTarget = [21.5449, -9.2575, 9.41763e-007],
 		},
 		EditorRenderer = 
 		{

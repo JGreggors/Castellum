@@ -110,6 +110,7 @@ ContentLibrary =
 		"Overheat.SoundCue.data",
 		"Pause.Archetype.data",
 		"PauseBG.Archetype.data",
+		"PauseP.Archetype.data",
 		"Pit.Archetype.data",
 		"Player.Archetype.data",
 		"Projectile.Archetype.data",

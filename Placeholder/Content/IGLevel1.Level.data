@@ -56,6 +56,11 @@ Level =
 		ScoreOn = 
 		{
 		},
+		FixedAspectRatio = 
+		{
+			float Width = 16,
+			float Height = 9,
+		},
 	},
 	Cog = 
 	{
