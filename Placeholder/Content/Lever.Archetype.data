@@ -8,15 +8,19 @@ Cog =
 	{
 		string Name = "Lever",
 	},
+	Archetyped = 
+	{
+		string Name = "52aec4d879fd04b0:Lever",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [66.4212, -3.48239, -1.90735e-006],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [-0.0530468, -0.119788, 0],
+		Vec3 Scale = [1.16339, 1.29066, 0.0348838],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "52ec921404703861:lever1",
 		bool FlipX = false,
 		bool FlipY = false,
 		Vec4 Color = [1, 1, 1, 1],
@@ -27,5 +31,8 @@ Cog =
 		uint StartFrame = 0,
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
+	},
+	Hierarchy = 
+	{
 	},
 },

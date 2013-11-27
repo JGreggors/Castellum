@@ -23,7 +23,7 @@ class MouseTargetCont:
         
     def OnLogicUpdate(self, UpdateEvent):
         currentTranslation = self.Owner.Transform.Translation
-        newTranslation = VectorMath.Vec3(self.mousePosition.x, self.mousePosition.y, 20)
+        newTranslation = VectorMath.Vec3(self.mousePosition.x, self.mousePosition.y, 0)
         self.Owner.Transform.Translation = newTranslation
         
 

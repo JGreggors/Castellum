@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "LoadHighscore",
+		uint64 ResourceId = 52c2483259562a77,
+	},
+},

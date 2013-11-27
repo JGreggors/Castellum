@@ -69,7 +69,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44,
+			float Size = 31,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, -4, 0.1],
+			Vec3 Translation = [-4, -4, 0],
 			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 11",
-			bool OnTop = false,
+			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -168,7 +168,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -1, 0.1],
+			Vec3 Translation = [0, -1, 0],
 			Vec3 Scale = [0.671, 0.671, 0.671],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -181,7 +181,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level Select",
-			bool OnTop = false,
+			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -201,7 +201,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, -6, 0.1],
+			Vec3 Translation = [-4, -6, 0],
 			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -214,7 +214,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 12",
-			bool OnTop = false,
+			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -246,7 +246,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, -8, 0.1],
+			Vec3 Translation = [-4, -8, 0],
 			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -259,7 +259,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 13",
-			bool OnTop = false,
+			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -301,7 +301,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.5, -4, 0.1],
+			Vec3 Translation = [3.5, -4, 0],
 			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -314,7 +314,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 14",
-			bool OnTop = false,
+			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -346,7 +346,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.5, -8, 0.1],
+			Vec3 Translation = [3.5, -8, 0],
 			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -359,7 +359,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Back",
-			bool OnTop = false,
+			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -376,7 +376,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 2,
+			uint LevelNumber = 7,
 		},
 	},
 	Cog = 
@@ -391,7 +391,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.5, -6, 0.1],
+			Vec3 Translation = [3.5, -6, 0],
 			Vec3 Scale = [0.821, 0.821, 0.821],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -404,7 +404,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 15",
-			bool OnTop = false,
+			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,

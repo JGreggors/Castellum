@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-3.4805, -8.39244, 0],
+		Vec3 Translation = [-2.34692, -5.17032, 0],
 		Vec3 Scale = [3.14411, 3.14411, 3.14411],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -65,9 +65,9 @@ Cog =
 		bool Seamless = false,
 		string MaterialName = "4faa6050b8692851:HardMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [-0.045, -0.13, 0],
-		float Radius = 0.27,
-		float Height = 0.25,
+		Vec3 Offset = [-0.08, -0.01, 0],
+		float Radius = 0.45,
+		float Height = 0.1,
 		uint Direction = 1,
 	},
 	Hierarchy = 

@@ -24,6 +24,8 @@ class Health:
         self.totalDeath = 0
         self.nextPing = 0.0
         
+        self.DeathByPit = False
+        
         self.hurt = False
         self.hurtmore = False
         self.hurtmost = False
@@ -35,6 +37,7 @@ class Health:
         #print(self.RegenStart)
         #print(self.Health)
        #---------------------------------------
+        
         #Owner's health is full everything is A ok
         if(self.Health == self.MaxHealth):
             self.Owner.Sprite.Color = self.OriginalColor
@@ -71,15 +74,17 @@ class Health:
             #print(self.totalDeath)
         #Respawn procedure
         if(self.PlayerSpawned == False):
-            self.Space.CreateAtPosition("Death", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y, -5))
+            if(self.DeathByPit == False):
+                self.Space.CreateAtPosition("Death", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y, -5))
             self.Owner.Transform.Translation = self.StartPlace
             self.Health = self.MaxHealth
             self.PlayerSpawned = True
+            self.DeathByPit = False
             self.Owner.MasterPlayerContr.StopGrapple()
             self.Owner.RigidBody.Velocity = VectorMath.Vec3(0,0,0)
         #if you aren't dead you're fine
         elif(self.PlayerSpawned == True):
-                pass
+            pass
         #regen procedure
         if(self.RegenStart > self.RegenCounter):
             if(self.Health < self.MaxHealth):
@@ -130,6 +135,8 @@ class Health:
             self.Space.SoundSpace.PlayCue("hit")
         #Drops into abysses to never be seen or heard from again kill you
         if(CollisionEvent.OtherObject.Name == "Pit"):
+            self.DeathByPit = True
+            self.Space.CreateAtPosition("Fizzle", self.Owner.Transform.Translation)
             self.Health = -38
            
             

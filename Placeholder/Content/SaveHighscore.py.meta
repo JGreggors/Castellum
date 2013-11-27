@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "SaveHighscore",
+		uint64 ResourceId = 52c24f6e7d20f254,
+	},
+},

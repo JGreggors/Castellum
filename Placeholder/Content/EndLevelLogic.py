@@ -23,20 +23,6 @@ class EndLevelLogic:
         
         self.LevelFinalScore = 0 #your total score for the level
         
-    def OnLogicUpdate(self, UpdateEvent):
-        #If Space is pressed Add up score
-        if(Zero.Keyboard.KeyIsPressed(Keys.Space)):
-            self.getStats = True
-        if(Zero.Keyboard.KeyIsPressed(Keys.N)):
-            self.Space.LoadLevel("MainMenu")
-        if(Zero.Keyboard.KeyIsPressed(Keys.B)):
-            self.Space.LoadLevel("EndSlide")
-
-            
-       #--------------------------------------------------------
-        #Start timer
-        self.levelProgression += UpdateEvent.Dt
-        
         #Get you final time and level par from last level
         self.finalTime = Zero.Game.Score.finalTime
         self.par = Zero.Game.Score.par
@@ -53,7 +39,26 @@ class EndLevelLogic:
         #Calculate gold score
         self.tgold = self.finalGold * 5
         #Calculate Death score
-        self.tdeath = self.finalDeaths * 30
+        self.tdeath = self.finalDeaths * 20
+        
+        self.LevelFinalScore = self.tscore + self.tgold - self.tdeath
+        self.Owner.AddComponentByName("SaveHighscore")
+        
+    def OnLogicUpdate(self, UpdateEvent):
+        #If Space is pressed Add up score
+        if(Zero.Keyboard.KeyIsPressed(Keys.Space)):
+            self.getStats = True
+        if(Zero.Keyboard.KeyIsPressed(Keys.N)):
+            self.Space.LoadLevel("MainMenu")
+        if(Zero.Keyboard.KeyIsPressed(Keys.B)):
+            self.Space.LoadLevel("EndSlide")
+
+            
+       #--------------------------------------------------------
+        #Start timer
+        self.levelProgression += UpdateEvent.Dt
+        
+
        #--------------------------------------------------------
         #This is the spritetext that prints your time score
         clock = self.Space.FindObjectByName("tTime").SpriteText
@@ -73,8 +78,6 @@ class EndLevelLogic:
             total.Text = str(round(self.tscore + self.tgold - self.tdeath))
             #if you press Space again end level
             if((Zero.Keyboard.KeyIsPressed(Keys.Space) and self.endLevel) or (self.timeIsDone == True and self.goldIsDone == True)):
-                self.LevelFinalScore = self.tscore + self.tgold - self.tdeath
-                Zero.Game.Score.FinalScore += self.LevelFinalScore
                 Zero.Game.LevelManager.LoadNextLevel()
                 
             self.endLevel = True

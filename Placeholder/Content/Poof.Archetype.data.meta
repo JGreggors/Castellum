@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "PauseP",
-		uint64 ResourceId = 5222d50dab960825,
+		string Name = "Poof",
+		uint64 ResourceId = 52c246b5acb25bcd,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

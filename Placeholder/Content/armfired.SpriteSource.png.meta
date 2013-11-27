@@ -2,17 +2,17 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "block83",
-		uint64 ResourceId = 52241904b7186bbe,
-		uint64 AtlasId = 0000000000000000,
-		uint FrameSizeX = 0,
-		uint FrameSizeY = 0,
+		string Name = "armfired",
+		uint64 ResourceId = 52c2475af2eb7fbe,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 64,
+		uint FrameSizeY = 64,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
 		float OriginX = 32,
 		float OriginY = 32,
 		float PixelsPerUnit = 64,
-		bool Smoothing = true,
+		bool Smoothing = false,
 		bool Looping = true,
 		Vec4 Slices = [0, 0, 0, 0],
 		SpriteFill Fill = Stretch,

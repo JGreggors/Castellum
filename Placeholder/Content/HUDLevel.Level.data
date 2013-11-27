@@ -52,9 +52,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.509998, 6.76168, 50],
+			Vec3 Translation = [-0.142502, 6.28918, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.20537e-008, -0, 1],
+			Quat Rotation = [0, -2.19047e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -64,7 +64,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10,
+			float Size = 17,
 		},
 		EditorCameraController = 
 		{
@@ -72,7 +72,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.51, 6.76168, 2.22928e-008],
+			Vec3 LookTarget = [-0.1425, 6.28918, -6.22887e-009],
 		},
 		EditorRenderer = 
 		{
@@ -247,7 +247,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-0.00537563, 7.38984, 0],
-			Vec3 Scale = [0.794, 0.794, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -257,7 +257,7 @@ Level =
 			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 40,
 			Vec4 Color = [0.00382501, 0.765, 0.0571074, 1],
-			bool Visible = false,
+			bool Visible = true,
 			string Text = "T",
 			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
@@ -265,20 +265,6 @@ Level =
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
-		},
-		Sprite = 
-		{
-			string SpriteSource = "5223f16536bd00fd:time",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			bool OnTop = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
 		},
 	},
 	Cog = 
@@ -294,7 +280,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-1.50538, 7.38984, 0],
-			Vec3 Scale = [0.793799, 0.793799, 0.793799],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -304,7 +290,7 @@ Level =
 			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 40,
 			Vec4 Color = [0.62, 0, 0.0558001, 1],
-			bool Visible = false,
+			bool Visible = true,
 			string Text = "D",
 			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
@@ -312,20 +298,6 @@ Level =
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
-		},
-		Sprite = 
-		{
-			string SpriteSource = "5223f0301b2ee83a:deathskull",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			bool OnTop = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
 		},
 	},
 	Cog = 
@@ -341,7 +313,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [1.51792, 7.38984, 0],
-			Vec3 Scale = [0.9, 0.9, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -351,7 +323,7 @@ Level =
 			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 40,
 			Vec4 Color = [0.855, 0.671602, 0.021375, 1],
-			bool Visible = false,
+			bool Visible = true,
 			string Text = "G",
 			bool OnTop = true,
 			BlendMode BlendMode = Alpha,
@@ -359,20 +331,6 @@ Level =
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
-		},
-		Sprite = 
-		{
-			string SpriteSource = "5223f4b39dd27d9d:goldhud",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			bool OnTop = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
 		},
 	},
 	Cog = 

@@ -56,11 +56,6 @@ Level =
 		ScoreOn = 
 		{
 		},
-		FixedAspectRatio = 
-		{
-			float Width = 16,
-			float Height = 9,
-		},
 	},
 	Cog = 
 	{
@@ -74,7 +69,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [28.708, 3.06845, 50],
+			Vec3 Translation = [10.718, -0.404059, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, -1.90735e-008, -0, 1],
 		},
@@ -86,7 +81,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 45,
+			float Size = 23,
 		},
 		EditorCameraController = 
 		{
@@ -94,7 +89,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [28.708, 3.06845, 1.44925e-006],
+			Vec3 LookTarget = [10.718, -0.404059, 6.62887e-007],
 		},
 		EditorRenderer = 
 		{
@@ -233,19 +228,12 @@ Level =
 		},
 		Hierarchy = 
 		{
-			Cog = 
+			ArchetypeInstance = 
 			{
+				string Name = "5234ef29d5809c2a:arm",
 				LinkId = 
 				{
 					uint Id = 6,
-				},
-				Named = 
-				{
-					string Name = "arm",
-				},
-				Archetyped = 
-				{
-					string Name = "5234ef29d5809c2a:arm",
 				},
 				Transform = 
 				{
@@ -253,19 +241,9 @@ Level =
 					Vec3 Scale = [0.990702, 0.990702, 1.32094],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				Sprite = 
+				Named = 
 				{
-					string SpriteSource = "5234e40fd554dc11:arm",
-					bool FlipX = false,
-					bool FlipY = false,
-					Vec4 Color = [1, 1, 1, 1],
-					bool Visible = true,
-					bool OnTop = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
+					string Name = "arm",
 				},
 			},
 		},
@@ -682,22 +660,65 @@ Level =
 			Vec3 AngularVelocity = [0, 0, 0],
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "523438c6167e65ca:End",
 		LinkId = 
 		{
 			uint Id = 26,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [126.458, -0.323529, 0.1],
-			Vec3 Scale = [0.7858, 0.7858, 1.9645],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "End",
+		},
+		Archetyped = 
+		{
+			string Name = "523438c6167e65ca:End",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [123.533, -0.459331, 0],
+			Vec3 Scale = [0.7858, 0.7858, 1.9645],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "529e8b081d0ceca0:door",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+		NextLevel = 
+		{
+			int LevelNumber = 1,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [2, 2, 0.5],
 		},
 	},
 },
