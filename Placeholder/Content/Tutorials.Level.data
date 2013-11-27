@@ -69,7 +69,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 34,
+			float Size = 46,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, -4, 0],
+			Vec3 Translation = [-4, -4, 0.1],
 			Vec3 Scale = [0.821058, 0.821058, 0.821058],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 1",
-			bool OnTop = true,
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -153,7 +153,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 1,
+			uint LevelNumber = 8,
 		},
 	},
 	Cog = 
@@ -168,7 +168,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -1, 0],
+			Vec3 Translation = [0, -1, 0.1],
 			Vec3 Scale = [0.671057, 0.671057, 0.671057],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -181,7 +181,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level Select",
-			bool OnTop = true,
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -201,7 +201,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, -6, 0],
+			Vec3 Translation = [-4, -6, 0.1],
 			Vec3 Scale = [0.821058, 0.821058, 0.821058],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -214,7 +214,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 2",
-			bool OnTop = true,
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -231,7 +231,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 2,
+			uint LevelNumber = 9,
 		},
 	},
 	Cog = 
@@ -246,7 +246,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, -8, 0],
+			Vec3 Translation = [-4, -8, 0.1],
 			Vec3 Scale = [0.821058, 0.821058, 0.821058],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -259,7 +259,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 3",
-			bool OnTop = true,
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -276,7 +276,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 13,
+			uint LevelNumber = 4,
 		},
 	},
 	Cog = 
@@ -291,7 +291,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.5, -4, 0],
+			Vec3 Translation = [3.5, -4, 1],
 			Vec3 Scale = [0.821058, 0.821058, 0.821058],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -304,7 +304,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 4",
-			bool OnTop = true,
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -336,7 +336,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.5, -8, 0],
+			Vec3 Translation = [3.5, -8, 0.1],
 			Vec3 Scale = [0.821058, 0.821058, 0.821058],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -349,7 +349,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Back",
-			bool OnTop = true,
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -366,7 +366,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 7,
+			uint LevelNumber = 2,
 		},
 	},
 	Cog = 
@@ -381,7 +381,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.5, -6, 0],
+			Vec3 Translation = [3.5, -6, 1],
 			Vec3 Scale = [0.821058, 0.821058, 0.821058],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -394,7 +394,7 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level 5",
-			bool OnTop = true,
+			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
 			TextAlign Align = Left,
@@ -411,7 +411,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 0,
+			uint LevelNumber = 4,
 		},
 	},
 	Cog = 

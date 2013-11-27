@@ -29,5 +29,4 @@ class Checkpoint:
             self.visible = True
             self.Space.FindObjectByName("Player").Health.StartPlace = self.Space.FindObjectByName("Player").Transform.Translation
             self.Space.SoundSpace.PlayCue("menu")
-
 Zero.RegisterComponent("Checkpoint", Checkpoint)

@@ -39,6 +39,10 @@ Level =
 		{
 			Vec4 ClearColor = [0.278431, 0.278431, 0.278431, 1],
 		},
+		Timer = 
+		{
+			float par = 90,
+		},
 		HUDCreator = 
 		{
 			string LevelForHUD = "52a7044c7cf6ef4b:HUDLevel",
@@ -51,10 +55,6 @@ Level =
 		},
 		Cheats = 
 		{
-		},
-		Timer = 
-		{
-			float par = 45,
 		},
 	},
 	Cog = 
@@ -69,7 +69,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-89.013, 14.055, 50],
+			Vec3 Translation = [-105.148, 14.88, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, -0, -0, 1],
 		},
@@ -81,7 +81,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 23,
+			float Size = 22,
 		},
 		EditorCameraController = 
 		{
@@ -89,7 +89,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-89.013, 14.055, -3.89084e-006],
+			Vec3 LookTarget = [-105.148, 14.88, -4.59613e-006],
 		},
 		EditorRenderer = 
 		{
@@ -273,19 +273,12 @@ Level =
 			},
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "523438c6167e65ca:End",
 		LinkId = 
 		{
 			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "End",
-		},
-		Archetyped = 
-		{
-			string Name = "523438c6167e65ca:End",
 		},
 		Transform = 
 		{
@@ -293,45 +286,9 @@ Level =
 			Vec3 Scale = [0.4, 0.4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			string SpriteSource = "529e8b081d0ceca0:door",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			bool OnTop = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-		},
-		NextLevel = 
-		{
-			int LevelNumber = 2,
-		},
-		RigidBody = 
-		{
-			bool Static = true,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		BoxCollider = 
-		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = false,
-			string MaterialName = "4faa6050b8692851:HardMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [2, 2, 0.5],
+			string Name = "End",
 		},
 	},
 	ArchetypeInstance = 
@@ -2035,19 +1992,12 @@ Level =
 			Vec3 AngularVelocity = [0, 0, 0],
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "52433a06a7873402:Checkpoint",
 		LinkId = 
 		{
 			uint Id = 61,
-		},
-		Named = 
-		{
-			string Name = "Checkpoint",
-		},
-		Archetyped = 
-		{
-			string Name = "52433a06a7873402:Checkpoint",
 		},
 		Transform = 
 		{
@@ -2055,80 +2005,9 @@ Level =
 			Vec3 Scale = [1, 8, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [0.217183, 0.204575, 0.835, 1],
-			bool Visible = false,
-			bool OnTop = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-		},
-		RigidBody = 
-		{
-			bool Static = true,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		BoxCollider = 
-		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = false,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		Checkpoint = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 62,
-				},
-				Named = 
-				{
-					string Name = "CheckpointText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.021698, 0.112139, -3.59075e-007],
-					Vec3 Scale = [1, 0.125, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					SpriteGeometryMode GeometryMode = ZPlane,
-					TextPositionMode Position = Centered,
-					string FontName = "52d8b2af097ae33e:anklepants",
-					uint FontSize = 50,
-					Vec4 Color = [0.12, 0.0888, 0.0888, 0],
-					bool Visible = true,
-					string Text = "Checkpoint",
-					bool OnTop = true,
-					BlendMode BlendMode = Alpha,
-					Vec2 Size = [0, 0],
-					TextAlign Align = Left,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
-				},
-			},
+			string Name = "Checkpoint",
 		},
 	},
 	ArchetypeInstance = 
@@ -2136,7 +2015,7 @@ Level =
 		string Name = "52433a06a7873402:Checkpoint",
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 62,
 		},
 		Transform = 
 		{

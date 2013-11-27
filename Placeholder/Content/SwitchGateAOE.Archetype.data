@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [32.6825, -2.49799, 0],
-		Vec3 Scale = [1.13285, 1.03211, 37.781],
+		Vec3 Translation = [-17.8054, -1.41872, 0],
+		Vec3 Scale = [1.25, 1.25, 41.6881],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -57,9 +57,6 @@ Cog =
 	LeverLogic = 
 	{
 	},
-	LeverOnLogic = 
-	{
-	},
 	Hierarchy = 
 	{
 		Cog = 
@@ -78,8 +75,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [1.16623, -1.48937, -2.24512e-014],
-				Vec3 Scale = [1.74048, 1.97104, 0.0185462],
+				Vec3 Translation = [6.23476, 3.12102, -2.4869e-014],
+				Vec3 Scale = [1.6, 2.4, 0.0239877],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -135,8 +132,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [1.16626, -3.38222, -5.97046e-015],
-				Vec3 Scale = [1.74048, 1.97104, 0.0185462],
+				Vec3 Translation = [6.23477, 0.745703, -3.55271e-015],
+				Vec3 Scale = [1.6, 2.4, 0.0239877],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -176,22 +173,42 @@ Cog =
 				Vec3 Size = [0.5, 0.5, 0.5],
 			},
 		},
-		ArchetypeInstance = 
+		Cog = 
 		{
-			string Name = "52aec4d879fd04b0:Lever",
 			LinkId = 
 			{
 				uint Id = 4,
 			},
-			Transform = 
-			{
-				Vec3 Translation = [-0.0530468, -0.119788, 0],
-				Vec3 Scale = [1.16339, 1.29066, 0.0348838],
-				Quat Rotation = [0, 0, 0, 1],
-			},
 			Named = 
 			{
 				string Name = "Lever",
+			},
+			Archetyped = 
+			{
+				string Name = "52aec4d879fd04b0:Lever",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0.00216579, -0.0205573, 0],
+				Vec3 Scale = [0.8, 0.8, 0.0239877],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				string SpriteSource = "5275aa4d802dd6dc:Square",
+				bool FlipX = false,
+				bool FlipY = false,
+				Vec4 Color = [1, 1, 1, 1],
+				bool Visible = true,
+				bool OnTop = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+			},
+			Hierarchy = 
+			{
 			},
 		},
 	},

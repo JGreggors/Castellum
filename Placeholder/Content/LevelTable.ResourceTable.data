@@ -4,63 +4,63 @@ ResourceTable =
 	Array EntryList = 
 	[
 		{
-			string Name = "MainMenu",
-			string Value = "52c91d1eafeb949d:MainMenu",
+			string Name = "Splash",
+			string Value = "52d8bb94dc227e33:StartScreen",
 			float Weight = 1,
 		},
 		{
 			string Name = "1",
-			string Value = "523c3bf3ea85618a:Tutorial1",
-			float Weight = 1,
-		},
-		{
-			string Name = "2",
-			string Value = "523ba19b4a528646:IGLevel1",
-			float Weight = 1,
-		},
-		{
-			string Name = "3",
-			string Value = "520a5af2e8608a85:EndLevel",
-			float Weight = 1,
-		},
-		{
-			string Name = "4",
-			string Value = "52430b6c6b4aa67a:Level13",
-			float Weight = 1,
-		},
-		{
-			string Name = "5",
-			string Value = "520a5af2e8608a85:EndLevel",
-			float Weight = 1,
-		},
-		{
-			string Name = "6",
 			string Value = "52c91d1eafeb949d:MainMenu",
 			float Weight = 1,
 		},
 		{
-			string Name = "7",
+			string Name = "2",
 			string Value = "5236bb3703d5f7b6:LevelSelect",
 			float Weight = 1,
 		},
 		{
-			string Name = "8",
+			string Name = "3",
 			string Value = "5236bf68af72f904:Credits",
 			float Weight = 1,
 		},
 		{
-			string Name = "9",
+			string Name = "4",
 			string Value = "52ec5ec4ee87dd2d:Tutorials",
 			float Weight = 1,
 		},
 		{
-			string Name = "10",
+			string Name = "5",
 			string Value = "52ec580f13bc3814:sixten",
 			float Weight = 1,
 		},
 		{
-			string Name = "11",
+			string Name = "6",
 			string Value = "52ec594878c3a51b:elevenfifteen",
+			float Weight = 1,
+		},
+		{
+			string Name = "7",
+			string Value = "52ec590f4aec2093:sixteentwenty",
+			float Weight = 1,
+		},
+		{
+			string Name = "8",
+			string Value = "523ba19b4a528646:IGLevel1",
+			float Weight = 1,
+		},
+		{
+			string Name = "9",
+			string Value = "52269d72e2f31ac4:IGLevel2",
+			float Weight = 1,
+		},
+		{
+			string Name = "10",
+			string Value = "520a5af2e8608a85:EndLevel",
+			float Weight = 1,
+		},
+		{
+			string Name = "11",
+			string Value = "5236bb3703d5f7b6:LevelSelect",
 			float Weight = 1,
 		},
 		{

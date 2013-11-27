@@ -2,6 +2,10 @@ import Zero
 import Events
 import Property
 import VectorMath
+import io
+import pickle
+import os
+import Keys
 
 class LoadHighscore:
     def Initialize(self, initializer):

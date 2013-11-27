@@ -3,7 +3,6 @@ import Events
 import Property
 import VectorMath
 import Property
-import math
 
 class Timer:
     #level par
@@ -14,8 +13,8 @@ class Timer:
         self.totalTime = 0.0
         
         #for the clock
-        self.secondsPassed = self.par - (math.trunc(self.par / 60) * 60)
-        self.carry = math.trunc(self.par / 60)
+        self.secondsPassed = self.par - (60.0 * (round(self.par / 60) - 1))
+        self.carry = (round(self.par / 60) - 1)
         
         self.starttime = self.secondsPassed
         self.startcarry = self.carry

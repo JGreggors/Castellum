@@ -3,6 +3,6 @@ TextContent =
 	PyScriptBuilder = 
 	{
 		string Name = "HighscoreCamera",
-		uint64 ResourceId = 52c2487bab2d1c3b,
+		uint64 ResourceId = 52f89b4273ca079a,
 	},
 },

@@ -3,6 +3,6 @@ TextContent =
 	PyScriptBuilder = 
 	{
 		string Name = "LoadHighscore",
-		uint64 ResourceId = 52c2483259562a77,
+		uint64 ResourceId = 52f89ba5a2d44bb1,
 	},
 },

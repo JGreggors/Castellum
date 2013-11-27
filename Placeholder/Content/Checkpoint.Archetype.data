@@ -57,40 +57,4 @@ Cog =
 	Checkpoint = 
 	{
 	},
-	Hierarchy = 
-	{
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 2,
-			},
-			Named = 
-			{
-				string Name = "CheckpointText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0.021698, 0.112139, -3.59075e-007],
-				Vec3 Scale = [1, 0.125, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				SpriteGeometryMode GeometryMode = ZPlane,
-				TextPositionMode Position = Centered,
-				string FontName = "52d8b2af097ae33e:anklepants",
-				uint FontSize = 50,
-				Vec4 Color = [0.12, 0.0888, 0.0888, 0],
-				bool Visible = true,
-				string Text = "Checkpoint",
-				bool OnTop = true,
-				BlendMode BlendMode = Alpha,
-				Vec2 Size = [0, 0],
-				TextAlign Align = Left,
-				float PixelsPerUnit = 64,
-				bool Smoothing = true,
-			},
-		},
-	},
 },

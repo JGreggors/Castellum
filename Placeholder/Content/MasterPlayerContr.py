@@ -53,11 +53,12 @@ class MasterPlayerContr:
         self.swingDown = True
         self.mousePosition = VectorMath.Vec3(0,0,0)
         self.grappleCounter = 1
+        self.currentVelocity = 0
+
 #----------------------------------------------------------
 #Shooting (JB)
         #For shooting
         Zero.Connect(self.Space, Events.RightMouseDown, self.OnRightClick)
-        self.OriginalArm = self.Owner.FindChildByName("arm").Sprite.Color
         self.Heat = 0.0
         self.CanShoot = True
         self.Shoot = 0.0
@@ -81,7 +82,7 @@ class MasterPlayerContr:
         #Sets if mouse is being held down
         self.MouseDown = True
         self.Owner.FindChildByName("arm").Sprite.SpriteSource = "armfired"
-        if(self.Space.CurrentLevel.Name == "InfiniteGrap" or self.Space.CurrentLevel.Name == "Tutorial1" or self.Space.CurrentLevel.Name == "IGLevel1"):
+        if(self.Space.CurrentLevel.Name == "InfiniteGrap" or self.Space.CurrentLevel.Name == "Tutorial1" or self.Space.CurrentLevel.Name == "IGLevel1" or self.Space.CurrentLevel.Name == "IGLevel2"):
             self.grappleCounter += 1
         #Checks Grapple counter to see if able to grapple
         if(self.grappleCounter > 0):
@@ -102,7 +103,6 @@ class MasterPlayerContr:
     def OnRightClick(self, ViewportMouseEvent):
         # if you can't shoot it makes funny noises
         if(self.CanShoot == False):
-            self.Owner.FindChildByName("arm").Sprite.Color = Color.Red
             self.Space.SoundSpace.PlayCue("Overheat")
             
         else:
@@ -224,7 +224,6 @@ class MasterPlayerContr:
             self.Heat -= self.CooldownSpeed * UpdateEvent.Dt
         #if heat reaches Zero, stop cooling and allow shooting if you couldn't shoot
         if(self.Heat < 0.0):
-            self.Owner.FindChildByName("arm").Sprite.Color = self.OriginalArm
             self.Heat = 0.0
             self.CanShoot = True
         #if heat excedes Overheat threshold, you can't shoot.
@@ -316,6 +315,9 @@ class MasterPlayerContr:
                 self.grappleDistance += self.DeltaTime * 25
         else:
             self.grappleDistance = math.sqrt(math.pow((ray.Start.x - self.grapplePoint.x), 2) + math.pow((ray.Start.y - self.grapplePoint.y), 2))
+            self.currentVelocity = self.Owner.RigidBody.Velocity.x
+            #print(self.currentVelocity)
+            #print("Before")
             self.Owner.RigidBody.Kinematic = True
             if(self.grappleDistance < 1):
                 self.StopGrapple()
@@ -478,16 +480,20 @@ class MasterPlayerContr:
 #--------------------------------------------------------------------------------------------
 #GrappleStops and Resets everything
     def StopGrapple(self):
+        
         self.grappleHit = 0
         self.grappleDistance = 0
         self.playerGrappleShot = False
         self.Owner.RigidBody.Kinematic = False
+        self.Owner.RigidBody.Velocity.x = self.currentVelocity
+        #print(self.currentVelocity)
         self.Swing = False
         #if there is a grapple or hook destroy it
         if(self.Grapple):
             self.Grapple.Destroy()
         if(self.hook):
             self.hook.Destroy()
+        
 #--------------------------------------------------------------------------------------------
            
 #--------------------------------------------------------------------------------------------

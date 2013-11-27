@@ -35,10 +35,11 @@ class CameraLogic:
             self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
         
     def onMouseUpdate(self, MouseEvent):
-        if(MouseEvent.Scroll.y > 0 and not self.Owner.Camera.Size < 10):
-            self.Owner.Camera.Size -= 1
-        elif(MouseEvent.Scroll.y < 0 and not self.Owner.Camera.Size > 21):
-            self.Owner.Camera.Size += 1
+        pass
+        #if(MouseEvent.Scroll.y > 0 and not self.Owner.Camera.Size < 10):
+        #    self.Owner.Camera.Size -= 1
+        #elif(MouseEvent.Scroll.y < 0 and not self.Owner.Camera.Size > 21):
+        #    self.Owner.Camera.Size += 1
 
         
 Zero.RegisterComponent("CameraLogic", CameraLogic)

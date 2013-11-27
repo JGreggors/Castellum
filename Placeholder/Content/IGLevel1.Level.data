@@ -56,6 +56,11 @@ Level =
 		ScoreOn = 
 		{
 		},
+		FixedAspectRatio = 
+		{
+			float Width = 16,
+			float Height = 9,
+		},
 	},
 	Cog = 
 	{
@@ -69,9 +74,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.718, -0.404059, 50],
+			Vec3 Translation = [43.2205, 9.48095, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -1.90735e-008, -0, 1],
+			Quat Rotation = [0, -3.8147e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -81,7 +86,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 23,
+			float Size = 45,
 		},
 		EditorCameraController = 
 		{
@@ -89,7 +94,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [10.718, -0.404059, 6.62887e-007],
+			Vec3 LookTarget = [43.2205, 9.48095, 2.0836e-006],
 		},
 		EditorRenderer = 
 		{
@@ -228,12 +233,19 @@ Level =
 		},
 		Hierarchy = 
 		{
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "5234ef29d5809c2a:arm",
 				LinkId = 
 				{
 					uint Id = 6,
+				},
+				Named = 
+				{
+					string Name = "arm",
+				},
+				Archetyped = 
+				{
+					string Name = "5234ef29d5809c2a:arm",
 				},
 				Transform = 
 				{
@@ -241,9 +253,19 @@ Level =
 					Vec3 Scale = [0.990702, 0.990702, 1.32094],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				Named = 
+				Sprite = 
 				{
-					string Name = "arm",
+					string SpriteSource = "5234e40fd554dc11:arm",
+					bool FlipX = false,
+					bool FlipY = false,
+					Vec4 Color = [1, 1, 1, 1],
+					bool Visible = true,
+					bool OnTop = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
 				},
 			},
 		},
@@ -588,7 +610,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [60.5, -9.6938, 0],
+			Vec3 Translation = [59.6902, -9.6938, 0],
 			Vec3 Scale = [21.0973, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -620,7 +642,7 @@ Level =
 		{
 			bool Active = true,
 			uint EmitCount = 0,
-			float EmitRate = 100,
+			float EmitRate = 1400,
 			float EmitVariance = 0,
 			float Size = 2,
 			float SizeVariance = 2,
@@ -676,7 +698,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [123.533, -0.459331, 0],
+			Vec3 Translation = [126.458, -0.323529, 0.1],
 			Vec3 Scale = [0.7858, 0.7858, 1.9645],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -696,7 +718,7 @@ Level =
 		},
 		NextLevel = 
 		{
-			int LevelNumber = 1,
+			int LevelNumber = 5,
 		},
 		RigidBody = 
 		{

@@ -139,7 +139,6 @@ class Health:
             self.Space.CreateAtPosition("Fizzle", self.Owner.Transform.Translation)
             self.Health = -38
            
-            
         
 
 Zero.RegisterComponent("Health", Health)
