@@ -11,6 +11,7 @@ class StartScreenLogic:
         self.lastSlide = 2
         self.maxcount = 4
         self.count = 4
+        Zero.Mouse.Cursor = -1
         
     def onLogicUpdate(self, UpdateEvent):
         self.slide = self.Space.FindObjectByName("Slide" + str(self.slideNum))
