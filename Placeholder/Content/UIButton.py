@@ -58,6 +58,10 @@ class UIButton:
             Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
             
+        elif(self.Owner.Name == "HighScore"):
+            Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
+            self.Space.SoundSpace.PlayCue("menu")
+            
         elif(self.Owner.Name == "Tutorials"):
             Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")

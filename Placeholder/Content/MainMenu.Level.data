@@ -60,9 +60,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.8798, -10.1189, 49.997],
+			Vec3 Translation = [0.727698, -6.5114, 49.997],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.14577e-008, -0, 1],
+			Quat Rotation = [0, -2.20537e-008, -0, 1],
 		},
 		Camera = 
 		{
@@ -72,7 +72,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29,
+			float Size = 37,
 		},
 		EditorCameraController = 
 		{
@@ -80,7 +80,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.8798, -10.1189, -0.00299844],
+			Vec3 LookTarget = [0.7277, -6.5114, -0.00299828],
 		},
 		EditorRenderer = 
 		{
@@ -563,6 +563,61 @@ Level =
 		{
 			string SourceName = "5227e2d349f83a3b:MainMenu_TileMap00",
 			float UnitsPerTile = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "HighScore",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.59721, -3.43706, 1],
+			Vec3 Scale = [2.44019, 2.44019, 2.44019],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 30,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "High Scores",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [1.37, -0.5, 0],
+			Vec3 Size = [1.45, 0.5, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 HoverColor = [0, 0.43, 1, 0.9999],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 12,
 		},
 	},
 },

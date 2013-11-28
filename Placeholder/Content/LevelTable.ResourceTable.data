@@ -65,7 +65,7 @@ ResourceTable =
 		},
 		{
 			string Name = "12",
-			string Value = "52ec590f4aec2093:sixteentwenty",
+			string Value = "522dd64ba195d832:Highscore",
 			float Weight = 1,
 		},
 		{
