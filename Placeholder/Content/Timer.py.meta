@@ -3,6 +3,6 @@ TextContent =
 	PyScriptBuilder = 
 	{
 		string Name = "Timer",
-		uint64 ResourceId = 52dcabad523328d8,
+		uint64 ResourceId = 52f437fbc9108ccb,
 	},
 },
