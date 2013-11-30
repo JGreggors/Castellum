@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "LvlDoneCheck",
+		uint64 ResourceId = 522e8215ce99e6df,
+	},
+},

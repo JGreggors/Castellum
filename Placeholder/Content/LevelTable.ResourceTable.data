@@ -30,27 +30,27 @@ ResourceTable =
 		},
 		{
 			string Name = "5",
-			string Value = "520a5af2e8608a85:EndLevel",
-			float Weight = 1,
-		},
-		{
-			string Name = "6",
-			string Value = "52ec594878c3a51b:elevenfifteen",
-			float Weight = 1,
-		},
-		{
-			string Name = "7",
-			string Value = "52ec590f4aec2093:sixteentwenty",
-			float Weight = 1,
-		},
-		{
-			string Name = "8",
 			string Value = "523ba19b4a528646:IGLevel1",
 			float Weight = 1,
 		},
 		{
-			string Name = "9",
+			string Name = "6",
 			string Value = "520a5af2e8608a85:EndLevel",
+			float Weight = 1,
+		},
+		{
+			string Name = "7",
+			string Value = "52269d72e2f31ac4:IGLevel2",
+			float Weight = 1,
+		},
+		{
+			string Name = "8",
+			string Value = "520a5af2e8608a85:EndLevel",
+			float Weight = 1,
+		},
+		{
+			string Name = "9",
+			string Value = "5236bb3703d5f7b6:LevelSelect",
 			float Weight = 1,
 		},
 		{

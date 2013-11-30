@@ -29,20 +29,18 @@ Level =
 			bool Background = true,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			uint Layer = 0,
+			int Layer = 0,
 			bool Active = true,
 			bool Blocking = true,
 			uint Renderer = 1,
 			uint Camera = 2,
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [16, 9],
+			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
 		{
 			Vec4 ClearColor = [0.278431, 0.278431, 0.278431, 1],
-		},
-		FixedAspectRatio = 
-		{
-			float Width = 16,
-			float Height = 9,
 		},
 		Cheats = 
 		{
@@ -60,9 +58,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.227694, -2.8689, 49.997],
+			Vec3 Translation = [0.227696, -2.8689, 49.997],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.19047e-008, -0, 1],
+			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
 		Camera = 
 		{
@@ -206,7 +204,7 @@ Level =
 			Vec4 DefaultColor = [1, 1, 1, 1],
 			Vec4 HoverColor = [0, 0.43, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 8,
+			uint LevelNumber = 5,
 		},
 	},
 	Cog = 
