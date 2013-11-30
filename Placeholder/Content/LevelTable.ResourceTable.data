@@ -30,7 +30,7 @@ ResourceTable =
 		},
 		{
 			string Name = "5",
-			string Value = "52ec580f13bc3814:sixten",
+			string Value = "520a5af2e8608a85:EndLevel",
 			float Weight = 1,
 		},
 		{
@@ -50,17 +50,17 @@ ResourceTable =
 		},
 		{
 			string Name = "9",
-			string Value = "52269d72e2f31ac4:IGLevel2",
-			float Weight = 1,
-		},
-		{
-			string Name = "10",
 			string Value = "520a5af2e8608a85:EndLevel",
 			float Weight = 1,
 		},
 		{
+			string Name = "10",
+			string Value = "52269d72e2f31ac4:IGLevel2",
+			float Weight = 1,
+		},
+		{
 			string Name = "11",
-			string Value = "5236bb3703d5f7b6:LevelSelect",
+			string Value = "520a5af2e8608a85:EndLevel",
 			float Weight = 1,
 		},
 		{
