@@ -4,6 +4,7 @@ import Property
 import VectorMath
 import Color
 import Action
+import random
 
 class Health:
     
@@ -29,6 +30,10 @@ class Health:
         self.hurt = False
         self.hurtmore = False
         self.hurtmost = False
+        
+        self.Phrase = False
+        self.maxcount = 2
+        self.count = 2
         
     def OnLogicUpdate(self, UpdateEvent):
         #debug stuff
@@ -74,14 +79,58 @@ class Health:
             #print(self.totalDeath)
         #Respawn procedure
         if(self.PlayerSpawned == False):
+            
             if(self.DeathByPit == False):
                 self.Space.CreateAtPosition("Death", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y, -5))
+            
+            #Creating a random number
+            randPhrase = random.randint(1,3)
+            
             self.Owner.Transform.Translation = self.StartPlace
             self.Health = self.MaxHealth
             self.PlayerSpawned = True
             self.DeathByPit = False
             self.Owner.MasterPlayerContr.StopGrapple()
             self.Owner.RigidBody.Velocity = VectorMath.Vec3(0,0,0)
+            
+            #Based on what the random number is it will do one of these
+            if(randPhrase == 1):
+                #if a phrase already exists it will destroy the current one 
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount #and reset the count
+                #creating a phrase
+                self.Space.CreateAtPosition("Phrase1", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                #setting that to phrase object
+                self.phrase = self.Space.FindObjectByName("Phrase1")
+                #saying there is a phrase
+                self.Phrase = True
+                    
+            elif(randPhrase == 2):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase2", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase2")
+                self.Phrase = True
+          
+            elif(randPhrase == 3):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase3", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase3")
+                self.Phrase = True
+                  
+        if(self.Phrase):
+            if(self.count <= 2):
+                self.count -= UpdateEvent.Dt
+            if(self.count < 0):
+                self.count = self.maxcount
+                self.phrase.Destroy()
+                self.Phrase = False
+                self.PhraseCheck = 0
+            
         #if you aren't dead you're fine
         elif(self.PlayerSpawned == True):
             pass
@@ -93,9 +142,6 @@ class Health:
                 self.RegenStart = 0
                 self.Health = self.MaxHealth
         
-        if(Zero.Keyboard.KeyIsPressed(Zero.Keys.Nine)):
-            self.Health += 1000000000
-            
             
         if(UpdateEvent.CurrentTime > self.nextPing):
             self.nextPing = UpdateEvent.CurrentTime + self.pingDelay
@@ -139,6 +185,7 @@ class Health:
             self.Space.CreateAtPosition("Fizzle", self.Owner.Transform.Translation)
             self.Health = -38
            
-        
+
+
 
 Zero.RegisterComponent("Health", Health)

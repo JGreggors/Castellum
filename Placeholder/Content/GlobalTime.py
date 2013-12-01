@@ -14,6 +14,8 @@ class GlobalTime:
     def Initialize(self, init):
         Zero.Connect(Zero.Keyboard, Events.KeyDown, self.OnKeyDown)
         self.Pause = False
+        
+        
     def OnKeyDown(self, keyboardEvent):
         self.Target = self.Space.FindObjectByName("Target")
         vec = Vec3(self.Space.FindObjectByName("Camera").Transform.Translation.x, (self.Space.FindObjectByName("Camera").Transform.Translation.y + 1.5), 0)
@@ -21,6 +23,8 @@ class GlobalTime:
         vec3 = Vec3(self.Space.FindObjectByName("Camera").Transform.Translation.x, (self.Space.FindObjectByName("Camera").Transform.Translation.y + -.8), 0)
         vec4 = Vec3(self.Space.FindObjectByName("Camera").Transform.Translation.x, (self.Space.FindObjectByName("Camera").Transform.Translation.y + -1.6), 0)
         vec5 = Vec3(self.Space.FindObjectByName("Camera").Transform.Translation.x, (self.Space.FindObjectByName("Camera").Transform.Translation.y + 0), 0)
+        
+        
         #If tab is pressed then toggle pausing the game
         if(keyboardEvent.Key == Keys.P and self.Pause == False):
             self.Space.CreateAtPosition("Pause", vec)

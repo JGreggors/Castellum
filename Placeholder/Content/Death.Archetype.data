@@ -20,7 +20,7 @@ Cog =
 	},
 	Sprite = 
 	{
-		string SpriteSource = "529e85721da02d8e:knight",
+		string SpriteSource = "5234e77c377cd0ef:player",
 		bool FlipX = false,
 		bool FlipY = false,
 		Vec4 Color = [0, 0, 0, 0.9999],

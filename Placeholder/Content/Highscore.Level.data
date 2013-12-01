@@ -29,11 +29,14 @@ Level =
 			bool Background = true,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			uint Layer = 0,
+			int Layer = 0,
 			bool Active = true,
 			bool Blocking = true,
 			uint Renderer = 1,
 			uint Camera = 2,
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [16, 9],
+			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
 		{
@@ -41,11 +44,6 @@ Level =
 		},
 		LoadHighscore = 
 		{
-		},
-		FixedAspectRatio = 
-		{
-			float Width = 16,
-			float Height = 9,
 		},
 	},
 	Cog = 
@@ -60,9 +58,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.8025, -5.2925, 50],
+			Vec3 Translation = [1.2675, -3.8575, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.14577e-008, -0, 1],
+			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
 		Camera = 
 		{
@@ -72,7 +70,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 42,
+			float Size = 31,
 		},
 		EditorCameraController = 
 		{
@@ -80,7 +78,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.8025, -5.2925, 1.40982e-007],
+			Vec3 LookTarget = [1.2675, -3.8575, 2.75175e-007],
 		},
 		EditorRenderer = 
 		{
@@ -1214,8 +1212,8 @@ Level =
 			bool Seamless = false,
 			string MaterialName = "4faa6050b8692851:HardMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [2.25, -1, 0],
-			Vec3 Size = [2.3, 0.65, 0.5],
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [1.75, 0.65, 0.5],
 		},
 		Reactive = 
 		{

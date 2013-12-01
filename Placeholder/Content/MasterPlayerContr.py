@@ -81,22 +81,23 @@ class MasterPlayerContr:
     def OnMouseDown(self, ViewportMouseEvent):
         #Sets if mouse is being held down
         self.MouseDown = True
-        self.Owner.FindChildByName("arm").Sprite.SpriteSource = "armfired"
+        
         if(self.Space.CurrentLevel.Name == "InfiniteGrap" or self.Space.CurrentLevel.Name == "Tutorial1" or self.Space.CurrentLevel.Name == "IGLevel1" or self.Space.CurrentLevel.Name == "IGLevel2"):
             self.grappleCounter += 1
         #Checks Grapple counter to see if able to grapple
         if(self.grappleCounter > 0):
             self.grappleCounter -= 1
             self.StopGrapple()
+            self.Owner.FindChildByName("arm").Sprite.SpriteSource = "armfired"
             self.playerGrappleShot = True
             direction = self.MouseDirection
             direction = math.atan2(direction.y, direction.x)
             self.grappleDirectionPoint = self.mousePosition
             #Grappling 'Rope' object
-            self.Grapple = self.Space.CreateAtPosition("Rope", self.Owner.Transform.Translation)
-            self.Space.CreateAtPosition("Poof", self.Owner.Transform.Translation)
+            self.Grapple = self.Space.CreateAtPosition("Rope", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
+            self.Space.CreateAtPosition("Poof", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * 1), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * 1) + .15, 0) )
             #Grappling 'Hook' object
-            self.hook = self.Space.CreateAtPosition("Hook", self.Owner.Transform.Translation)
+            self.hook = self.Space.CreateAtPosition("Hook", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
             self.grappleDirection = self.MouseDirection
 #----------------------------------------------------------
 #Shooting:
@@ -118,7 +119,9 @@ class MasterPlayerContr:
 #----------------------------------------------------------
     def OnMouseUp(self, ViewportMouseEvent):
         #Sets if mouse is not being held down
-        self.Owner.FindChildByName("arm").Sprite.SpriteSource = "arm"
+        #if(self.Swing == False and self.Grapple == False):
+        #    self.Owner.FindChildByName("arm").Sprite.SpriteSource = "arm"
+            
         self.MouseDown = False
         if(self.grappleHit == 0):
             self.StopGrapple()
@@ -171,7 +174,7 @@ class MasterPlayerContr:
         self.UpdateGroundState()
         self.ApplyJumping()
         self.Owner.Sprite.FlipX = self.playerDirection
-        
+
         
         if(self.keyAttached):
             self.Key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0,.6 * self.Owner.Transform.Scale.y,0)
@@ -480,7 +483,7 @@ class MasterPlayerContr:
 #--------------------------------------------------------------------------------------------
 #GrappleStops and Resets everything
     def StopGrapple(self):
-        
+
         self.grappleHit = 0
         self.grappleDistance = 0
         self.playerGrappleShot = False
@@ -488,6 +491,7 @@ class MasterPlayerContr:
         self.Owner.RigidBody.Velocity.x = self.currentVelocity
         #print(self.currentVelocity)
         self.Swing = False
+        self.Owner.FindChildByName("arm").Sprite.SpriteSource = "arm"
         #if there is a grapple or hook destroy it
         if(self.Grapple):
             self.Grapple.Destroy()

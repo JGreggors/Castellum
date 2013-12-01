@@ -15,22 +15,20 @@ class CameraLogic:
     def OnLogicUpdate(self, UpdateEvent):
         self.targetObject = self.Space.FindObjectByName("Player")
         if(self.targetObject):
+            
         #Get our current translation
             currentTranslation = self.Owner.Transform.Translation
         #Get target object's translation
             targetTranslation = self.targetObject.Transform.Translation
-        #Use x component of target translation with our y and z translation
-            if(self.Space.CurrentLevel.Name == "Level2"):
-                if(targetTranslation.y + 3.4 >= 2):
-                    newTranslation = VectorMath.Vec3(targetTranslation.x, 2, currentTranslation.z)
-                else:
-                    newTranslation = VectorMath.Vec3(targetTranslation.x, targetTranslation.y + 3.4, currentTranslation.z)
-            #Update our translation with the new translation
-            elif(self.Space.CurrentLevel.Name == "InfiniteGrap"):
-                newTranslation = VectorMath.Vec3(targetTranslation.x, -5, currentTranslation.z)
-            elif(self.Space.CurrentLevel.Name != "Level2"):
+            
+            if(self.Space.CurrentLevel.Name == "MainMenu" or self.Space.CurrentLevel.Name == "LevelSelect" or self.Space.CurrentLevel.Name == "Credits"):
+                newTranslation = currentTranslation
+                self.Owner.Transform.Translation = newTranslation
+            else:
+                #Use x component of target translation with our y and z translation
                 newTranslation = VectorMath.Vec3(targetTranslation.x, currentTranslation.y, currentTranslation.z)
-            self.Owner.Transform.Translation = newTranslation
+                self.Owner.Transform.Translation = newTranslation
+            
         if(Zero.Keyboard.KeyIsPressed(Zero.Keys.M)):
             self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
         

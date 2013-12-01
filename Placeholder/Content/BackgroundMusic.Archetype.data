@@ -1,0 +1,44 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "BackgroundMusic",
+	},
+	Archetyped = 
+	{
+		string Name = "522d8c4c8dd55d3a:BackgroundMusic",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SoundEmitter = 
+	{
+		bool StartPlaying = false,
+		int ExtraPriority = 0,
+		string CueName = "52c750016cfb1ca8:Background",
+		float Volume = 1,
+		float Pitch = 1,
+		bool Positional = false,
+	},
+	Sprite = 
+	{
+		string SpriteSource = "4e07948c35993095:DefaultSprite",
+		bool FlipX = false,
+		bool FlipY = false,
+		Vec4 Color = [1, 1, 1, 1],
+		bool Visible = false,
+		bool OnTop = false,
+		bool AnimationActive = false,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+	},
+},

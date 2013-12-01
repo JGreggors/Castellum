@@ -55,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.13006, -5.5634, 50],
+			Vec3 Translation = [-3.18006, -3.9134, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 7,
+			float Size = 20,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-7.13006, -5.5634, -5.94256e-007],
+			Vec3 LookTarget = [-3.18006, -3.9134, -4.21596e-007],
 		},
 		EditorRenderer = 
 		{
@@ -150,13 +150,6 @@ Level =
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
 		},
-		UIButton = 
-		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
-			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 4,
-		},
 		BoxCollider = 
 		{
 			bool Ghost = false,
@@ -204,13 +197,6 @@ Level =
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
-		},
-		UIButton = 
-		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
-			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 5,
 		},
 		BoxCollider = 
 		{
@@ -260,13 +246,6 @@ Level =
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
 		},
-		UIButton = 
-		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
-			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 6,
-		},
 		BoxCollider = 
 		{
 			bool Ghost = false,
@@ -314,13 +293,6 @@ Level =
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
-		},
-		UIButton = 
-		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
-			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 7,
 		},
 		BoxCollider = 
 		{
