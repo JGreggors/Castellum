@@ -30,7 +30,7 @@ ResourceTable =
 		},
 		{
 			string Name = "5",
-			string Value = "523ba19b4a528646:IGLevel1.1",
+			string Value = "52131abc81347e13:IGLevel1.2",
 			float Weight = 1,
 		},
 		{
@@ -55,7 +55,7 @@ ResourceTable =
 		},
 		{
 			string Name = "10",
-			string Value = "52269d72e2f31ac4:IGLevel2",
+			string Value = "5213689fa756e4f9:IGLevel3",
 			float Weight = 1,
 		},
 		{

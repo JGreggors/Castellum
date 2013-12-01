@@ -371,7 +371,7 @@ class MasterPlayerContr:
                     self.grapplePoint = endPosition
                     self.Space.SoundSpace.PlayCue("hooked")
             #Prevents grapple from hitting player and the key
-            elif(castResult.ObjectHit.Name != "Player" and castResult.ObjectHit.Name != "Key" and castResult.ObjectHit.Name != "AOE" and castResult.ObjectHit.Name != "GateAOE" and castResult.ObjectHit.Name != "GWall" and castResult.ObjectHit.Name != "Gold" and castResult.ObjectHit.Name != "Checkpoint"):
+            elif(castResult.ObjectHit.Name != "Player" and castResult.ObjectHit.Name != "Pit" and castResult.ObjectHit.Name != "Key" and castResult.ObjectHit.Name != "AOE" and castResult.ObjectHit.Name != "GateAOE" and castResult.ObjectHit.Name != "GWall" and castResult.ObjectHit.Name != "Gold" and castResult.ObjectHit.Name != "Checkpoint"):
                 if(castResult.Distance < self.grappleDistance):
                     self.StopGrapple()
             else:

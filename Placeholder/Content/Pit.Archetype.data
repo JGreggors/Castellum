@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [5.5, -15, 0],
+		Vec3 Translation = [24.5, -14, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -46,11 +46,11 @@ Cog =
 	{
 		bool Active = true,
 		uint EmitCount = 0,
-		float EmitRate = 1000,
+		float EmitRate = 800,
 		float EmitVariance = 0,
 		float Size = 2,
 		float SizeVariance = 2,
-		float Lifetime = 0.9,
+		float Lifetime = 0.5,
 		float LifetimeVariance = 0,
 		float Spin = 0,
 		float SpinVariance = 0,
