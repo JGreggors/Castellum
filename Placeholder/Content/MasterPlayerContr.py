@@ -20,7 +20,6 @@ class MasterPlayerContr:
         #Creating LogicUpdate, CollisionStarted, Collision Persisted (JB)
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
         Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStarted)
-        Zero.Connect(self.Owner, Events.CollisionPersisted, self.OnButtonPress)
 #----------------------------------------------------------
 #Player Movement Related:
         #Setting starting ground state
@@ -137,12 +136,6 @@ class MasterPlayerContr:
         if(KeyboardEvent.Key == Zero.Keys.Space):
             self.jumpIsPressed = True
         #Key Logic (JB)
-        if(KeyboardEvent.Key == Zero.Keys.E and self.keyAttached == True):
-            self.Space.SoundSpace.PlayCue("menuNo")
-            self.Key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1 * self.Owner.Transform.Scale.x, 0, 0)
-            self.Key.RigidBody.Static = False
-            self.keyAttached = False
-            self.Key.BoxCollider.Ghost = False
         if(KeyboardEvent.Key == Zero.Keys.Shift):
             self.ShiftIsPressed = True
             
@@ -579,6 +572,14 @@ class MasterPlayerContr:
         key = self.Space.FindObjectByName("Key")
         otherObject = CollisionEvent.OtherObject
         
+        if(otherObject.Name == "AOE" and self.keyAttached == False):
+            self.Space.SoundSpace.PlayCue("pickupkey")
+            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, .6  * self.Owner.Transform.Scale.y, 0)
+            key.RigidBody.Static = True
+            key.BoxCollider.Ghost = True
+            self.keyAttached = True
+            
+        
         displacementX = targetObject.Transform.Translation.x - self.Owner.Transform.Translation.x
         displacementY = targetObject.Transform.Translation.y - self.Owner.Transform.Translation.y
         #Stops grapple if hits object
@@ -611,36 +612,6 @@ class MasterPlayerContr:
             key.RigidBody.Static = False
             self.keyAttached = False
             key.BoxCollider.Ghost = False
-#--------------------------------------------------------------------------------------------
-
-#--------------------------------------------------------------------------------------------
-#All of the Key Logic (JB)
-    def OnButtonPress(self, CollisionEvent):
-        otherObject = CollisionEvent.OtherObject
-        key = self.Space.FindObjectByName("Key")
-        if(not otherObject):
-            #Dan says this if funneh
-            return
-        
-        if(otherObject.Name == "AOE" and self.keyAttached == False and Zero.Keyboard.KeyIsPressed(Zero.Keys.E)):
-            self.Space.SoundSpace.PlayCue("pickupkey")
-            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, .6  * self.Owner.Transform.Scale.y, 0)
-            key.RigidBody.Static = True
-            key.BoxCollider.Ghost = True
-            self.keyAttached = True
-
-        #elif(self.keyAttached):
-        #    self.Space.SoundSpace.PlayCue("menuNo")
-        #    key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1 * self.Owner.Transform.Scale.x, 0, 0)
-        #    key.RigidBody.Static = False
-        #    self.keyAttached = True
-        #    key.BoxCollider.Ghost = False
-        #    self.CanShoot = True
-
-
-        #elif(otherObject.Name == "Gold"):
-        #    self.gold += 1
-        #    self.Space.SoundSpace.PlayCue("gold")
 #--------------------------------------------------------------------------------------------
 
 
