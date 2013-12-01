@@ -1,0 +1,37 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Phrase6",
+	},
+	Archetyped = 
+	{
+		string Name = "522d3cd4bc484ee3:Phrase6",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteText = 
+	{
+		SpriteGeometryMode GeometryMode = ZPlane,
+		TextPositionMode Position = UpperLeft,
+		string FontName = "52d8b2af097ae33e:anklepants",
+		uint FontSize = 50,
+		Vec4 Color = [0, 0.831373, 0.121569, 1],
+		bool Visible = true,
+		string Text = "I didn't know somebody could be that bad.",
+		bool OnTop = false,
+		BlendMode BlendMode = Alpha,
+		Vec2 Size = [0, 0],
+		TextAlign Align = Left,
+		float PixelsPerUnit = 64,
+		bool Smoothing = true,
+	},
+},

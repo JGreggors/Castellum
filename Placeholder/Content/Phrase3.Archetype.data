@@ -21,10 +21,10 @@ Cog =
 	SpriteText = 
 	{
 		SpriteGeometryMode GeometryMode = ZPlane,
-		TextPositionMode Position = Centered,
+		TextPositionMode Position = UpperLeft,
 		string FontName = "52d8b2af097ae33e:anklepants",
 		uint FontSize = 50,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [0, 0.831373, 0.121569, 1],
 		bool Visible = true,
 		string Text = "Are you even trying?",
 		bool OnTop = false,

@@ -55,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.6348, -6.5914, 49.997],
+			Vec3 Translation = [19.7152, -0.666399, 49.997],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 37,
+			float Size = 31,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.6348, -6.5914, -0.00299838],
+			Vec3 LookTarget = [19.7152, -0.666399, -0.00299745],
 		},
 		EditorRenderer = 
 		{
@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.75318, -3.43706, 1],
+			Vec3 Translation = [-3.75318, -4.05722, 1],
 			Vec3 Scale = [2.44019, 2.44019, 2.44019],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -134,7 +134,7 @@ Level =
 			TextPositionMode Position = UpperLeft,
 			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 50,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [0, 0.831373, 0.121569, 1],
 			bool Visible = true,
 			string Text = "Start",
 			bool OnTop = false,
@@ -161,7 +161,7 @@ Level =
 		},
 		UIButton = 
 		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 DefaultColor = [0, 0.831373, 0.121569, 1],
 			Vec4 HoverColor = [0, 0.43, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 5,
@@ -216,7 +216,7 @@ Level =
 		},
 		UIButton = 
 		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 DefaultColor = [0, 0.831373, 0.121569, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 3,
@@ -234,7 +234,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.74996, -5.74554, 1],
+			Vec3 Translation = [-6.74996, -6.09438, 1],
 			Vec3 Scale = [2.44019, 2.44019, 2.44019],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -271,7 +271,7 @@ Level =
 		},
 		UIButton = 
 		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
+			Vec4 DefaultColor = [0, 0.831373, 0.121569, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 2,
@@ -474,25 +474,23 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.321421, -1.36137, -0.00299832],
-			Vec3 Scale = [2.41177, 2.41177, 2.41177],
+			Vec3 Translation = [-0.321421, -1.36137, 1],
+			Vec3 Scale = [1, 1, 2.41177],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 80,
+			string SpriteSource = "522d2aadfd469063:titlescreen2",
+			bool FlipX = false,
+			bool FlipY = false,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = "Castellum",
-			bool OnTop = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			SpriteGeometryMode GeometryMode = ZPlane,
 		},
 	},
 	Cog = 
@@ -535,7 +533,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.67628, -3.72233, 1],
+			Vec3 Translation = [4.67628, -4.22621, 1],
 			Vec3 Scale = [2.44019, 2.44019, 2.44019],
 			Quat Rotation = [0, 0, -0.239801, 0.970822],
 		},
@@ -572,8 +570,8 @@ Level =
 		},
 		UIButton = 
 		{
-			Vec4 DefaultColor = [1, 1, 1, 1],
-			Vec4 HoverColor = [0, 0.43, 1, 0.9999],
+			Vec4 DefaultColor = [0.486275, 0.431373, 1, 1],
+			Vec4 HoverColor = [0, 0.113725, 1, 1],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 12,
 		},

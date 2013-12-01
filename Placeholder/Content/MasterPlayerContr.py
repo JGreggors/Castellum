@@ -81,7 +81,6 @@ class MasterPlayerContr:
         #Sets if mouse is being held down
         self.MouseDown = True
         
-
         #Checks Grapple counter to see if able to grapple
         self.StopGrapple()
         self.Owner.FindChildByName("arm").Sprite.SpriteSource = "armfired"
@@ -90,10 +89,11 @@ class MasterPlayerContr:
         direction = math.atan2(direction.y, direction.x)
         self.grappleDirectionPoint = self.mousePosition
         #Grappling 'Rope' object
-        self.Grapple = self.Space.CreateAtPosition("Rope", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
-        self.Space.CreateAtPosition("Poof", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * 1), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * 1) + .15, 0) )
+        if(self.Space.CurrentLevel.Name != "MainMenu"):
+            self.Grapple = self.Space.CreateAtPosition("Rope", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
+            self.Space.CreateAtPosition("Poof", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * 1), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * 1) + .15, 0) )
         #Grappling 'Hook' object
-        self.hook = self.Space.CreateAtPosition("Hook", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
+            self.hook = self.Space.CreateAtPosition("Hook", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
         self.grappleDirection = self.MouseDirection
 #----------------------------------------------------------
 #Shooting:
