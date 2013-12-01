@@ -42,9 +42,6 @@ Level =
 		{
 			Vec4 ClearColor = [0.278431, 0.278431, 0.278431, 1],
 		},
-		MusicLogic = 
-		{
-		},
 	},
 	Cog = 
 	{
@@ -58,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.227696, -2.8689, 49.997],
+			Vec3 Translation = [-1.6348, -6.5914, 49.997],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -70,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33,
+			float Size = 37,
 		},
 		EditorCameraController = 
 		{
@@ -78,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.227696, -2.8689, -0.0029983],
+			Vec3 LookTarget = [-1.6348, -6.5914, -0.00299838],
 		},
 		EditorRenderer = 
 		{
@@ -120,40 +117,6 @@ Level =
 		LinkId = 
 		{
 			uint Id = 4,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.4175, -4.9725, -5],
-			Vec3 Scale = [313.783, 313.783, 313.783],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [0, 0, 0, 0.9999],
-			bool Visible = true,
-			bool OnTop = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-		},
-		MusicLogic = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 5,
 		},
 		Named = 
 		{
@@ -208,7 +171,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -263,7 +226,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -318,7 +281,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -359,7 +322,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -390,7 +353,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -453,7 +416,7 @@ Level =
 				string Name = "5234ef29d5809c2a:arm",
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 10,
 				},
 				Transform = 
 				{
@@ -472,7 +435,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -503,7 +466,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -536,7 +499,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -564,7 +527,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 14,
 		},
 		Named = 
 		{

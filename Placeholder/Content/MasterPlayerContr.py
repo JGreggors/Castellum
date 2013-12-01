@@ -51,7 +51,7 @@ class MasterPlayerContr:
         self.Swing = False
         self.swingDown = True
         self.mousePosition = VectorMath.Vec3(0,0,0)
-        self.grappleCounter = 1
+
         self.currentVelocity = 0
 
 #----------------------------------------------------------
@@ -81,23 +81,20 @@ class MasterPlayerContr:
         #Sets if mouse is being held down
         self.MouseDown = True
         
-        if(self.Space.CurrentLevel.Name == "InfiniteGrap" or self.Space.CurrentLevel.Name == "Tutorial1" or self.Space.CurrentLevel.Name == "IGLevel1" or self.Space.CurrentLevel.Name == "IGLevel2"):
-            self.grappleCounter += 1
+
         #Checks Grapple counter to see if able to grapple
-        if(self.grappleCounter > 0):
-            self.grappleCounter -= 1
-            self.StopGrapple()
-            self.Owner.FindChildByName("arm").Sprite.SpriteSource = "armfired"
-            self.playerGrappleShot = True
-            direction = self.MouseDirection
-            direction = math.atan2(direction.y, direction.x)
-            self.grappleDirectionPoint = self.mousePosition
-            #Grappling 'Rope' object
-            self.Grapple = self.Space.CreateAtPosition("Rope", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
-            self.Space.CreateAtPosition("Poof", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * 1), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * 1) + .15, 0) )
-            #Grappling 'Hook' object
-            self.hook = self.Space.CreateAtPosition("Hook", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
-            self.grappleDirection = self.MouseDirection
+        self.StopGrapple()
+        self.Owner.FindChildByName("arm").Sprite.SpriteSource = "armfired"
+        self.playerGrappleShot = True
+        direction = self.MouseDirection
+        direction = math.atan2(direction.y, direction.x)
+        self.grappleDirectionPoint = self.mousePosition
+        #Grappling 'Rope' object
+        self.Grapple = self.Space.CreateAtPosition("Rope", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
+        self.Space.CreateAtPosition("Poof", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * 1), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * 1) + .15, 0) )
+        #Grappling 'Hook' object
+        self.hook = self.Space.CreateAtPosition("Hook", VectorMath.Vec3(self.Owner.Transform.Translation.x + (math.cos(self.PointDirection) * .5), self.Owner.Transform.Translation.y + (math.sin(self.PointDirection) * .5) + .15, 0) )
+        self.grappleDirection = self.MouseDirection
 #----------------------------------------------------------
 #Shooting:
     def OnRightClick(self, ViewportMouseEvent):

@@ -29,20 +29,18 @@ Level =
 			bool Background = true,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			uint Layer = 0,
+			int Layer = 0,
 			bool Active = true,
 			bool Blocking = true,
 			uint Renderer = 1,
 			uint Camera = 2,
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [16, 9],
+			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
 		{
 			Vec4 ClearColor = [0.278431, 0.278431, 0.278431, 1],
-		},
-		FixedAspectRatio = 
-		{
-			float Width = 16,
-			float Height = 9,
 		},
 	},
 	Cog = 
@@ -57,9 +55,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.325, -5.3075, 50],
+			Vec3 Translation = [-0.324998, -5.3075, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.17557e-008, -0, 1],
+			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
 		Camera = 
 		{
@@ -69,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 45,
+			float Size = 32,
 		},
 		EditorCameraController = 
 		{
