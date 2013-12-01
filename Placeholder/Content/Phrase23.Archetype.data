@@ -6,11 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Phrase1",
+		string Name = "Phrase23",
 	},
 	Archetyped = 
 	{
-		string Name = "522d9f49b8b3a158:Phrase1",
+		string Name = "522d3d74615c3d1a:Phrase23",
 	},
 	Transform = 
 	{
@@ -26,7 +26,7 @@ Cog =
 		uint FontSize = 50,
 		Vec4 Color = [0, 0.831373, 0.121569, 1],
 		bool Visible = true,
-		string Text = "Nice Try",
+		string Text = "C’mon, just a few more steps!",
 		bool OnTop = false,
 		BlendMode BlendMode = Alpha,
 		Vec2 Size = [0, 0],

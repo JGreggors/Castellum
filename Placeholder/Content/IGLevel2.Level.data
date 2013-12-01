@@ -29,11 +29,14 @@ Level =
 			bool Background = true,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			uint Layer = 0,
+			int Layer = 0,
 			bool Active = true,
 			bool Blocking = true,
 			uint Renderer = 1,
 			uint Camera = 2,
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [16, 9],
+			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
 		{
@@ -56,11 +59,6 @@ Level =
 		{
 			string LevelForHUD = "52a7044c7cf6ef4b:HUDLevel",
 		},
-		FixedAspectRatio = 
-		{
-			float Width = 16,
-			float Height = 9,
-		},
 	},
 	Cog = 
 	{
@@ -74,9 +72,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21.5449, -9.2575, 50],
+			Vec3 Translation = [4.6449, -2.0625, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -1.90735e-008, -0, 1],
+			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
 		Camera = 
 		{
@@ -86,7 +84,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44,
+			float Size = 29,
 		},
 		EditorCameraController = 
 		{
@@ -94,7 +92,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [21.5449, -9.2575, 9.41763e-007],
+			Vec3 LookTarget = [4.6449, -2.0625, 2.03041e-007],
 		},
 		EditorRenderer = 
 		{

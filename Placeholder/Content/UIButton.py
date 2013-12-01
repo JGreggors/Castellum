@@ -7,7 +7,7 @@ Vec4 = VectorMath.Vec4
 
 class UIButton:
     #setting defaults for changing color can change in properties
-    DefaultColor = Property.Vector4(default = Vec4(1,1,1,1))
+    DefaultColor = Property.Vector4(default = Vec4(0,212,31,1))
     HoverColor = Property.Vector4(default = Vec4(1,1,0,0.25))
     DownColor = Property.Vector4(default = Vec4(1,1,1,0.5))
     LevelNumber = Property.Uint(0)

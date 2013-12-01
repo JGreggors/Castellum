@@ -84,7 +84,7 @@ class Health:
                 self.Space.CreateAtPosition("Death", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y, -5))
             
             #Creating a random number
-            randPhrase = random.randint(1,3)
+            randPhrase = random.randint(1,34)
             
             self.Owner.Transform.Translation = self.StartPlace
             self.Health = self.MaxHealth
@@ -121,7 +121,255 @@ class Health:
                 self.Space.CreateAtPosition("Phrase3", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
                 self.phrase = self.Space.FindObjectByName("Phrase3")
                 self.Phrase = True
+
+            elif(randPhrase == 4):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase4", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase4")
+                self.Phrase = True
+          
+            elif(randPhrase == 5):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase5", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase5")
+                self.Phrase = True
+                
+            elif(randPhrase == 6):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase6", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase6")
+                self.Phrase = True
+          
+            elif(randPhrase == 7):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase7", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase7")
+                self.Phrase = True
+
+            elif(randPhrase == 8):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase8", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase8")
+                self.Phrase = True
+          
+            elif(randPhrase == 9):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase9", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase9")
+                self.Phrase = True
+                
+            elif(randPhrase == 10):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase10", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase10")
+                self.Phrase = True
+          
+            elif(randPhrase == 11):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase11", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase11")
+                self.Phrase = True
+
+            elif(randPhrase == 12):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase12", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase12")
+                self.Phrase = True
+          
+            elif(randPhrase == 13):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase13", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase13")
+                self.Phrase = True
+                
+            elif(randPhrase == 14):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase14", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase14")
+                self.Phrase = True
+          
+            elif(randPhrase == 15):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase15", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase15")
+                self.Phrase = True
+
+            elif(randPhrase == 16):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase16", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase16")
+                self.Phrase = True
+          
+            elif(randPhrase == 17):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase17", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase17")
+                self.Phrase = True
                   
+            elif(randPhrase == 18):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase18", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase18")
+                self.Phrase = True
+          
+            elif(randPhrase == 19):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase19", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase19")
+                self.Phrase = True
+
+            elif(randPhrase == 20):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase20", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase20")
+                self.Phrase = True
+          
+            elif(randPhrase == 21):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase21", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase21")
+                self.Phrase = True
+                
+            elif(randPhrase == 22):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase22", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase22")
+                self.Phrase = True
+          
+            elif(randPhrase == 23):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase23", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase23")
+                self.Phrase = True
+
+            elif(randPhrase == 24):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase24", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase24")
+                self.Phrase = True
+          
+            elif(randPhrase == 25):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase25", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase25")
+                self.Phrase = True
+                
+            elif(randPhrase == 26):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase26", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase26")
+                self.Phrase = True
+          
+            elif(randPhrase == 27):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase27", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase27")
+                self.Phrase = True
+
+            elif(randPhrase == 28):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase28", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase28")
+                self.Phrase = True
+          
+            elif(randPhrase == 29):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase29", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase29")
+                self.Phrase = True
+                
+            elif(randPhrase == 30):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase30", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase30")
+                self.Phrase = True
+          
+            elif(randPhrase == 31):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase31", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase31")
+                self.Phrase = True
+
+            elif(randPhrase == 32):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase32", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase32")
+                self.Phrase = True
+          
+            elif(randPhrase == 33):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase33", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase33")
+                self.Phrase = True
+                  
+            elif(randPhrase == 34):
+                if(self.Phrase):
+                    self.phrase.Destroy()
+                    self.count = self.maxcount
+                self.Space.CreateAtPosition("Phrase34", VectorMath.Vec3(self.Owner.Transform.Translation.x, self.Owner.Transform.Translation.y + 3, 1))
+                self.phrase = self.Space.FindObjectByName("Phrase34")
+                self.Phrase = True
+                
         if(self.Phrase):
             if(self.count <= 2):
                 self.count -= UpdateEvent.Dt
