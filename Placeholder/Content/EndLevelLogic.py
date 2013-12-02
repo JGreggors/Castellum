@@ -21,6 +21,7 @@ class EndLevelLogic:
         self.startGoldScore = 0 #This sets beginning score from Gold to 0
         self.startDeathScore = 0 #This sets beginning score from deaths to 0
         
+        self.deathsAreDone = False
         self.timeIsDone = False
         self.goldIsDone = False
         
@@ -84,10 +85,7 @@ class EndLevelLogic:
             total.Text = str(round(self.tscore + self.tgold - self.tdeath))
             #if you press Space again end level
             if((Zero.Keyboard.KeyIsPressed(Keys.Space) and self.endLevel) or (self.timeIsDone == True and self.goldIsDone == True)):
-                if(self.Space.CurrentLevel.Name == "EndLevel1"):
-                    self.Space.LoadLevel("Win1")
-                else:
-                    self.Space.LoadLevel("LevelSelect")
+                self.Space.LoadLevel("LevelSelect")
                 
             self.endLevel = True
         
@@ -95,7 +93,7 @@ class EndLevelLogic:
         else:
             #Slowly add up time score
             if(self.levelProgression > 1 and self.startTimeScore <= self.tscore):
-                self.startTimeScore += 1 * (UpdateEvent.Dt * 100000)
+                self.startTimeScore += 1 * (UpdateEvent.Dt * 100)
                 clock.Text = str(round(self.startTimeScore))
             if(self.startTimeScore >= self.tscore):
                 clock.Text = str(round(self.tscore))
@@ -106,7 +104,7 @@ class EndLevelLogic:
                     gold.Text = "0"
                     self.goldIsDone = True
                 else:
-                    self.startGoldScore += 1 * (UpdateEvent.Dt * 1000)
+                    self.startGoldScore += 1 * (UpdateEvent.Dt * 100)
                     gold.Text = str(round(self.startGoldScore))
                     if(self.startGoldScore >= self.tgold):
                         gold.Text = str(round(self.tgold))
@@ -115,11 +113,13 @@ class EndLevelLogic:
             if(self.levelProgression > 3 and self.startDeathScore <= self.tdeath):
                 if(self.finalDeaths == 0):
                     deaths.Text = "0"
+                    self.deathsAreDone = True
                 else:
                     self.startDeathScore += 1 * (UpdateEvent.Dt * 100)
                     deaths.Text = str(round(-self.startDeathScore))
+                    self.deathsAreDone = True
             #add up total
-            if(self.timeIsDone == True and self.goldIsDone == True):
+            if(self.timeIsDone == True and self.goldIsDone == True and self.deathsAreDone == True):
                 total.Text = str(round(self.tscore + self.tgold - self.tdeath))
 
 Zero.RegisterComponent("EndLevelLogic", EndLevelLogic)

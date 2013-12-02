@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [70.1162, -3.48239, -2.00875e-006],
+		Vec3 Translation = [48.9788, 0.988117, -48.5344],
 		Vec3 Scale = [8, 9, 41.6881],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -59,12 +59,19 @@ Cog =
 	},
 	Hierarchy = 
 	{
-		ArchetypeInstance = 
+		Cog = 
 		{
-			string Name = "520ff9bb62bffb60:Gate1",
 			LinkId = 
 			{
 				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Gate1",
+			},
+			Archetyped = 
+			{
+				string Name = "520ff9bb62bffb60:Gate1",
 			},
 			Transform = 
 			{
@@ -72,17 +79,56 @@ Cog =
 				Vec3 Scale = [0.25, 0.333333, 0.0239877],
 				Quat Rotation = [0, 0, 0, 1],
 			},
-			Named = 
+			Sprite = 
 			{
-				string Name = "Gate1",
+				string SpriteSource = "52d8aa05647f864c:gatetemp2",
+				bool FlipX = false,
+				bool FlipY = false,
+				Vec4 Color = [1, 1, 1, 1],
+				bool Visible = true,
+				bool OnTop = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = false,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.5, 0.5, 0.5],
 			},
 		},
-		ArchetypeInstance = 
+		Cog = 
 		{
-			string Name = "520ffa496818361e:Gate2",
 			LinkId = 
 			{
 				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "Gate2",
+			},
+			Archetyped = 
+			{
+				string Name = "520ffa496818361e:Gate2",
 			},
 			Transform = 
 			{
@@ -90,9 +136,41 @@ Cog =
 				Vec3 Scale = [0.25, 0.333333, 0.0239877],
 				Quat Rotation = [0, 0, 0, 1],
 			},
-			Named = 
+			Sprite = 
 			{
-				string Name = "Gate2",
+				string SpriteSource = "52d8aa05647f864c:gatetemp2",
+				bool FlipX = false,
+				bool FlipY = false,
+				Vec4 Color = [1, 1, 1, 1],
+				bool Visible = true,
+				bool OnTop = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = false,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.5, 0.5, 0.5],
 			},
 		},
 	},
