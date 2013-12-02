@@ -55,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.960198, -4.7739, 49.997],
+			Vec3 Translation = [19.7152, -0.666399, 49.997],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.960198, -4.7739, -0.00299827],
+			Vec3 LookTarget = [19.7152, -0.666399, -0.00299745],
 		},
 		EditorRenderer = 
 		{
@@ -244,7 +244,7 @@ Level =
 			TextPositionMode Position = UpperLeft,
 			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 50,
-			Vec4 Color = [0, 0.113725, 1, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Level Select",
 			bool OnTop = false,

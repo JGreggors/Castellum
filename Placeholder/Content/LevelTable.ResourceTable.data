@@ -5,12 +5,12 @@ ResourceTable =
 	[
 		{
 			string Name = "Splash",
-			string Value = "52d8bb94dc227e33:StartScreen",
+			string Value = "52bf1c02350215f2:GroundLevel1",
 			float Weight = 1,
 		},
 		{
 			string Name = "1",
-			string Value = "52c91d1eafeb949d:MainMenu",
+			string Value = "520a5af2e8608a85:EndLevel",
 			float Weight = 1,
 		},
 		{

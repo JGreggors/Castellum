@@ -42,7 +42,7 @@ class Health:
         #print(self.RegenStart)
         #print(self.Health)
        #---------------------------------------
-        
+        key = self.Space.FindObjectByName("Key")
         #Owner's health is full everything is A ok
         if(self.Health == self.MaxHealth):
             self.Owner.Sprite.Color = self.OriginalColor
@@ -76,6 +76,11 @@ class Health:
             self.Space.SoundSpace.PlayCue("death")
             self.PlayerSpawned = False
             self.totalDeath += 1 
+            if(self.Space.FindObjectByName("Player").MasterPlayerContr.keyAttached == True):
+                self.Space.FindObjectByName("Player").MasterPlayerContr.keyAttached == False
+                key.Transform.Translation = self.Owner.Transform.Translation + Vec3(1, 0, 0)
+                key.RigidBody.Static = False
+                key.BoxCollider.Ghost = False
             #print(self.totalDeath)
         #Respawn procedure
         if(self.PlayerSpawned == False):
