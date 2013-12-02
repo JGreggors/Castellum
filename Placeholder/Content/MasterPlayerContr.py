@@ -501,6 +501,10 @@ class MasterPlayerContr:
             else:
                 moveDirection += Vec3(.5,0,0)
             self.playerDirection = False
+            if(self.Owner.Sprite.SpriteSource.Name == "player_stand"):
+                self.Owner.Sprite.SpriteSource = "player"
+
+           
             self.arm.Transform.Translation = Vec3(-.03, currentArmTranslation.y, currentArmTranslation.z)
             
         if(self.moveLeft):
@@ -509,9 +513,13 @@ class MasterPlayerContr:
             else:
                 moveDirection += Vec3(-.5,0,0)
             self.playerDirection = True
-            self.arm.Transform.Translation = Vec3(.03, currentArmTranslation.y, currentArmTranslation.z)
-            
+            if(self.Owner.Sprite.SpriteSource.Name == "player_stand"):
+                self.Owner.Sprite.SpriteSource = "player"
 
+            self.arm.Transform.Translation = Vec3(.03, currentArmTranslation.y, currentArmTranslation.z)
+        if(not (self.moveRight or self.moveLeft)):
+            self.Owner.Sprite.SpriteSource = "player_stand"
+            
         self.Owner.RigidBody.ApplyLinearVelocity(moveDirection * (self.moveSpeed/30))
         
     def ApplyJumping(self):
