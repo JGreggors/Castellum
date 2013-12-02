@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "IGLevel2Copy1Copy1",
-		uint64 ResourceId = 52bf1c070a7e5882,
+		string Name = "Win1.Level",
+		uint64 ResourceId = 522bde3387da0e88,
 		string LoaderType = "Level",
 		uint Version = 0,
 		bool ShowInEditor = true,
