@@ -84,7 +84,10 @@ class EndLevelLogic:
             total.Text = str(round(self.tscore + self.tgold - self.tdeath))
             #if you press Space again end level
             if((Zero.Keyboard.KeyIsPressed(Keys.Space) and self.endLevel) or (self.timeIsDone == True and self.goldIsDone == True)):
-                self.Space.LoadLevel("LevelSelect")
+                if(self.Space.CurrentLevel.Name == "EndLevel1"):
+                    self.Space.LoadLevel("Win1")
+                else:
+                    self.Space.LoadLevel("LevelSelect")
                 
             self.endLevel = True
         
