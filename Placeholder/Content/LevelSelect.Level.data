@@ -55,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.18006, -3.9134, 50],
+			Vec3 Translation = [-0.98506, -8.3934, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20,
+			float Size = 8,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.18006, -3.9134, -4.21596e-007],
+			Vec3 LookTarget = [-0.98506, -8.3934, -3.2565e-007],
 		},
 		EditorRenderer = 
 		{
@@ -107,15 +107,6 @@ Level =
 			float NearPlane = 0.5,
 			float FarPlane = 200,
 			float Size = 20,
-		},
-		SoundEmitter = 
-		{
-			bool StartPlaying = true,
-			int ExtraPriority = 0,
-			string CueName = "52c750016cfb1ca8:Background",
-			float Volume = 1,
-			float Pitch = 1,
-			bool Positional = true,
 		},
 	},
 	Cog = 
@@ -322,14 +313,14 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.79607, -9.4952, 0.2],
+			Vec3 Translation = [-0.666658, -10.1164, 0.2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
+			TextPositionMode Position = Centered,
 			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 70,
 			Vec4 Color = [1, 1, 1, 1],
@@ -356,7 +347,7 @@ Level =
 			bool Seamless = false,
 			string MaterialName = "4faa6050b8692851:HardMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [2.25, -1, 0],
+			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [2.3, 0.65, 0.5],
 		},
 		Reactive = 

@@ -5,7 +5,7 @@ ResourceTable =
 	[
 		{
 			string Name = "Splash",
-			string Value = "52d8bb94dc227e33:StartScreen",
+			string Value = "522bff3c07ad5d84:Controls",
 			float Weight = 1,
 		},
 		{

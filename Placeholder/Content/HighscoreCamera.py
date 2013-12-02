@@ -17,7 +17,8 @@ class HighscoreCamera:
     def onMouseUpdate(self, MouseEvent):
         if(MouseEvent.Scroll.y > 0 and not self.Owner.Transform.Translation.y > 0):
             self.CurrentTran.y += 1
-        elif(MouseEvent.Scroll.y < 0 and not self.Owner.Transform.Translation.y < -10):
+        elif(MouseEvent.Scroll.y < 0 and not self.Owner.Transform.Translation.y < -10 and self.Space.CurrentLevel.Name == "Highscore"):
             self.CurrentTran.y += -1
-
+        elif(MouseEvent.Scroll.y < 0 and not self.Owner.Transform.Translation.y < -43 and self.Space.CurrentLevel.Name == "Controls"):
+            self.CurrentTran.y += -1
 Zero.RegisterComponent("HighscoreCamera", HighscoreCamera)
