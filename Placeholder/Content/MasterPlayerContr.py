@@ -579,7 +579,7 @@ class MasterPlayerContr:
         
         if(otherObject.Name == "AOE" and self.keyAttached == False):
             self.Space.SoundSpace.PlayCue("pickupkey")
-            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, .6  * self.Owner.Transform.Scale.y, 0)
+            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, .6  * self.Owner.Transform.Scale.y, 1)
             key.RigidBody.Static = True
             key.BoxCollider.Ghost = True
             self.keyAttached = True
