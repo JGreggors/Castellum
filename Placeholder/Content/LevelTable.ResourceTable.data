@@ -5,7 +5,7 @@ ResourceTable =
 	[
 		{
 			string Name = "Splash",
-			string Value = "522bff3c07ad5d84:Controls",
+			string Value = "522ad108f922a7fa:JG2",
 			float Weight = 1,
 		},
 		{
@@ -40,7 +40,7 @@ ResourceTable =
 		},
 		{
 			string Name = "7",
-			string Value = "52269d72e2f31ac4:IGLevel2",
+			string Value = "4faa6050b86892a8:DefaultLevel",
 			float Weight = 1,
 		},
 		{

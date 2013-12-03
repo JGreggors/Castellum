@@ -308,7 +308,7 @@ class MasterPlayerContr:
                 self.grappleDistance += self.DeltaTime * 25
         else:
             self.grappleDistance = math.sqrt(math.pow((ray.Start.x - self.grapplePoint.x), 2) + math.pow((ray.Start.y - self.grapplePoint.y), 2))
-            self.currentVelocity = self.Owner.RigidBody.Velocity.x
+            #self.currentVelocity = self.Owner.RigidBody.Velocity.x
             #print(self.currentVelocity)
             #print("Before")
             self.Owner.RigidBody.Kinematic = True
@@ -478,7 +478,7 @@ class MasterPlayerContr:
         self.grappleDistance = 0
         self.playerGrappleShot = False
         self.Owner.RigidBody.Kinematic = False
-        self.Owner.RigidBody.Velocity.x = self.currentVelocity
+        #self.Owner.RigidBody.Velocity.x = self.currentVelocity
         #print(self.currentVelocity)
         self.Swing = False
         self.Owner.FindChildByName("arm").Sprite.SpriteSource = "arm"
