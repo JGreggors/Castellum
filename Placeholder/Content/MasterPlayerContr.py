@@ -590,7 +590,7 @@ class MasterPlayerContr:
         displacementY = targetObject.Transform.Translation.y - self.Owner.Transform.Translation.y
         #Stops grapple if hits object
 
-        if(self.Swing and targetObject.Name != "Gold"):
+        if(self.Swing and targetObject.Name != "Gold" and targetObject.Name != "Key" and targetObject.Name != "AOE"):
                 self.StopGrapple()
 
         

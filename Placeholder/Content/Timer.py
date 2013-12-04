@@ -8,14 +8,14 @@ import Color
 
 class Timer:
     #level par
-    par = Property.Float(45.0)
+    par = Property.Float(180.0)
     def Initialize(self, initializer):
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
         
         self.totalTime = 0.0
         
         #for the clock
-        self.secondsPassed = (math.trunc(self.par / 60) * 60)
+        self.secondsPassed = (math.trunc(45 / 60) * 60)
         #self.carry = math.trunc(self.par / 60)
         
         self.starttime = self.secondsPassed
