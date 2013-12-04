@@ -72,7 +72,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [50.9586, -4.81268, 50],
+			Vec3 Translation = [15.945, -13.365, 90],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -84,7 +84,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 28.0349,
+			float Size = 37,
 		},
 		EditorCameraController = 
 		{
@@ -92,7 +92,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [50.9586, -4.81268, 1.65922e-006],
+			Vec3 LookTarget = [15.945, -13.365, 40],
 		},
 		EditorRenderer = 
 		{
@@ -138,7 +138,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.4805, -8.39244, 0],
+			Vec3 Translation = [-3.4805, 3.66549, 0],
 			Vec3 Scale = [3.14411, 3.14411, 3.14411],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -174,8 +174,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [13, -10, 0],
-			Vec3 Scale = [0.198341, 0.716192, 1],
+			Vec3 Translation = [15.5899, -11.0577, 0],
+			Vec3 Scale = [0.338261, 0.716192, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -199,8 +199,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [62.5635, -9.18548, 0.1],
-			Vec3 Scale = [0.876, 0.876, 1.63256],
+			Vec3 Translation = [35.3031, 2.07251, 0],
+			Vec3 Scale = [0.653023, 0.653023, 1.63256],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -268,44 +268,134 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "5213737588024ca5:IGLevel3_TileMap05",
+			string SourceName = "5214c749a68a5792:IzzyLevel5Copy1_TileMap00",
 			float UnitsPerTile = 1,
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "52c4be097e795f9c:Pit",
+		string Name = "5200e13174cdd122:Gold",
 		LinkId = 
 		{
 			uint Id = 9,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [43.5, 3.93234, 0],
-			Vec3 Scale = [0.198341, 0.716192, 1],
+			Vec3 Translation = [7.5, -3.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
-			string Name = "Pit",
+			string Name = "Gold",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "52c4be097e795f9c:Pit",
+		string Name = "5200e13174cdd122:Gold",
 		LinkId = 
 		{
 			uint Id = 10,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [43.5, -10.251, 0],
-			Vec3 Scale = [0.198341, 0.716192, 1],
+			Vec3 Translation = [21, -3.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
-			string Name = "Pit",
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17, -7.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14.5, -8, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [9.5, -5.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [12, -7.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [19, -5.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
 		},
 	},
 },
