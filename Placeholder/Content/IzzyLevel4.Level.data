@@ -72,7 +72,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [101.388, -8.07499, 90],
+			Vec3 Translation = [39.0017, 5.73251, 90],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -84,7 +84,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 28,
+			float Size = 58.5,
 		},
 		EditorCameraController = 
 		{
@@ -92,7 +92,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [101.388, -8.07499, 40],
+			Vec3 LookTarget = [39.0017, 5.73251, 40],
 		},
 		EditorRenderer = 
 		{
@@ -272,76 +272,356 @@ Level =
 			float UnitsPerTile = 1,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "52c4be097e795f9c:Pit",
 		LinkId = 
 		{
 			uint Id = 9,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [22.8823, 7.98506, 0],
-			Vec3 Scale = [0.198341, 0.716192, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "Pit",
 		},
+		Archetyped = 
+		{
+			string Name = "52c4be097e795f9c:Pit",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [22.8823, 7.43467, 0],
+			Vec3 Scale = [0.198341, 0.716192, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Additive,
+			ParticleSortMode SortMode = None,
+			string Texture = "52c34acfb825f6de:FireCloud",
+			Vec4 Tint = [0.595, 0.246925, 0.246925, 1],
+			float VelocityScale = 1,
+			float LengthScale = 0,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [100, 5, 5],
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 5, 0],
+			Vec3 RandomForce = [0, 5, 0],
+			float Torque = 0,
+			float Growth = -0.5,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		BoxParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 350,
+			float EmitVariance = 0,
+			float Size = 2,
+			float SizeVariance = 2,
+			float Lifetime = 0.5,
+			float LifetimeVariance = 0,
+			float Spin = 0,
+			float SpinVariance = 0,
+			bool RandomSpin = false,
+			float Fill = 1,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 2, 0],
+			Vec3 RandomVelocity = [0, 1, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [100, 1, 1],
+			bool FastMovingEmitter = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [50, 1, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = false,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "52c4be097e795f9c:Pit",
 		LinkId = 
 		{
 			uint Id = 10,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [42.732, 7.98506, 0],
-			Vec3 Scale = [0.198341, 0.716192, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "Pit",
 		},
+		Archetyped = 
+		{
+			string Name = "52c4be097e795f9c:Pit",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [42.732, 7.43467, 0],
+			Vec3 Scale = [0.198341, 0.716192, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Additive,
+			ParticleSortMode SortMode = None,
+			string Texture = "52c34acfb825f6de:FireCloud",
+			Vec4 Tint = [0.595, 0.246925, 0.246925, 1],
+			float VelocityScale = 1,
+			float LengthScale = 0,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [100, 5, 5],
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 5, 0],
+			Vec3 RandomForce = [0, 5, 0],
+			float Torque = 0,
+			float Growth = -0.5,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		BoxParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 350,
+			float EmitVariance = 0,
+			float Size = 2,
+			float SizeVariance = 2,
+			float Lifetime = 0.5,
+			float LifetimeVariance = 0,
+			float Spin = 0,
+			float SpinVariance = 0,
+			bool RandomSpin = false,
+			float Fill = 1,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 2, 0],
+			Vec3 RandomVelocity = [0, 1, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [100, 1, 1],
+			bool FastMovingEmitter = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [50, 1, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = false,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "52c4be097e795f9c:Pit",
 		LinkId = 
 		{
 			uint Id = 11,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [61.9899, 7.98506, 0],
-			Vec3 Scale = [0.198341, 0.716192, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "Pit",
 		},
+		Archetyped = 
+		{
+			string Name = "52c4be097e795f9c:Pit",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [61.9899, 7.43467, 0],
+			Vec3 Scale = [0.198341, 0.716192, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Additive,
+			ParticleSortMode SortMode = None,
+			string Texture = "52c34acfb825f6de:FireCloud",
+			Vec4 Tint = [0.595, 0.246925, 0.246925, 1],
+			float VelocityScale = 1,
+			float LengthScale = 0,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [100, 5, 5],
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 5, 0],
+			Vec3 RandomForce = [0, 5, 0],
+			float Torque = 0,
+			float Growth = -0.5,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		BoxParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 350,
+			float EmitVariance = 0,
+			float Size = 2,
+			float SizeVariance = 2,
+			float Lifetime = 0.5,
+			float LifetimeVariance = 0,
+			float Spin = 0,
+			float SpinVariance = 0,
+			bool RandomSpin = false,
+			float Fill = 1,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 2, 0],
+			Vec3 RandomVelocity = [0, 1, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [100, 1, 1],
+			bool FastMovingEmitter = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [50, 1, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = false,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "52c4be097e795f9c:Pit",
 		LinkId = 
 		{
 			uint Id = 12,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [81.2133, 7.98506, 0],
-			Vec3 Scale = [0.198341, 0.716192, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "Pit",
+		},
+		Archetyped = 
+		{
+			string Name = "52c4be097e795f9c:Pit",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [81.2133, 7.43467, 0],
+			Vec3 Scale = [0.198341, 0.716192, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Additive,
+			ParticleSortMode SortMode = None,
+			string Texture = "52c34acfb825f6de:FireCloud",
+			Vec4 Tint = [0.595, 0.246925, 0.246925, 1],
+			float VelocityScale = 1,
+			float LengthScale = 0,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [100, 5, 5],
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 5, 0],
+			Vec3 RandomForce = [0, 5, 0],
+			float Torque = 0,
+			float Growth = -0.5,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		BoxParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 350,
+			float EmitVariance = 0,
+			float Size = 2,
+			float SizeVariance = 2,
+			float Lifetime = 0.5,
+			float LifetimeVariance = 0,
+			float Spin = 0,
+			float SpinVariance = 0,
+			bool RandomSpin = false,
+			float Fill = 1,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 2, 0],
+			Vec3 RandomVelocity = [0, 1, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [100, 1, 1],
+			bool FastMovingEmitter = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [50, 1, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = false,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
 		},
 	},
 	ArchetypeInstance = 

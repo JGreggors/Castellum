@@ -5,7 +5,6 @@ import VectorMath
 
 class MusicLogic:
     def Initialize(self, initializer):
-        Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
         
         self.backgroundMusicObject = self.Space.FindObjectByName("BackgroundMusic")
         
@@ -19,14 +18,5 @@ class MusicLogic:
         if(self.backgroundMusicObject.SoundEmitter.IsPlaying() == False):
             self.backgroundMusicObject.SoundEmitter.Play()
             
-
-        
-    def OnLogicUpdate(self, UpdateEvent):
-        #if(Zero.Keyboard.KeyIsPressed(Zero.Keys.M)):
-        #    self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
-            
-            
-        if(Zero.Keyboard.KeyIsPressed(Zero.Keys.Shift)):
-            self.Space.ReloadLevel()
 
 Zero.RegisterComponent("MusicLogic", MusicLogic)

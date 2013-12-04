@@ -105,7 +105,7 @@ class EndLevelLogic:
         else:
             #Slowly add up time score
             if(self.levelProgression > 1 and self.startTimeScore <= self.tscore):
-                self.startTimeScore += 1 * (UpdateEvent.Dt * 100)
+                self.startTimeScore += 10 * (UpdateEvent.Dt * 100)
                 clock.Text = str(round(self.startTimeScore))
             if(self.startTimeScore >= self.tscore):
                 clock.Text = str(round(self.tscore))
@@ -116,7 +116,7 @@ class EndLevelLogic:
                     gold.Text = "0"
                     self.goldIsDone = True
                 else:
-                    self.startGoldScore += 1 * (UpdateEvent.Dt * 100)
+                    self.startGoldScore += 10 * (UpdateEvent.Dt * 100)
                     gold.Text = str(round(self.startGoldScore))
                     if(self.startGoldScore >= self.tgold):
                         gold.Text = str(round(self.tgold))
@@ -127,7 +127,7 @@ class EndLevelLogic:
                     deaths.Text = "0"
                     self.deathsAreDone = True
                 else:
-                    self.startDeathScore += 1 * (UpdateEvent.Dt * 100)
+                    self.startDeathScore += 10 * (UpdateEvent.Dt * 100)
                     deaths.Text = str(round(-self.startDeathScore))
                     self.deathsAreDone = True
             #add up total

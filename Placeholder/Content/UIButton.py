@@ -20,6 +20,8 @@ class UIButton:
         Zero.Connect(self.Owner, Events.MouseUp, self.OnMouseUp)
         Zero.Connect(self.Owner, Events.MouseDown, self.OnMouseDown)
         
+        Zero.Connect(Zero.Game, Events.GameRequestQuit, self.OnGameRequestQuit)
+        
         self.DefaultState()
 #----------------------------------------------------------------------
 #Color Stuff
@@ -85,6 +87,12 @@ class UIButton:
         elif(self.Owner.Name == "Level13"):
             Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
+        
+        
+        elif(self.Owner.Name == "Quit"):
+            Zero.Game.Quit()
+            
+            
       #Levels
 #----------------------------------------------------------------------------------
         elif(self.Owner.Name == "Level1"):
@@ -119,4 +127,11 @@ class UIButton:
     def OnMouseDown(self, ViewportMouseEvent):
         self.DownState()
 #--------------------------------------------------------------------
+
+    def OnGameRequestQuit(self, gameEvent):
+        #If you handle this event the game will not exit
+        gameEvent.Handled = True
+            
+            
+
 Zero.RegisterComponent("UIButton", UIButton)

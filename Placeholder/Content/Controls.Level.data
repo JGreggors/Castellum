@@ -55,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.18744, -37.6275, 50],
+			Vec3 Translation = [5.63494, -36.43, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 31,
+			float Size = 6,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.18744, -37.6275, 1.39331e-007],
+			Vec3 LookTarget = [5.63494, -36.43, 2.46315e-007],
 		},
 		EditorRenderer = 
 		{
@@ -1492,37 +1492,6 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.8496, -29.4283, -5],
-			Vec3 Scale = [5.36452, 1.63529, 1.63529],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [0.278431, 0.278431, 0.278431, 1],
-			bool Visible = true,
-			bool OnTop = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 48,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
 			Vec3 Translation = [-4.0176, -25.8562, -5],
 			Vec3 Scale = [1.63529, 1.63529, 1.63529],
 			Quat Rotation = [0, 0, 0, 1],
@@ -1546,7 +1515,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 49,
+			uint Id = 48,
 		},
 		Named = 
 		{
@@ -1579,40 +1548,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 50,
-		},
-		Named = 
-		{
-			string Name = "Transform",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-6.1066, -28.4298, -4],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 101,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = "Shift",
-			bool OnTop = false,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 51,
+			uint Id = 49,
 		},
 		Named = 
 		{
@@ -1645,7 +1581,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 50,
 		},
 		Named = 
 		{
@@ -1678,7 +1614,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 51,
 		},
 		Named = 
 		{
@@ -1709,7 +1645,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 52,
 		},
 		Named = 
 		{
@@ -1742,7 +1678,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 53,
 		},
 		Named = 
 		{
@@ -1797,7 +1733,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 54,
 		},
 		Named = 
 		{
@@ -1828,7 +1764,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 55,
 		},
 		Named = 
 		{
@@ -1846,7 +1782,7 @@ Level =
 			TextPositionMode Position = Centered,
 			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 40,
-			Vec4 Color = [0.855, 0.671602, 0.021375, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = false,
 			string Text = "G",
 			bool OnTop = true,
@@ -1875,7 +1811,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 56,
 		},
 		Named = 
 		{
@@ -1922,7 +1858,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 57,
 		},
 		Named = 
 		{
@@ -1969,7 +1905,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 58,
 		},
 		Named = 
 		{
@@ -2002,7 +1938,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 59,
 		},
 		Named = 
 		{
@@ -2033,7 +1969,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 60,
 		},
 		Named = 
 		{
@@ -2064,7 +2000,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 61,
 		},
 		Named = 
 		{
@@ -2095,7 +2031,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 64,
+			uint Id = 62,
 		},
 		Named = 
 		{
@@ -2128,7 +2064,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 65,
+			uint Id = 63,
 		},
 		Named = 
 		{
@@ -2161,7 +2097,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 66,
+			uint Id = 64,
 		},
 		Named = 
 		{
@@ -2194,7 +2130,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 67,
+			uint Id = 65,
 		},
 		Named = 
 		{
@@ -2227,7 +2163,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 68,
+			uint Id = 66,
 		},
 		Named = 
 		{
@@ -2260,7 +2196,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 67,
 		},
 		Named = 
 		{
@@ -2293,7 +2229,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 70,
+			uint Id = 68,
 		},
 		Named = 
 		{
@@ -2314,6 +2250,70 @@ Level =
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "health",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 69,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.0176, -29.5197, -5],
+			Vec3 Scale = [1.63529, 1.63529, 1.63529],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [0.278431, 0.278431, 0.278431, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 70,
+		},
+		Named = 
+		{
+			string Name = "Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.55195, -28.5135, -4],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = UpperLeft,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 101,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "R",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],

@@ -42,9 +42,6 @@ Level =
 		{
 			Vec4 ClearColor = [0.278431, 0.278431, 0.278431, 1],
 		},
-		GlobalTime = 
-		{
-		},
 		Cheats = 
 		{
 		},
@@ -58,6 +55,9 @@ Level =
 		Timer = 
 		{
 			float par = 60,
+		},
+		GlobalTime = 
+		{
 		},
 	},
 	Cog = 

@@ -134,7 +134,7 @@ class MasterPlayerContr:
         if(KeyboardEvent.Key == Zero.Keys.Space):
             self.jumpIsPressed = True
         #Key Logic (JB)
-        if(KeyboardEvent.Key == Zero.Keys.Shift):
+        if(KeyboardEvent.Key == Zero.Keys.R):
             self.ShiftIsPressed = True
             
 
@@ -154,7 +154,7 @@ class MasterPlayerContr:
         #if(KeyboardEvent.Key == Zero.Keys.E and self.EIsPressed == False):
         #    if(self.keyAttached):
         #        self.RIsPressed = False
-        if(KeyboardEvent.Key == Zero.Keys.Shift):
+        if(KeyboardEvent.Key == Zero.Keys.R):
             self.ShiftIsPressed = False
 #--------------------------------------------------------------------------------------------
 

@@ -74,8 +74,9 @@ class GlobalTime:
         if(keyboardEvent.Key == Keys.Escape and self.Escape == False):
             self.Space.CreateAtPosition("PauseBG", vec2)
             self.Space.CreateAtPosition("EscQuit", vec)
-            self.Space.CreateAtPosition("EscQuitY", vec3)
-            self.Space.CreateAtPosition("EscQuitN", vec7)
+            self.Space.CreateAtPosition("EscQuitY", vec5)
+            self.Space.CreateAtPosition("EscQuitN", vec3)
+            self.Space.CreateAtPosition("QuitLevel", vec7)
             self.Escape = True
             self.Space.TimeSpace.TogglePause()
         
@@ -84,11 +85,20 @@ class GlobalTime:
             self.Space.FindObjectByName("EscQuit").Destroy()
             self.Space.FindObjectByName("EscQuitY").Destroy()
             self.Space.FindObjectByName("EscQuitN").Destroy()
+            self.Space.FindObjectByName("QuitLevel").Destroy()
             self.Escape = False
             self.Space.TimeSpace.TogglePause()
         
         elif(keyboardEvent.Key == Keys.Y and self.Escape == True):
             Zero.Game.Quit()
+            
+        if(self.Escape):
+            if(keyboardEvent.Key == Keys.Back):
+                self.Escape = False
+                self.Space.TimeSpace.TogglePause()
+                if(Zero.Game.FindSpaceByName("HUDSpace")):
+                    Zero.Game.FindSpaceByName("HUDSpace").Destroy()
+                self.Space.LoadLevel("MainMenu")
             
             
             
