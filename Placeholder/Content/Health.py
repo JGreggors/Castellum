@@ -26,6 +26,7 @@ class Health:
         self.nextPing = 0.0
         
         self.DeathByPit = False
+
         
         self.hurt = False
         self.hurtmore = False
@@ -45,6 +46,8 @@ class Health:
         #print(self.Health)
        #---------------------------------------
         key = self.Space.FindObjectByName("Key")
+        
+        
         
         self.healthbar.Transform.Scale = VectorMath.Vec3((self.Health / self.MaxHealth) * self.healthbarscalex,0.113,1)
         

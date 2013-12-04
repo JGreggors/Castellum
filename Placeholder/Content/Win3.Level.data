@@ -430,7 +430,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Credits",
+			string Name = "UI",
 		},
 		Transform = 
 		{
@@ -475,6 +475,9 @@ Level =
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 2,
+		},
+		WinScreenLogic = 
+		{
 		},
 	},
 },

@@ -427,7 +427,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Credits",
+			string Name = "UI",
 		},
 		Transform = 
 		{
@@ -474,6 +474,9 @@ Level =
 			uint LevelNumber = 2,
 		},
 		ScaleText = 
+		{
+		},
+		WinScreenLogic = 
 		{
 		},
 	},

@@ -589,9 +589,12 @@ class MasterPlayerContr:
         displacementX = targetObject.Transform.Translation.x - self.Owner.Transform.Translation.x
         displacementY = targetObject.Transform.Translation.y - self.Owner.Transform.Translation.y
         #Stops grapple if hits object
+
         if(self.Swing and targetObject.Name != "Gold"):
-            self.StopGrapple()
-            
+                self.StopGrapple()
+
+        
+        
         if(Gob):
             self.Owner.RigidBody.ApplyForce(VectorMath.Vec3((displacementX * -100),(displacementY * -250),0))
             targetObject.RigidBody.ApplyForce(VectorMath.Vec3((displacementX * 250),(displacementY * 50),0))

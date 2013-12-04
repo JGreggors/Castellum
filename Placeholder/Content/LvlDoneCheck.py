@@ -12,12 +12,12 @@ class LvlDoneCheck:
         self.Check()
         
     def Check(self):
-        self.scores = [[0] * 10 for i in range(10)]
+        self.scores = [[0] * 11 for i in range(11)]
         
         if(os.path.isfile(self.UserDirect + "Castellum\\" + self.filename)):
             ScoreFile = open(self.UserDirect + "Castellum\\" + self.filename, "r")
             
-            for i in range(10):
+            for i in range(11):
                 self.scores[i] = int(ScoreFile.readline())
                 print(self.scores[i])
                 
@@ -52,6 +52,9 @@ class LvlDoneCheck:
                     self.Owner.Sprite.Visible = True
             elif(self.Owner.Name == "Check10"):
                 if(self.scores[9] > 0):
+                    self.Owner.Sprite.Visible = True
+            elif(self.Owner.Name == "Check11"):
+                if(self.scores[10] > 0):
                     self.Owner.Sprite.Visible = True
         
 

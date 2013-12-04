@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "WinScreenLogic",
+		uint64 ResourceId = 52290736fbffa06b,
+	},
+},

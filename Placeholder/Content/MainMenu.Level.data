@@ -58,7 +58,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.369807, -12.6739, 49.997],
+			Vec3 Translation = [3.42769, -5.1564, 49.997],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -70,7 +70,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12,
+			float Size = 31,
 		},
 		EditorCameraController = 
 		{
@@ -78,7 +78,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.369807, -12.6739, -0.00299832],
+			Vec3 LookTarget = [3.42769, -5.1564, -0.00299815],
 		},
 		EditorRenderer = 
 		{
@@ -164,7 +164,7 @@ Level =
 			Vec4 DefaultColor = [0, 0.831373, 0.121569, 1],
 			Vec4 HoverColor = [0, 0.43, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 5,
+			uint LevelNumber = 7,
 		},
 	},
 	Cog = 
@@ -633,7 +633,7 @@ Level =
 			Vec4 DefaultColor = [0, 0.831373, 0.121569, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 16,
+			uint LevelNumber = 5,
 		},
 	},
 	Cog = 
@@ -688,7 +688,7 @@ Level =
 			Vec4 DefaultColor = [0, 0.831373, 0.121569, 1],
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
-			uint LevelNumber = 15,
+			uint LevelNumber = 6,
 		},
 	},
 },

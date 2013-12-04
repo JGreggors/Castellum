@@ -17,7 +17,7 @@ class HighscoreLogic:
         
         Zero.Connect(Zero.Keyboard, Events.KeyDown, self.OnKeyDown) #get cho buttons ready
        
-        for i in range(1,6): #While in the range between 1-5, append the names thus finding the cogs
+        for i in range(1,12): #While in the range between 1-5, append the names thus finding the cogs
             self.names.append(self.Space.FindObjectByName("Name" + str(i)))
             self.scores.append(self.Space.FindObjectByName("Score"+ str(i)))
             
@@ -34,7 +34,7 @@ class HighscoreLogic:
         self.WriteHighScore()
         
     def WriteHighScore(self):
-        for i in range(0,5):
+        for i in range(0,10):
             self.names[i].SpriteText.Text = self.listedScoreData[i].name
             self.scores[i].SpriteText.Text = self.listedScoreData[i].score
         

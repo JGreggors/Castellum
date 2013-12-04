@@ -136,13 +136,13 @@ class EndLevelLogic:
 
     def Check(self):
         #setting up an array to hold score values
-        self.scores = [[0] * 10 for i in range(10)]
+        self.scores = [[0] * 11 for i in range(11)]
         #checking if this path exists
         if(os.path.isfile(self.UserDirect + "Castellum\\" + self.filename)):
             #opens file
             ScoreFile = open(self.UserDirect + "Castellum\\" + self.filename, "r")
             #reads in scores stores in file
-            for i in range(10):
+            for i in range(11):
                 #changes scores to integers
                 self.scores[i] = int(ScoreFile.readline())
                 
@@ -150,38 +150,38 @@ class EndLevelLogic:
             ScoreFile.close()
         #checks current level and if scores have been stored    
         if(self.Space.CurrentLevel.Name == "EndLevel" and self.WinTutorial == False):    
-            if(self.scores[0] > 0 and self.scores[1] > 0 and self.scores[2] > 0):
+            if(self.scores[0] > 0 and self.scores[1] > 0):
                 #if the scores are stored then those levels are complete load win screen
                 self.Space.FindObjectByName("LvlToggles").LevelToggles.WinTutorial = True #state this win screen has been achieved
                 self.Space.LoadLevel("Win1")
                 return
                 
         if(self.Space.CurrentLevel.Name == "EndLevel1" and self.WinDougMode == False):
-            if(self.scores[3] > 0 and self.scores[4] > 0 and self.scores[5] > 0):
+            if(self.scores[2] > 0 and self.scores[3] > 0 and self.scores[4] > 0):
                 #if the scores are stored then those levels are complete load win screen
                 self.Space.FindObjectByName("LvlToggles").LevelToggles.WinDougMode = True 
                 self.Space.LoadLevel("Win2")
                 return
                 
         if(self.Space.CurrentLevel.Name == "EndLevel2" and self.WinAdventure == False):
-            if(self.scores[6] > 0 and self.scores[7] > 0 and self.scores[8] > 0):
+            if(self.scores[5] > 0 and self.scores[6] > 0 and self.scores[7] > 0):
                 self.Space.FindObjectByName("LvlToggles").LevelToggles.WinAdventure = True 
                 #if the scores are stored then those levels are complete load win screen
                 self.Space.LoadLevel("Win3")
                 return
                 
         if(self.Space.CurrentLevel.Name == "EndLevel3" and self.WinDaredevil == False):
-            if(self.score[9] > 0):
+            if(self.scores[8] > 0 and self.scores[9] > 0 and self.scores[10] > 0):
                 self.Space.FindObjectByName("LvlToggles").LevelToggles.WinDaredevil = True
                 #if the scores are stored then those levels are complete load win screen
-                self.Space.Loadlevel("Win4")
+                self.Space.LoadLevel("Win4")
                 return
                 
-        if(self.WinTutorial == True and self.WinDougMode == True and self.WinAdventure == True and self.WinDaredevil == True and self.WinAll == False):
-            self.Space.FindObjectByName("LvlToggles").LevelToggles.WinAll = True
-            #basically if all levels are complete load win screen for whole game
-            self.Space.LoadLevel("Win5")
-            return
+        #if(self.WinTutorial == True and self.WinDougMode == True and self.WinAdventure == True and self.WinDaredevil == True and self.WinAll == False):
+        #    self.Space.FindObjectByName("LvlToggles").LevelToggles.WinAll = True
+        #    #basically if all levels are complete load win screen for whole game
+        #    self.Space.LoadLevel("Win5")
+        #    return
         
         self.Space.LoadLevel("LevelSelect")
 

@@ -23,7 +23,7 @@ class SaveHighscore:
         if(not os.path.isfile(self.UserDirect + "Castellum\\" + self.filename)):
             initialScores = "0\n"
             
-            for i in range(0,9):
+            for i in range(0,10):
                 initialScores += "0\n"
             
             

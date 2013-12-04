@@ -55,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.0825, -4.2925, 50],
+			Vec3 Translation = [0.48, -0.00749934, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40,
+			float Size = 25,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [5.0825, -4.2925, 2.22164e-007],
+			Vec3 LookTarget = [0.48, -0.00749934, 2.09823e-008],
 		},
 		EditorRenderer = 
 		{
@@ -475,6 +475,61 @@ Level =
 			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "HighScore",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10.8457, -0.748565, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, -0.247152, 0.968977],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 50,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "High Scores",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [2.9, 0.5, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [0, 0.113725, 1, 1],
+			Vec4 HoverColor = [0, 0.431372, 1, 1],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 4,
 		},
 	},
 },

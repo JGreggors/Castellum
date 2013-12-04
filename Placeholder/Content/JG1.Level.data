@@ -51,9 +51,12 @@ Level =
 		},
 		Timer = 
 		{
-			float par = 45,
+			float par = 60,
 		},
 		GlobalTime = 
+		{
+		},
+		Cheats = 
 		{
 		},
 	},
@@ -69,7 +72,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [15.1074, -7.9375, 50],
+			Vec3 Translation = [-21.4276, -1.4275, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -81,7 +84,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 75,
+			float Size = 53,
 		},
 		EditorCameraController = 
 		{
@@ -89,7 +92,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [15.1074, -7.9375, 6.60381e-007],
+			Vec3 LookTarget = [-21.4276, -1.4275, -9.36615e-007],
 		},
 		EditorRenderer = 
 		{

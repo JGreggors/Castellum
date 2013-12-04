@@ -110,6 +110,10 @@ class UIButton:
         elif(self.Owner.Name == "Level6"):
             Zero.Game.LevelManager.LoadSpecificLevel(self.LevelNumber)
             self.Space.SoundSpace.PlayCue("menu")
+            
+        elif(self.Owner.Name == "UI"):
+            self.Owner.WinScreenLogic.Check()
+
 #----------------------------------------------------------------------------------
        
     def OnMouseDown(self, ViewportMouseEvent):

@@ -30,17 +30,17 @@ ResourceTable =
 		},
 		{
 			string Name = "5",
-			string Value = "52131abc81347e13:IGLevel1.2",
+			string Value = "522bff3c07ad5d84:Controls",
 			float Weight = 1,
 		},
 		{
 			string Name = "6",
-			string Value = "520a5af2e8608a85:EndLevel",
+			string Value = "52ec580f13bc3814:Volume",
 			float Weight = 1,
 		},
 		{
 			string Name = "7",
-			string Value = "52bf1c02350215f2:GroundLevel1",
+			string Value = "52131abc81347e13:IzzyLevel1",
 			float Weight = 1,
 		},
 		{
@@ -50,7 +50,7 @@ ResourceTable =
 		},
 		{
 			string Name = "9",
-			string Value = "5213689fa756e4f9:IGLevel3",
+			string Value = "5215028e74342740:IzzyLevel5",
 			float Weight = 1,
 		},
 		{
@@ -60,7 +60,7 @@ ResourceTable =
 		},
 		{
 			string Name = "11",
-			string Value = "522acb0b7501642f:JG1",
+			string Value = "5213689fa756e4f9:IzzyLevel2",
 			float Weight = 1,
 		},
 		{
@@ -70,7 +70,7 @@ ResourceTable =
 		},
 		{
 			string Name = "13",
-			string Value = "522ad108f922a7fa:JG2",
+			string Value = "522acb0b7501642f:JG1",
 			float Weight = 1,
 		},
 		{
@@ -80,12 +80,72 @@ ResourceTable =
 		},
 		{
 			string Name = "15",
-			string Value = "52ec580f13bc3814:Volume",
+			string Value = "52153ad50bb41335:IzzyLevel3",
 			float Weight = 1,
 		},
 		{
 			string Name = "16",
-			string Value = "522bff3c07ad5d84:Controls",
+			string Value = "5229f97e215d866e:EndLevel1",
+			float Weight = 1,
+		},
+		{
+			string Name = "17",
+			string Value = "5215028a74be6722:IzzyLevel4",
+			float Weight = 1,
+		},
+		{
+			string Name = "18",
+			string Value = "5229a80b7d949e55:EndLevel2",
+			float Weight = 1,
+		},
+		{
+			string Name = "19",
+			string Value = "522ad108f922a7fa:JG2",
+			float Weight = 1,
+		},
+		{
+			string Name = "20",
+			string Value = "5229a80b7d949e55:EndLevel2",
+			float Weight = 1,
+		},
+		{
+			string Name = "21",
+			string Value = "5214c740b84717ca:IzzyLevel7",
+			float Weight = 1,
+		},
+		{
+			string Name = "22",
+			string Value = "5229a80b7d949e55:EndLevel2",
+			float Weight = 1,
+		},
+		{
+			string Name = "23",
+			string Value = "5214c744a7c16692:IzzyLevel8",
+			float Weight = 1,
+		},
+		{
+			string Name = "24",
+			string Value = "52293edc29401362:EndLevel3",
+			float Weight = 1,
+		},
+		{
+			string Name = "25",
+			string Value = "5214c73db8d87d12:IzzyLevel6",
+			float Weight = 1,
+		},
+		{
+			string Name = "26",
+			string Value = "52293edc29401362:EndLevel3",
+			float Weight = 1,
+		},
+		{
+			string Name = "27",
+			string Value = "5214c74ba7424e11:IzzyLevel9",
+			float Weight = 1,
+		},
+		{
+			string Name = "28",
+			string Value = "52293edc29401362:EndLevel3",
 			float Weight = 1,
 		},
 	],
