@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "GoblinTime",
-		uint64 ResourceId = 52dcd1a2a19e0bbe,
-	},
-},

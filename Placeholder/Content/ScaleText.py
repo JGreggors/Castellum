@@ -8,16 +8,18 @@ class ScaleText:
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
         
         self.big = True
-        
+
     def OnLogicUpdate(self, UpdateEvent):
         if(self.big):
             self.Owner.Transform.Scale += VectorMath.Vec3(.006, .006, 0)
-            self.Owner.BoxCollider.Size += VectorMath.Vec3(.006, .006, 0)
+            if(self.Owner.BoxCollider):
+                self.Owner.BoxCollider.Size += VectorMath.Vec3(.006, .006, 0)
             if(self.Owner.Transform.Scale.x > 1.4):
                 self.big = False
         else:
             self.Owner.Transform.Scale -= VectorMath.Vec3(.006, .006, 0)
-            self.Owner.BoxCollider.Size -= VectorMath.Vec3(.006, .006, 0)
+            if(self.Owner.BoxCollider):
+                self.Owner.BoxCollider.Size -= VectorMath.Vec3(.006, .006, 0)
             if(self.Owner.Transform.Scale.x < 1):
                 self.big = True
                 

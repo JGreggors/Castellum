@@ -2,7 +2,7 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "fizzle.SoundCue",
+		string Name = "fizzle",
 		uint64 ResourceId = 52ee2cd6377efc74,
 		string LoaderType = "SoundCue",
 		uint Version = 0,

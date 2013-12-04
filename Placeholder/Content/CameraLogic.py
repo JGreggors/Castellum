@@ -31,6 +31,8 @@ class CameraLogic:
             
         if(Zero.Keyboard.KeyIsPressed(Zero.Keys.M)):
             self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
+            
+        self.Space.FindObjectByName("LevelSettings").HUDCreator.BGSpace.FindObjectByName("Camera").Transform.Translation = VectorMath.Vec3(self.Owner.Transform.Translation.x/2, self.Owner.Transform.Translation.y/2, 40)
         
     def onMouseUpdate(self, MouseEvent):
         pass

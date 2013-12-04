@@ -19,10 +19,11 @@ class MusicLogic:
         if(self.backgroundMusicObject.SoundEmitter.IsPlaying() == False):
             self.backgroundMusicObject.SoundEmitter.Play()
             
+
+        
     def OnLogicUpdate(self, UpdateEvent):
         #if(Zero.Keyboard.KeyIsPressed(Zero.Keys.M)):
-            #print("M")
-            #self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
+        #    self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
             
             
         if(Zero.Keyboard.KeyIsPressed(Zero.Keys.Shift)):

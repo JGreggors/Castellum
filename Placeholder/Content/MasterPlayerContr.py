@@ -4,6 +4,7 @@ import Property
 import VectorMath
 import math
 import Color
+import DebugDraw
 
 Vec3 = VectorMath.Vec3
 
@@ -394,14 +395,14 @@ class MasterPlayerContr:
 #--------------------------------------------------------------------------------------------
 #Stops Grapple if player bumps into anything using colliders:
     def CastRayStopGrapple(self):
-
+        xvalue = .1
         if(self.grappleHit == 1):
         #Collider 1
             ray = VectorMath.Ray()
-            direction = Vec3(0.5, -0.5,0)
+            direction = Vec3(xvalue, -0.5,0)
             direction = math.atan2(direction.y, direction.x)
             ray.Start = self.Owner.Transform.Translation
-            ray.Direction = Vec3(0.5*self.Owner.Transform.Scale.x, -0.5*self.Owner.Transform.Scale.y, 0)
+            ray.Direction = Vec3(xvalue*self.Owner.Transform.Scale.x, -0.5*self.Owner.Transform.Scale.y, 0)
             ray.Direction.normalize()
             maxRayCastDistance = .75
             castResultRange = self.Space.PhysicsSpace.CastRayResults(ray, 1)
@@ -417,10 +418,10 @@ class MasterPlayerContr:
             #DebugDraw.DrawSphere(ray.Start + ray.Direction * maxRayCastDistance, 0.25)
         #Collider 2
             ray2 = VectorMath.Ray()
-            direction = Vec3(0.5, 0.5,0)
+            direction = Vec3(xvalue, 0.5,0)
             direction = math.atan2(direction.y, direction.x)
             ray2.Start = self.Owner.Transform.Translation
-            ray2.Direction = Vec3(0.5*self.Owner.Transform.Scale.x, 0.5*self.Owner.Transform.Scale.y, 0)
+            ray2.Direction = Vec3(xvalue*self.Owner.Transform.Scale.x, 0.5*self.Owner.Transform.Scale.y, 0)
             ray2.Direction.normalize()
             maxRayCastDistance = .75 
             castResultRange = self.Space.PhysicsSpace.CastRayResults(ray2, 1)
@@ -435,10 +436,10 @@ class MasterPlayerContr:
             #DebugDraw.DrawSphere(ray2.Start + ray2.Direction * maxRayCastDistance, 0.25)
         #Collider 3
             ray3 = VectorMath.Ray()
-            direction = Vec3(-0.5, 0.5,0)
+            direction = Vec3(-xvalue, 0.5,0)
             direction = math.atan2(direction.y, direction.x)
             ray3.Start = self.Owner.Transform.Translation
-            ray3.Direction = Vec3(-0.5*self.Owner.Transform.Scale.x, 0.5*self.Owner.Transform.Scale.y, 0)
+            ray3.Direction = Vec3(-xvalue*self.Owner.Transform.Scale.x, 0.5*self.Owner.Transform.Scale.y, 0)
             ray3.Direction.normalize()
             maxRayCastDistance = .75
             castResultRange = self.Space.PhysicsSpace.CastRayResults(ray3, 1)
@@ -453,10 +454,10 @@ class MasterPlayerContr:
             #DebugDraw.DrawSphere(ray3.Start + ray3.Direction * maxRayCastDistance, 0.25)
         #Collider 4
             ray4 = VectorMath.Ray()
-            direction = Vec3(-0.5, -0.5,0)
+            direction = Vec3(-xvalue, -0.5,0)
             direction = math.atan2(direction.y, direction.x)
             ray4.Start = self.Owner.Transform.Translation
-            ray4.Direction = Vec3(-0.5*self.Owner.Transform.Scale.x, -0.5*self.Owner.Transform.Scale.y, 0)
+            ray4.Direction = Vec3(-xvalue*self.Owner.Transform.Scale.x, -0.5*self.Owner.Transform.Scale.y, 0)
             ray4.Direction.normalize()
             maxRayCastDistance = .75 
             castResultRange = self.Space.PhysicsSpace.CastRayResults(ray4, 1)

@@ -26,10 +26,10 @@ Level =
 		},
 		CameraViewport = 
 		{
-			bool Background = true,
+			bool Background = false,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			int Layer = 0,
+			int Layer = 1,
 			bool Active = true,
 			bool Blocking = true,
 			uint Renderer = 1,
@@ -48,16 +48,16 @@ Level =
 		GlobalTime = 
 		{
 		},
-		Timer = 
-		{
-			float par = 45,
-		},
 		ScoreOn = 
 		{
 		},
 		HUDCreator = 
 		{
 			string LevelForHUD = "52a7044c7cf6ef4b:HUDLevel",
+		},
+		Timer = 
+		{
+			float par = 45,
 		},
 	},
 	Cog = 
@@ -72,7 +72,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [40.7979, -11.69, 3.22486],
+			Vec3 Translation = [16.2604, -1.20249, 3.2249],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -84,7 +84,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36,
+			float Size = 19,
 		},
 		EditorCameraController = 
 		{
@@ -92,7 +92,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [40.7979, -11.69, -46.7751],
+			Vec3 LookTarget = [16.2604, -1.20249, -46.7751],
 		},
 		EditorRenderer = 
 		{
@@ -166,7 +166,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.4805, -8.39244, 0],
+			Vec3 Translation = [-2.20055, -10.2701, -2.38419e-007],
 			Vec3 Scale = [3.14411, 3.14411, 3.14411],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -203,7 +203,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [13.1534, -4.67666, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -221,7 +221,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [11.1121, -4.7866, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -239,7 +239,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [9.24968, -4.76116, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -257,7 +257,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [30.5526, -9.28767, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -275,7 +275,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [33.0425, -7.17294, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -293,7 +293,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [31.7805, -8.12798, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -311,7 +311,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [41.0033, -3.0117, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -477,8 +477,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [31.4422, -0.951801, 0],
-			Vec3 Scale = [0.75, 0.85, 1],
+			Vec3 Translation = [31.4422, -1.57591, 0],
+			Vec3 Scale = [1.37791, 1.56163, 1.83721],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -502,7 +502,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [26.974, -1.03412, 0],
+			Vec3 Translation = [23.4893, -1.03647, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -664,7 +664,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [41.0033, -4.69878, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -682,7 +682,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [41.0033, -6.43858, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -700,7 +700,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [41.0033, -1.37736, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -718,7 +718,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [41.0033, 0.415158, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -736,7 +736,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [41.0033, 2.20767, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -754,7 +754,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [49.4914, -12.7651, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -772,7 +772,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [49.4914, -11.7107, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -790,7 +790,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [49.4914, -10.709, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -808,7 +808,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [48.4897, -10.709, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -826,7 +826,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [48.4897, -11.7107, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -844,7 +844,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [48.4897, -12.7651, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -862,7 +862,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [47.2244, -10.709, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -880,7 +880,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [47.2244, -11.7107, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -898,7 +898,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [47.2244, -12.7651, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -916,7 +916,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [46.0645, -11.7107, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -934,7 +934,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [46.0645, -10.709, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -952,7 +952,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [46.0645, -12.7651, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -970,7 +970,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [46.0645, -9.49639, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -988,7 +988,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [46.0645, -7.44029, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1006,7 +1006,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [46.0645, -8.44199, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1024,7 +1024,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [47.2244, -9.49639, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1042,7 +1042,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [47.2244, -8.44199, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1060,7 +1060,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [47.2244, -7.44029, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1078,7 +1078,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [15.7724, -2.26714, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1096,7 +1096,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [17.4486, -0.171901, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1114,7 +1114,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [28.3438, -0.800472, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1132,7 +1132,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [25.7248, -0.800472, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1150,7 +1150,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [22.8962, -0.800472, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1168,7 +1168,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [17.3438, -10.6481, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1186,7 +1186,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [17.3438, -8.1862, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1204,7 +1204,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [17.3438, -9.2862, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1222,7 +1222,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [17.3438, -6.71953, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1240,7 +1240,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [1.47237, -1.32429, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1258,7 +1258,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [3.09618, -1.32429, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1276,7 +1276,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [4.77237, -1.32429, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1294,7 +1294,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-0.518106, -1.32429, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1312,7 +1312,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-2.29906, -1.32429, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1330,7 +1330,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [6.29142, -1.32429, 0],
-			Vec3 Scale = [0.651938, 0.651938, 1.30388],
+			Vec3 Scale = [1.5, 1.5, 1.30388],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 

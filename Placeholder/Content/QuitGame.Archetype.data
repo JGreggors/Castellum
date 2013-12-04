@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-25.8775, 8.3325, -1.13114e-006],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -27,7 +27,7 @@ Cog =
 		Vec4 Color = [1, 1, 1, 1],
 		bool Visible = true,
 		string Text = "Hit Esc to Quit Game",
-		bool OnTop = true,
+		bool OnTop = false,
 		BlendMode BlendMode = Alpha,
 		Vec2 Size = [0, 0],
 		TextAlign Align = Left,

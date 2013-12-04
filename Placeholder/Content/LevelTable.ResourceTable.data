@@ -5,7 +5,7 @@ ResourceTable =
 	[
 		{
 			string Name = "Splash",
-			string Value = "522ad108f922a7fa:JG2",
+			string Value = "52d8bb94dc227e33:StartScreen",
 			float Weight = 1,
 		},
 		{
@@ -25,7 +25,7 @@ ResourceTable =
 		},
 		{
 			string Name = "4",
-			string Value = "52ec5ec4ee87dd2d:Tutorials",
+			string Value = "522dd64ba195d832:Highscore",
 			float Weight = 1,
 		},
 		{
@@ -40,7 +40,7 @@ ResourceTable =
 		},
 		{
 			string Name = "7",
-			string Value = "4faa6050b86892a8:DefaultLevel",
+			string Value = "52bf1c02350215f2:GroundLevel1",
 			float Weight = 1,
 		},
 		{
@@ -50,37 +50,42 @@ ResourceTable =
 		},
 		{
 			string Name = "9",
-			string Value = "5236bb3703d5f7b6:LevelSelect",
-			float Weight = 1,
-		},
-		{
-			string Name = "10",
 			string Value = "5213689fa756e4f9:IGLevel3",
 			float Weight = 1,
 		},
 		{
-			string Name = "11",
+			string Name = "10",
 			string Value = "520a5af2e8608a85:EndLevel",
+			float Weight = 1,
+		},
+		{
+			string Name = "11",
+			string Value = "522acb0b7501642f:JG1",
 			float Weight = 1,
 		},
 		{
 			string Name = "12",
-			string Value = "522dd64ba195d832:Highscore",
+			string Value = "5229f97e215d866e:EndLevel1",
 			float Weight = 1,
 		},
 		{
 			string Name = "13",
-			string Value = "52c3b3abf8353087:InfiniteGrap",
+			string Value = "522ad108f922a7fa:JG2",
 			float Weight = 1,
 		},
 		{
 			string Name = "14",
-			string Value = "520a5af2e8608a85:EndLevel",
+			string Value = "5229f97e215d866e:EndLevel1",
 			float Weight = 1,
 		},
 		{
 			string Name = "15",
-			string Value = "52c91d1eafeb949d:MainMenu",
+			string Value = "52ec580f13bc3814:Volume",
+			float Weight = 1,
+		},
+		{
+			string Name = "16",
+			string Value = "522bff3c07ad5d84:Controls",
 			float Weight = 1,
 		},
 	],

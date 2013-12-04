@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "LevelToggles",
+		uint64 ResourceId = 52299e9e2e84762d,
+	},
+},

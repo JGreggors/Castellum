@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "GlobalVolume",
+		uint64 ResourceId = 522a984941285aa3,
+	},
+},

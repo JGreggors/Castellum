@@ -4,12 +4,7 @@ import Property
 import VectorMath
 import Property
 import Keys
-import Zero
-import Events
-import Property
-import VectorMath
-import Property
-import Keys
+import os
 
 class EndLevelLogic:
     def Initialize(self, initializer):
@@ -21,6 +16,7 @@ class EndLevelLogic:
         self.startGoldScore = 0 #This sets beginning score from Gold to 0
         self.startDeathScore = 0 #This sets beginning score from deaths to 0
         
+        #for live calculating of score
         self.deathsAreDone = False
         self.timeIsDone = False
         self.goldIsDone = False
@@ -42,30 +38,45 @@ class EndLevelLogic:
        #--------------------------------------------------------
         
         #Calculate time score
-        self.tscore = (round(self.par - self.finalTime)) * 5
+        if(self.finalTime < self.par):
+            self.tscore = (round(self.par - self.finalTime)) * 100
+        else:
+            self.tscore = 0
         #Calculate gold score
-        self.tgold = self.finalGold * 5
+        self.tgold = self.finalGold * 200
         #Calculate Death score
-        self.tdeath = self.finalDeaths * 20
-        
+        self.tdeath = self.finalDeaths * 100
+        #calculate final score
         self.LevelFinalScore = self.tscore + self.tgold - self.tdeath
         self.Owner.AddComponentByName("SaveHighscore")
+        
+        #------------------------------------------------------
+        #for file i/o for checking game progress
+        self.UserDirect = Zero.GetUserDirectory()
+        self.filename = "save.txt"
+        #------------------------------------------------------
+        #setting up checks that wiin screens have been achieved
+        self.WinTutorial = False
+        self.WinDougMode = False
+        self.WinAdventure = False
+        self.WinDaredevil = False
+        self.WinAll = False
         
     def OnLogicUpdate(self, UpdateEvent):
         #If Space is pressed Add up score
         if(Zero.Keyboard.KeyIsPressed(Keys.Space)):
             self.getStats = True
-        if(Zero.Keyboard.KeyIsPressed(Keys.N)):
-            self.Space.LoadLevel("MainMenu")
-        if(Zero.Keyboard.KeyIsPressed(Keys.B)):
-            self.Space.LoadLevel("EndSlide")
 
-            
+        self.WinTutorial = self.Space.FindObjectByName("LvlToggles").LevelToggles.WinTutorial
+        self.WinDougMode = self.Space.FindObjectByName("LvlToggles").LevelToggles.WinDougMode
+        self.WinAdventure = self.Space.FindObjectByName("LvlToggles").LevelToggles.WinAdventure
+        self.WinDaredevil = self.Space.FindObjectByName("LvlToggles").LevelToggles.WinDaredevil
+        self.WinAll = self.Space.FindObjectByName("LvlToggles").LevelToggles.WinAll
+        
        #--------------------------------------------------------
         #Start timer
         self.levelProgression += UpdateEvent.Dt
         
-
        #--------------------------------------------------------
         #This is the spritetext that prints your time score
         clock = self.Space.FindObjectByName("tTime").SpriteText
@@ -85,7 +96,8 @@ class EndLevelLogic:
             total.Text = str(round(self.tscore + self.tgold - self.tdeath))
             #if you press Space again end level
             if((Zero.Keyboard.KeyIsPressed(Keys.Space) and self.endLevel) or (self.timeIsDone == True and self.goldIsDone == True)):
-                self.Space.LoadLevel("LevelSelect")
+                self.Check()
+                
                 
             self.endLevel = True
         
@@ -121,5 +133,56 @@ class EndLevelLogic:
             #add up total
             if(self.timeIsDone == True and self.goldIsDone == True and self.deathsAreDone == True):
                 total.Text = str(round(self.tscore + self.tgold - self.tdeath))
+
+    def Check(self):
+        #setting up an array to hold score values
+        self.scores = [[0] * 10 for i in range(10)]
+        #checking if this path exists
+        if(os.path.isfile(self.UserDirect + "Castellum\\" + self.filename)):
+            #opens file
+            ScoreFile = open(self.UserDirect + "Castellum\\" + self.filename, "r")
+            #reads in scores stores in file
+            for i in range(10):
+                #changes scores to integers
+                self.scores[i] = int(ScoreFile.readline())
+                
+            #Close file    
+            ScoreFile.close()
+        #checks current level and if scores have been stored    
+        if(self.Space.CurrentLevel.Name == "EndLevel" and self.WinTutorial == False):    
+            if(self.scores[0] > 0 and self.scores[1] > 0 and self.scores[2] > 0):
+                #if the scores are stored then those levels are complete load win screen
+                self.Space.FindObjectByName("LvlToggles").LevelToggles.WinTutorial = True #state this win screen has been achieved
+                self.Space.LoadLevel("Win1")
+                return
+                
+        if(self.Space.CurrentLevel.Name == "EndLevel1" and self.WinDougMode == False):
+            if(self.scores[3] > 0 and self.scores[4] > 0 and self.scores[5] > 0):
+                #if the scores are stored then those levels are complete load win screen
+                self.Space.FindObjectByName("LvlToggles").LevelToggles.WinDougMode = True 
+                self.Space.LoadLevel("Win2")
+                return
+                
+        if(self.Space.CurrentLevel.Name == "EndLevel2" and self.WinAdventure == False):
+            if(self.scores[6] > 0 and self.scores[7] > 0 and self.scores[8] > 0):
+                self.Space.FindObjectByName("LvlToggles").LevelToggles.WinAdventure = True 
+                #if the scores are stored then those levels are complete load win screen
+                self.Space.LoadLevel("Win3")
+                return
+                
+        if(self.Space.CurrentLevel.Name == "EndLevel3" and self.WinDaredevil == False):
+            if(self.score[9] > 0):
+                self.Space.FindObjectByName("LvlToggles").LevelToggles.WinDaredevil = True
+                #if the scores are stored then those levels are complete load win screen
+                self.Space.Loadlevel("Win4")
+                return
+                
+        if(self.WinTutorial == True and self.WinDougMode == True and self.WinAdventure == True and self.WinDaredevil == True and self.WinAll == False):
+            self.Space.FindObjectByName("LvlToggles").LevelToggles.WinAll = True
+            #basically if all levels are complete load win screen for whole game
+            self.Space.LoadLevel("Win5")
+            return
+        
+        self.Space.LoadLevel("LevelSelect")
 
 Zero.RegisterComponent("EndLevelLogic", EndLevelLogic)

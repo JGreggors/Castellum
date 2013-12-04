@@ -31,6 +31,8 @@ class Health:
         self.hurtmore = False
         self.hurtmost = False
         
+        self.healthbar = self.Space.FindObjectByName("LevelSettings").HUDCreator.HUDSpace.FindObjectByName("Healthbar")
+        self.healthbarscalex = self.healthbar.Transform.Scale.x
         self.Phrase = False
         self.maxcount = 2
         self.count = 2
@@ -43,9 +45,13 @@ class Health:
         #print(self.Health)
        #---------------------------------------
         key = self.Space.FindObjectByName("Key")
+        
+        self.healthbar.Transform.Scale = VectorMath.Vec3((self.Health / self.MaxHealth) * self.healthbarscalex,0.113,1)
+        
         #Owner's health is full everything is A ok
         if(self.Health == self.MaxHealth):
-            self.Owner.Sprite.Color = self.OriginalColor
+            self.healthbar.Sprite.Color = Color.Green
+
             self.hurt = False
             self.hurtmore = False
             self.hurtmost = False
@@ -54,21 +60,24 @@ class Health:
             self.hurt = True
             self.hurtmore = False
             self.hurtmost = False
-            self.Owner.Sprite.Color = Color.Orange
+
+            self.healthbar.Sprite.Color = Color.Yellow
             self.RegenStart += 1 * UpdateEvent.Dt
         #Health is more down color yellow
-        elif(self.Health > 50.0):
+        elif(self.Health >= 50.0):
             self.hurt = False
             self.hurtmore = True
             self.hurtmost = False
-            self.Owner.Sprite.Color = Color.Yellow
+
+            self.healthbar.Sprite.Color = Color.Red
             self.RegenStart += 1 * UpdateEvent.Dt
         #Healht is WAAAAAAAAAAY down color is black
         elif(self.Health > 0.0):
             self.hurt = False
             self.hurtmore = False
             self.hurtmost = True
-            self.Owner.Sprite.Color = Color.Black
+
+            self.healthbar.Sprite.Color = Color.Black
             self.RegenStart += 1 * UpdateEvent.Dt
         #You dead sucka!
         elif(self.Health <= 0.0):
@@ -90,7 +99,6 @@ class Health:
             
             #Creating a random number
             randPhrase = random.randint(1,34)
-            
             self.Owner.Transform.Translation = self.StartPlace
             self.Health = self.MaxHealth
             self.PlayerSpawned = True
@@ -431,6 +439,7 @@ class Health:
         if(CollisionEvent.OtherObject.Name == "Goblin"):
             self.Health += -50.0
             self.RegenStart = 0
+            print(self.Health)
             self.Space.SoundSpace.PlayCue("hit")
         #Drops into abysses to never be seen or heard from again kill you
         if(CollisionEvent.OtherObject.Name == "Pit"):

@@ -55,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.98494, -17.9675, 50],
+			Vec3 Translation = [3.18744, -37.6275, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16,
+			float Size = 31,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.98494, -17.9675, 2.17902e-007],
+			Vec3 LookTarget = [3.18744, -37.6275, 1.39331e-007],
 		},
 		EditorRenderer = 
 		{
@@ -902,44 +902,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Transform",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.4448, -12.521, -5],
-			Vec3 Scale = [0.45647, 0.45647, 0.45647],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 101,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = "Your Cursor",
-			bool OnTop = false,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 29,
-		},
-		Named = 
-		{
 			string Name = "TestTarget",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.4717, -14.4814, 3.8147e-006],
+			Vec3 Translation = [4.4717, -10.4256, 3.8147e-006],
 			Vec3 Scale = [0.809484, 0.809484, 2.42845],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -965,7 +932,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 29,
 		},
 		Named = 
 		{
@@ -973,107 +940,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0714624, -12.521, -5],
-			Vec3 Scale = [0.45647, 0.45647, 0.45647],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 101,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = "will tell you if you",
-			bool OnTop = false,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 31,
-		},
-		Named = 
-		{
-			string Name = "Transform",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-1.7657, -13.4357, -5],
-			Vec3 Scale = [0.45647, 0.45647, 0.45647],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 101,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = "can grapple",
-			bool OnTop = false,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 32,
-		},
-		Named = 
-		{
-			string Name = "TestTarget",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-0.887974, -12.9279, 3.8147e-006],
-			Vec3 Scale = [1.21706, 1.21706, 3.65117],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			string SpriteSource = "52da19bdf4098b1f:Target",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [0.98, 1, 0, 1],
-			bool Visible = true,
-			bool OnTop = true,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 33,
-		},
-		Named = 
-		{
-			string Name = "Transform",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-5.6778, -14.8881, -5],
+			Vec3 Translation = [-5.6778, -10.8323, -5],
 			Vec3 Scale = [0.314696, 0.314696, 0.314696],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1098,7 +965,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 34,
+			uint Id = 30,
 		},
 		Named = 
 		{
@@ -1106,7 +973,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.7997, -14.9532, -5],
+			Vec3 Translation = [1.7997, -10.8974, -5],
 			Vec3 Scale = [0.314696, 0.314696, 0.314696],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1131,40 +998,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 35,
-		},
-		Named = 
-		{
-			string Name = "Transform",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-5.8995, -11.4385, -5],
-			Vec3 Scale = [0.437647, 0.437647, 0.437647],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 101,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = "When you scroll over objects",
-			bool OnTop = false,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 36,
+			uint Id = 31,
 		},
 		Named = 
 		{
@@ -1172,7 +1006,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.5345, -14.4163, 3.8147e-006],
+			Vec3 Translation = [-3.5345, -10.3605, 3.8147e-006],
 			Vec3 Scale = [0.809484, 0.809484, 2.42845],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1198,7 +1032,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 37,
+			uint Id = 32,
 		},
 		Named = 
 		{
@@ -1227,7 +1061,7 @@ Level =
 		string Name = "52d0d7f7cec0a5e2:Target",
 		LinkId = 
 		{
-			uint Id = 38,
+			uint Id = 33,
 		},
 		Transform = 
 		{
@@ -1244,7 +1078,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 39,
+			uint Id = 34,
 		},
 		Named = 
 		{
@@ -1252,19 +1086,19 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.61875, -18.6065, -5],
+			Vec3 Translation = [0, -15.1801, -5],
 			Vec3 Scale = [0.45647, 0.45647, 0.45647],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
+			TextPositionMode Position = Centered,
 			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 101,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
-			string Text = "Stun enemies with your gun",
+			string Text = "Stun Enemies and grapple to them",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
@@ -1277,40 +1111,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 40,
-		},
-		Named = 
-		{
-			string Name = "Transform",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-10.1847, -19.4608, -5],
-			Vec3 Scale = [0.45647, 0.45647, 0.45647],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 101,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = "when they turn green you can grapple to them",
-			bool OnTop = false,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 41,
+			uint Id = 35,
 		},
 		Named = 
 		{
@@ -1318,7 +1119,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0989472, -22.8045, 3.8147e-006],
+			Vec3 Translation = [0.0989472, -17.0851, 3.8147e-006],
 			Vec3 Scale = [2.55062, 2.55062, 2.55062],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1363,7 +1164,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 42,
+			uint Id = 36,
 		},
 		Named = 
 		{
@@ -1375,7 +1176,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.325137, -32.4851, 0.000156403],
+			Vec3 Translation = [0, -23.6851, 0.000156403],
 			Vec3 Scale = [2.20772, 1.88608, 7.54435],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1399,7 +1200,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 43,
+					uint Id = 37,
 				},
 				Named = 
 				{
@@ -1462,12 +1263,150 @@ Level =
 		string Name = "5200e13174cdd122:Gold",
 		LinkId = 
 		{
+			uint Id = 38,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.09647, -20.679, 0.000152588],
+			Vec3 Scale = [1.5, 1.5, 1.55349],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 39,
+		},
+		Named = 
+		{
+			string Name = "Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -22.5053, -4.99985],
+			Vec3 Scale = [0.371546, 0.371546, 0.371546],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 101,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Pick up keys",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 40,
+		},
+		Named = 
+		{
+			string Name = "Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -19.0605, -4.99985],
+			Vec3 Scale = [0.45647, 0.45647, 0.45647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 101,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Collect Gems!",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 41,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.98823, -20.679, 0.000152588],
+			Vec3 Scale = [1.5, 1.5, 1.55349],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 42,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.087065, -20.679, 0.000152588],
+			Vec3 Scale = [1.5, 1.5, 1.55349],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 43,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2.16236, -20.679, 0.000152588],
+			Vec3 Scale = [1.5, 1.5, 1.55349],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
 			uint Id = 44,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.09647, -27.4883, 0.000152588],
-			Vec3 Scale = [0.776744, 0.776744, 1.55349],
+			Vec3 Translation = [4.46824, -20.679, 0.000152588],
+			Vec3 Scale = [1.5, 1.5, 1.55349],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -1487,178 +1426,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.15885, -29.7022, -4.99985],
-			Vec3 Scale = [0.371546, 0.371546, 0.371546],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 101,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = "Pick up keys and",
-			bool OnTop = false,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 46,
-		},
-		Named = 
-		{
-			string Name = "Transform",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.55183, -25.4977, -4.99985],
-			Vec3 Scale = [0.45647, 0.45647, 0.45647],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 101,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = "Collect gold to increase your score",
-			bool OnTop = false,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 47,
-		},
-		Named = 
-		{
-			string Name = "Transform",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3.70578, -30.8129, -4.99985],
-			Vec3 Scale = [0.297237, 0.297237, 0.297237],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 101,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = "use them to unlock doors",
-			bool OnTop = false,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5200e13174cdd122:Gold",
-		LinkId = 
-		{
-			uint Id = 48,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-1.98823, -27.4883, 0.000152588],
-			Vec3 Scale = [0.776744, 0.776744, 1.55349],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gold",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5200e13174cdd122:Gold",
-		LinkId = 
-		{
-			uint Id = 49,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.087065, -27.4883, 0.000152588],
-			Vec3 Scale = [0.776744, 0.776744, 1.55349],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gold",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5200e13174cdd122:Gold",
-		LinkId = 
-		{
-			uint Id = 50,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2.16236, -27.4883, 0.000152588],
-			Vec3 Scale = [0.776744, 0.776744, 1.55349],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gold",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5200e13174cdd122:Gold",
-		LinkId = 
-		{
-			uint Id = 51,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [4.46824, -27.4883, 0.000152588],
-			Vec3 Scale = [0.776744, 0.776744, 1.55349],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gold",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 52,
-		},
-		Named = 
-		{
-			string Name = "Transform",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4.7886, -36.0578, -4],
+			Vec3 Translation = [-4.7886, -26.6438, -4],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1683,7 +1451,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 46,
 		},
 		Named = 
 		{
@@ -1691,7 +1459,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.160605, -38.54, -5],
+			Vec3 Translation = [-0.160605, -29.126, -5],
 			Vec3 Scale = [0.45647, 0.45647, 0.45647],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1716,7 +1484,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 47,
 		},
 		Named = 
 		{
@@ -1724,7 +1492,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.8496, -38.8423, -5],
+			Vec3 Translation = [-3.8496, -29.4283, -5],
 			Vec3 Scale = [5.36452, 1.63529, 1.63529],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1747,7 +1515,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 48,
 		},
 		Named = 
 		{
@@ -1755,7 +1523,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.0176, -35.2702, -5],
+			Vec3 Translation = [-4.0176, -25.8562, -5],
 			Vec3 Scale = [1.63529, 1.63529, 1.63529],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1778,7 +1546,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 49,
 		},
 		Named = 
 		{
@@ -1786,7 +1554,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.5096, -34.264, -4],
+			Vec3 Translation = [-4.5096, -24.85, -4],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1811,7 +1579,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 50,
 		},
 		Named = 
 		{
@@ -1819,7 +1587,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.1066, -37.8438, -4],
+			Vec3 Translation = [-6.1066, -28.4298, -4],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1844,7 +1612,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 51,
 		},
 		Named = 
 		{
@@ -1852,7 +1620,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.160605, -36.6593, -5],
+			Vec3 Translation = [-0.160605, -27.2453, -5],
 			Vec3 Scale = [0.45647, 0.45647, 0.45647],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1877,7 +1645,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 52,
 		},
 		Named = 
 		{
@@ -1885,7 +1653,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.160605, -34.8353, -5],
+			Vec3 Translation = [-0.160605, -25.4213, -5],
 			Vec3 Scale = [0.45647, 0.45647, 0.45647],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1910,7 +1678,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 53,
 		},
 		Named = 
 		{
@@ -1918,7 +1686,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.0176, -37.0749, -5],
+			Vec3 Translation = [-4.0176, -27.6609, -5],
 			Vec3 Scale = [1.63529, 1.63529, 1.63529],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1941,7 +1709,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 54,
 		},
 		Named = 
 		{
@@ -1974,7 +1742,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 55,
 		},
 		Named = 
 		{
@@ -2029,7 +1797,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 56,
 		},
 		Named = 
 		{
@@ -2037,7 +1805,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.487556, -21.5619, -10],
+			Vec3 Translation = [-0.487556, -22.3495, -10],
 			Vec3 Scale = [27.0897, 59.7274, 23.1647],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2054,6 +1822,504 @@ Level =
 			uint StartFrame = 0,
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 57,
+		},
+		Named = 
+		{
+			string Name = "GHeader",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.46446, -36.5127, 0.012093],
+			Vec3 Scale = [1.87953, 1.87953, 2.08837],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 40,
+			Vec4 Color = [0.855, 0.671602, 0.021375, 1],
+			bool Visible = false,
+			string Text = "G",
+			bool OnTop = true,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		Sprite = 
+		{
+			string SpriteSource = "522bf635b7cef5f3:gold_icon",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 58,
+		},
+		Named = 
+		{
+			string Name = "THeader",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.283251, -36.5127, 0.012093],
+			Vec3 Scale = [1.65817, 1.65817, 2.08837],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 40,
+			Vec4 Color = [0.00382501, 0.765, 0.0571074, 1],
+			bool Visible = false,
+			string Text = "T",
+			bool OnTop = true,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5223f16536bd00fd:time",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 59,
+		},
+		Named = 
+		{
+			string Name = "DHeader",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.84931, -36.5127, 0.012093],
+			Vec3 Scale = [1.65775, 1.65775, 1.65775],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 40,
+			Vec4 Color = [0.62, 0, 0.0558001, 1],
+			bool Visible = false,
+			string Text = "D",
+			bool OnTop = true,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5223f0301b2ee83a:deathskull",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 60,
+		},
+		Named = 
+		{
+			string Name = "Text",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.44575, -38.3018, 0.012093],
+			Vec3 Scale = [2.08837, 2.08837, 2.08837],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 40,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = " 0",
+			bool OnTop = true,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 61,
+		},
+		Named = 
+		{
+			string Name = "Healthbar",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.60334, -39.1464, -0.196744],
+			Vec3 Scale = [1.68048, 0.235061, 2.08837],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "522aa125b46434bc:health12",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [0, 1, 0.129412, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 62,
+		},
+		Named = 
+		{
+			string Name = "Background",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.294478, -38.4472, 0.012093],
+			Vec3 Scale = [10.0466, 1.56628, 2.08837],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [0, 0, 0, 0.495],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 63,
+		},
+		Named = 
+		{
+			string Name = "outline",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.163033, -38.2454, 0.012093],
+			Vec3 Scale = [1.76142, 1.67642, 2.08837],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "522aa268d1de3bb1:health outline",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [0.115976, 0.665, 0.0266, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 64,
+		},
+		Named = 
+		{
+			string Name = "Text",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.0457499, -38.3018, 0.012093],
+			Vec3 Scale = [2.08837, 2.08837, 2.08837],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 40,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = " 0.0",
+			bool OnTop = true,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 65,
+		},
+		Named = 
+		{
+			string Name = "Text",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.06433, -38.3018, 0.012093],
+			Vec3 Scale = [2.08837, 2.08837, 2.08837],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 40,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = " 0",
+			bool OnTop = true,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 66,
+		},
+		Named = 
+		{
+			string Name = "Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.27379, -36.4824, -4.99985],
+			Vec3 Scale = [0.45647, 0.45647, 0.45647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 101,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Death Count",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 67,
+		},
+		Named = 
+		{
+			string Name = "Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.282168, -34.7737, -4.99985],
+			Vec3 Scale = [0.45647, 0.45647, 0.45647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 101,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Timer",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 68,
+		},
+		Named = 
+		{
+			string Name = "Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.61805, -36.5884, -4.99985],
+			Vec3 Scale = [0.45647, 0.45647, 0.45647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 101,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Gem Count",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 69,
+		},
+		Named = 
+		{
+			string Name = "Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -32.6869, -4.99985],
+			Vec3 Scale = [0.45647, 0.45647, 0.45647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 150,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Heads Up Display",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 70,
+		},
+		Named = 
+		{
+			string Name = "Transform",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.27907, -40.0471, -4.99985],
+			Vec3 Scale = [0.45647, 0.45647, 0.45647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 101,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "health",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 },

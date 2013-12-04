@@ -26,10 +26,10 @@ Level =
 		},
 		CameraViewport = 
 		{
-			bool Background = true,
+			bool Background = false,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			int Layer = 0,
+			int Layer = 1,
 			bool Active = true,
 			bool Blocking = true,
 			uint Renderer = 1,
@@ -48,16 +48,16 @@ Level =
 		GlobalTime = 
 		{
 		},
-		Timer = 
-		{
-			float par = 45,
-		},
 		ScoreOn = 
 		{
 		},
 		HUDCreator = 
 		{
 			string LevelForHUD = "52a7044c7cf6ef4b:HUDLevel",
+		},
+		Timer = 
+		{
+			float par = 45,
 		},
 	},
 	Cog = 

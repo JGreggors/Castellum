@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "VolumeSliderLogic",
+		uint64 ResourceId = 522a9849412bdcd2,
+	},
+},

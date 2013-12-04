@@ -70,7 +70,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 84,
+			float Size = 88,
 		},
 		EditorCameraController = 
 		{
@@ -234,6 +234,40 @@ Level =
 		{
 			string SourceName = "522d276b29dac896:StartScreen_TileMap00",
 			float UnitsPerTile = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "LvlToggles",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-66.691, -3.83075, 3],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+		LevelToggles = 
+		{
 		},
 	},
 },

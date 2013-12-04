@@ -1,0 +1,37 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "PauseM",
+	},
+	Archetyped = 
+	{
+		string Name = "522a9df5e48fb405:PauseM",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-61.216, -0.434048, -2.48151e-006],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteText = 
+	{
+		SpriteGeometryMode GeometryMode = ZPlane,
+		TextPositionMode Position = Centered,
+		string FontName = "52d8b2af097ae33e:anklepants",
+		uint FontSize = 40,
+		Vec4 Color = [1, 1, 1, 1],
+		bool Visible = true,
+		string Text = "Press M to Mute Music",
+		bool OnTop = false,
+		BlendMode BlendMode = Alpha,
+		Vec2 Size = [0, 0],
+		TextAlign Align = Left,
+		float PixelsPerUnit = 64,
+		bool Smoothing = true,
+	},
+},

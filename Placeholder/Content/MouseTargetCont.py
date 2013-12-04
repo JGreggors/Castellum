@@ -16,14 +16,21 @@ class MouseTargetCont:
     def OnMouseMove(self, ViewportMouseEvent):
         #finding where the mouse is in the game
         self.mousePosition = ViewportMouseEvent.ToWorldZPlane(0.0)
+        currentTranslation = self.Owner.Transform.Translation
+        newTranslation = VectorMath.Vec3(self.mousePosition.x, self.mousePosition.y, 30)
+        self.Owner.Transform.Translation = newTranslation
+        Zero.Mouse.Cursor = -1
         
     def OnMouseUpdate(self, ViewportMouseEvent):
         self.mousePosition = ViewportMouseEvent.ToWorldZPlane(0.0)
-        
+        currentTranslation = self.Owner.Transform.Translation
+        newTranslation = VectorMath.Vec3(self.mousePosition.x, self.mousePosition.y, 30)
+        self.Owner.Transform.Translation = newTranslation
+        Zero.Mouse.Cursor = -1
         
     def OnLogicUpdate(self, UpdateEvent):
         currentTranslation = self.Owner.Transform.Translation
-        newTranslation = VectorMath.Vec3(self.mousePosition.x, self.mousePosition.y, 20)
+        newTranslation = VectorMath.Vec3(self.mousePosition.x, self.mousePosition.y, 30)
         self.Owner.Transform.Translation = newTranslation
         
 

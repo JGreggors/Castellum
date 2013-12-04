@@ -29,11 +29,14 @@ Level =
 			bool Background = false,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			uint Layer = 1,
+			int Layer = 2,
 			bool Active = true,
 			bool Blocking = true,
 			uint Renderer = 1,
 			uint Camera = 2,
+			ViewportScaling Scaling = Fill,
+			Vec2 Resolution = [1280, 720],
+			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
 		{
@@ -52,9 +55,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.509998, 6.76168, 50],
+			Vec3 Translation = [-0.2175, 6.48418, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -2.20537e-008, -0, 1],
+			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
 		Camera = 
 		{
@@ -64,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10,
+			float Size = 9,
 		},
 		EditorCameraController = 
 		{
@@ -72,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.51, 6.76168, 2.22928e-008],
+			Vec3 LookTarget = [-0.2175, 6.48418, -9.50724e-009],
 		},
 		EditorRenderer = 
 		{
@@ -114,27 +117,29 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Background",
+			string Name = "Timer",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 5.6134, 0],
-			Vec3 Scale = [2, 1.25, 1],
+			Vec3 Translation = [0, 6.57138, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		SpriteText = 
 		{
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool FlipX = false,
-			bool FlipY = false,
-			Vec4 Color = [0, 0, 0, 0.495],
-			bool Visible = true,
-			bool OnTop = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 40,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = " ",
+			bool OnTop = true,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -145,45 +150,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Timer",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 5.60086, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 40,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = " ",
-			bool OnTop = true,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 6,
-		},
-		Named = 
-		{
 			string Name = "Background",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 6.61885, 0],
-			Vec3 Scale = [4, 0.75, 1],
+			Vec3 Translation = [0, 6.64002, 0],
+			Vec3 Scale = [4.81072, 0.75, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -205,40 +177,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
-		},
-		Named = 
-		{
-			string Name = "Carry",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 6.6497, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = Centered,
-			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 40,
-			Vec4 Color = [1, 1, 1, 1],
-			bool Visible = true,
-			string Text = " ",
-			bool OnTop = true,
-			BlendMode BlendMode = Alpha,
-			Vec2 Size = [0, 0],
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 8,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -246,7 +185,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.00537563, 7.38984, 0],
+			Vec3 Translation = [-0.00537563, 7.46043, 0],
 			Vec3 Scale = [0.794, 0.794, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -285,7 +224,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -293,7 +232,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.50538, 7.38984, 0],
+			Vec3 Translation = [-1.50538, 7.46043, 0],
 			Vec3 Scale = [0.793799, 0.793799, 0.793799],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -332,7 +271,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -340,7 +279,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.51792, 7.38984, 0],
+			Vec3 Translation = [1.51792, 7.46043, 0],
 			Vec3 Scale = [0.9, 0.9, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -362,7 +301,7 @@ Level =
 		},
 		Sprite = 
 		{
-			string SpriteSource = "5223f4b39dd27d9d:goldhud",
+			string SpriteSource = "522bf635b7cef5f3:gold_icon",
 			bool FlipX = false,
 			bool FlipY = false,
 			Vec4 Color = [1, 1, 1, 1],
@@ -379,7 +318,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -387,7 +326,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.54301, 6.6497, 0],
+			Vec3 Translation = [-1.54301, 6.60375, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -412,7 +351,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -420,7 +359,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.50896, 6.6497, 0],
+			Vec3 Translation = [1.50896, 6.60375, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -439,6 +378,68 @@ Level =
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "outline",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.0629412, 6.63073, -1.18021e-008],
+			Vec3 Scale = [0.843443, 0.802742, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "522aa268d1de3bb1:health outline",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [0.115976, 0.665, 0.0266, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "Healthbar",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.34528, 6.1993, -0.1],
+			Vec3 Scale = [0.804685, 0.112557, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "522aa125b46434bc:health12",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [0, 1, 0.129412, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
 		},
 	},
 },
