@@ -1,0 +1,707 @@
+Level = 
+{
+	LevelSettings = 
+	{
+		LinkId = 
+		{
+			uint Id = 1,
+		},
+		Named = 
+		{
+			string Name = "LevelSettings",
+		},
+		GravityEffect = 
+		{
+			bool Active = true,
+			bool WakeUpOnChange = false,
+			bool LocalSpaceDirection = true,
+			float Strength = 10,
+			Vec3 Direction = [0, -1, 0],
+		},
+		DragEffect = 
+		{
+			bool Active = true,
+			bool WakeUpOnChange = false,
+			float Drag = 0.7,
+		},
+		CameraViewport = 
+		{
+			bool Background = true,
+			Vec2 Offset = [0, 0],
+			Vec2 Size = [1, 1],
+			int Layer = 0,
+			bool Active = true,
+			bool Blocking = true,
+			uint Renderer = 1,
+			uint Camera = 2,
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [16, 9],
+			Vec4 MarginColor = [0, 0, 0, 1],
+		},
+		ForwardRenderer = 
+		{
+			Vec4 ClearColor = [0.278431, 0.278431, 0.278431, 1],
+		},
+		Cheats = 
+		{
+		},
+		GlobalTime = 
+		{
+		},
+		Timer = 
+		{
+			float par = 45,
+		},
+		ScoreOn = 
+		{
+		},
+		HUDCreator = 
+		{
+			string LevelForHUD = "52a7044c7cf6ef4b:HUDLevel",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 3,
+		},
+		Named = 
+		{
+			string Name = "EditorCamera",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [31.993, -10.5589, 50],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [-0, -1.09278e-008, 0, 1],
+		},
+		Camera = 
+		{
+			ProjectionMode ProjectionMode = Orthographic,
+			Facing Facing = NegativeZ,
+			SpriteSort SpriteSort = ZDepth,
+			float FieldOfView = 45,
+			float NearPlane = 0.5,
+			float FarPlane = 500,
+			float Size = 40.0349,
+		},
+		EditorCameraController = 
+		{
+			ControlMode ControlMode = ZPlane,
+			float LookDistance = 50,
+			float VerticalAngle = 0,
+			float HorizontalAngle = 0,
+			Vec3 LookTarget = [31.993, -10.5589, 8.3021e-007],
+		},
+		EditorRenderer = 
+		{
+			Vec4 ClearColor = [0.278431, 0.278431, 0.278431, 1],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 2,
+		},
+		Named = 
+		{
+			string Name = "Camera",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -2, 40],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Camera = 
+		{
+			ProjectionMode ProjectionMode = Orthographic,
+			Facing Facing = NegativeZ,
+			SpriteSort SpriteSort = ZDepth,
+			float FieldOfView = 45,
+			float NearPlane = 0.5,
+			float FarPlane = 200,
+			float Size = 20,
+		},
+		CameraLogic = 
+		{
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "52da04e9fee8902d:Player",
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.4805, -8.39244, 0],
+			Vec3 Scale = [3.14411, 3.14411, 3.14411],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "52d0d7f7cec0a5e2:Target",
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.89911, 14.2169, 0],
+			Vec3 Scale = [1, 1, 3],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Target",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "52c4be097e795f9c:Pit",
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13, -10, 0],
+			Vec3 Scale = [0.198341, 0.716192, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pit",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "End",
+		},
+		Archetyped = 
+		{
+			string Name = "523438c6167e65ca:End",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [59.5, -9.5, 0],
+			Vec3 Scale = [0.653023, 0.653023, 1.63256],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "529e8b081d0ceca0:door",
+			bool FlipX = false,
+			bool FlipY = false,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+		},
+		NextLevel = 
+		{
+			int LevelNumber = 3,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [2, 2, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			BlendMode BlendMode = Alpha,
+		},
+		TileMap = 
+		{
+			string SourceName = "5213737588024ca5:IGLevel3_TileMap05",
+			float UnitsPerTile = 1,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "52c4be097e795f9c:Pit",
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [43.5, 3.93234, 0],
+			Vec3 Scale = [0.198341, 0.716192, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pit",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "52c4be097e795f9c:Pit",
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [43.5, -10.251, 0],
+			Vec3 Scale = [0.198341, 0.716192, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pit",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8, 2.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14, 2.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8, 1.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11, 1.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14, 1.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11, 2.5, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [39.5, -1, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [33.5, -1, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [36.5, -2, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [36.5, -1, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [39.5, -2, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [33.5, -2, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [45, -1, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 24,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [48, -1, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 25,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [42, -1, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 26,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [48, -2, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [45, -2, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 28,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [42, -2, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 29,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [50.5, -1, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 30,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [53.5, -1, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [53.5, -2, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5200e13174cdd122:Gold",
+		LinkId = 
+		{
+			uint Id = 32,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [50.5, -2, 0],
+			Vec3 Scale = [0.848235, 0.848235, 1.69647],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gold",
+		},
+	},
+},

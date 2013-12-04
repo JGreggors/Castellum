@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "IGLevel1.2",
-		uint64 ResourceId = 52131abc81347e13,
+		string Name = "IzzyLevel9",
+		uint64 ResourceId = 5214c74ba7424e11,
 		string LoaderType = "Level",
 		uint Version = 0,
 		bool ShowInEditor = true,

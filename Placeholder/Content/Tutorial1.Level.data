@@ -29,11 +29,14 @@ Level =
 			bool Background = true,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			uint Layer = 0,
+			int Layer = 0,
 			bool Active = true,
 			bool Blocking = true,
 			uint Renderer = 1,
 			uint Camera = 2,
+			ViewportScaling Scaling = Fill,
+			Vec2 Resolution = [1280, 720],
+			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
 		{
@@ -57,7 +60,7 @@ Level =
 		{
 			Vec3 Translation = [29.2585, -2.17599, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, -1.90735e-008, -0, 1],
+			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
 		Camera = 
 		{
@@ -1106,7 +1109,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [32.6825, -2.49799, 0],
+			Vec3 Translation = [25.5542, -2.49799, 0],
 			Vec3 Scale = [1.13285, 1.03211, 37.781],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1167,7 +1170,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.16623, -1.48937, -2.24512e-014],
+					Vec3 Translation = [7.41717, -1.48937, -2.24512e-014],
 					Vec3 Scale = [1.74048, 1.97104, 0.0185462],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1224,7 +1227,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.16626, -3.38222, -5.97046e-015],
+					Vec3 Translation = [7.4172, -3.38222, -5.97046e-015],
 					Vec3 Scale = [1.74048, 1.97104, 0.0185462],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1281,7 +1284,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.0530468, -0.119788, 0],
+					Vec3 Translation = [0.0090487, -0.119788, 0],
 					Vec3 Scale = [1.16339, 1.29066, 0.0348838],
 					Quat Rotation = [0, 0, 0, 1],
 				},
