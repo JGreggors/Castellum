@@ -42,6 +42,9 @@ Level =
 		{
 			Vec4 ClearColor = [0.278431, 0.278431, 0.278431, 1],
 		},
+		MusicLogic = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -55,7 +58,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [19.7152, -0.666399, 49.997],
+			Vec3 Translation = [-0.457302, -4.9164, 49.997],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -67,7 +70,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 31,
+			float Size = 21,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +78,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [19.7152, -0.666399, -0.00299745],
+			Vec3 LookTarget = [-0.457302, -4.9164, -0.00299833],
 		},
 		EditorRenderer = 
 		{
@@ -124,14 +127,14 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.75318, -4.05722, 1],
+			Vec3 Translation = [0, -5.09487, 1],
 			Vec3 Scale = [2.44019, 2.44019, 2.44019],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
+			TextPositionMode Position = Centered,
 			string FontName = "52d8b2af097ae33e:anklepants",
 			uint FontSize = 50,
 			Vec4 Color = [0, 0.831373, 0.121569, 1],
@@ -151,7 +154,7 @@ Level =
 			bool Seamless = false,
 			string MaterialName = "4faa6050b8692851:HardMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [1.37, -0.5, 0],
+			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [1.45, 0.5, 0.5],
 		},
 		Reactive = 
@@ -179,16 +182,16 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.50594, -8.07478, 1],
+			Vec3 Translation = [0, -9.7689, 1],
 			Vec3 Scale = [2.44019, 2.44019, 2.44019],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
+			TextPositionMode Position = Centered,
 			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 50,
+			uint FontSize = 30,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "Credits",
@@ -206,8 +209,8 @@ Level =
 			bool Seamless = false,
 			string MaterialName = "4faa6050b8692851:HardMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [1.75, -0.5, 0],
-			Vec3 Size = [1.75, 0.5, 0.5],
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [1.5, 0.25, 0.5],
 		},
 		Reactive = 
 		{
@@ -234,17 +237,17 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.74996, -6.09438, 1],
+			Vec3 Translation = [0, -6.88497, 1],
 			Vec3 Scale = [2.44019, 2.44019, 2.44019],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
+			TextPositionMode Position = Centered,
 			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 50,
-			Vec4 Color = [1, 1, 1, 1],
+			uint FontSize = 30,
+			Vec4 Color = [0, 0.113725, 1, 1],
 			bool Visible = true,
 			string Text = "Level Select",
 			bool OnTop = false,
@@ -261,8 +264,8 @@ Level =
 			bool Seamless = false,
 			string MaterialName = "4faa6050b8692851:HardMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [2.75, -0.5, 0],
-			Vec3 Size = [2.75, 0.5, 0.5],
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [2.25, 0.25, 0.5],
 		},
 		Reactive = 
 		{
@@ -361,7 +364,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10.5063, -5.545, 3],
+			Vec3 Translation = [-9.27806, -5.545, 3],
 			Vec3 Scale = [10.233, 10.233, 10.3741],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -474,7 +477,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.321421, -1.36137, 1],
+			Vec3 Translation = [0, -1.36137, 1],
 			Vec3 Scale = [1, 1, 2.41177],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -533,16 +536,16 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.67628, -4.22621, 1],
-			Vec3 Scale = [2.44019, 2.44019, 2.44019],
-			Quat Rotation = [0, 0, -0.239801, 0.970822],
+			Vec3 Translation = [9.61275, -4.8568, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0.18029, 0.983613],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
-			TextPositionMode Position = UpperLeft,
+			TextPositionMode Position = Centered,
 			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 25,
+			uint FontSize = 50,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "High Scores",
@@ -560,8 +563,8 @@ Level =
 			bool Seamless = false,
 			string MaterialName = "4faa6050b8692851:HardMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [1.37, -0.5, 0],
-			Vec3 Size = [1.45, 0.5, 0.5],
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [2.9, 0.5, 0.5],
 		},
 		Reactive = 
 		{
@@ -570,10 +573,68 @@ Level =
 		},
 		UIButton = 
 		{
-			Vec4 DefaultColor = [0.486275, 0.431373, 1, 1],
-			Vec4 HoverColor = [0, 0.113725, 1, 1],
+			Vec4 DefaultColor = [0, 0.113725, 1, 1],
+			Vec4 HoverColor = [0, 0.431372, 1, 1],
 			Vec4 DownColor = [1, 1, 1, 0.5],
 			uint LevelNumber = 12,
+		},
+		ScaleText = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "Credits",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -8.33361, 1],
+			Vec3 Scale = [2.44019, 2.44019, 2.44019],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			SpriteGeometryMode GeometryMode = ZPlane,
+			TextPositionMode Position = Centered,
+			string FontName = "52d8b2af097ae33e:anklepants",
+			uint FontSize = 30,
+			Vec4 Color = [1, 1, 1, 1],
+			bool Visible = true,
+			string Text = "Controls",
+			bool OnTop = false,
+			BlendMode BlendMode = Alpha,
+			Vec2 Size = [0, 0],
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = false,
+			string MaterialName = "4faa6050b8692851:HardMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [1.5, 0.25, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = true,
+		},
+		UIButton = 
+		{
+			Vec4 DefaultColor = [0, 0.831373, 0.121569, 1],
+			Vec4 HoverColor = [0, 0.431372, 1, 0.9999],
+			Vec4 DownColor = [1, 1, 1, 0.5],
+			uint LevelNumber = 3,
 		},
 	},
 },

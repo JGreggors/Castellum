@@ -308,7 +308,7 @@ class MasterPlayerContr:
                 self.grappleDistance += self.DeltaTime * 25
         else:
             self.grappleDistance = math.sqrt(math.pow((ray.Start.x - self.grapplePoint.x), 2) + math.pow((ray.Start.y - self.grapplePoint.y), 2))
-            self.currentVelocity = self.Owner.RigidBody.Velocity.x
+            #self.currentVelocity = self.Owner.RigidBody.Velocity.x
             #print(self.currentVelocity)
             #print("Before")
             self.Owner.RigidBody.Kinematic = True
@@ -478,7 +478,7 @@ class MasterPlayerContr:
         self.grappleDistance = 0
         self.playerGrappleShot = False
         self.Owner.RigidBody.Kinematic = False
-        self.Owner.RigidBody.Velocity.x = self.currentVelocity
+        #self.Owner.RigidBody.Velocity.x = self.currentVelocity
         #print(self.currentVelocity)
         self.Swing = False
         self.Owner.FindChildByName("arm").Sprite.SpriteSource = "arm"
@@ -501,6 +501,10 @@ class MasterPlayerContr:
             else:
                 moveDirection += Vec3(.5,0,0)
             self.playerDirection = False
+            if(self.Owner.Sprite.SpriteSource.Name == "player_stand"):
+                self.Owner.Sprite.SpriteSource = "player"
+
+           
             self.arm.Transform.Translation = Vec3(-.03, currentArmTranslation.y, currentArmTranslation.z)
             
         if(self.moveLeft):
@@ -509,9 +513,13 @@ class MasterPlayerContr:
             else:
                 moveDirection += Vec3(-.5,0,0)
             self.playerDirection = True
-            self.arm.Transform.Translation = Vec3(.03, currentArmTranslation.y, currentArmTranslation.z)
-            
+            if(self.Owner.Sprite.SpriteSource.Name == "player_stand"):
+                self.Owner.Sprite.SpriteSource = "player"
 
+            self.arm.Transform.Translation = Vec3(.03, currentArmTranslation.y, currentArmTranslation.z)
+        if(not (self.moveRight or self.moveLeft)):
+            self.Owner.Sprite.SpriteSource = "player_stand"
+            
         self.Owner.RigidBody.ApplyLinearVelocity(moveDirection * (self.moveSpeed/30))
         
     def ApplyJumping(self):
@@ -571,7 +579,7 @@ class MasterPlayerContr:
         
         if(otherObject.Name == "AOE" and self.keyAttached == False):
             self.Space.SoundSpace.PlayCue("pickupkey")
-            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, .6  * self.Owner.Transform.Scale.y, 0)
+            key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0, .6  * self.Owner.Transform.Scale.y, 1)
             key.RigidBody.Static = True
             key.BoxCollider.Ghost = True
             self.keyAttached = True

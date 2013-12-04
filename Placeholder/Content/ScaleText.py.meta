@@ -1,0 +1,8 @@
+TextContent = 
+{
+	PyScriptBuilder = 
+	{
+		string Name = "ScaleText",
+		uint64 ResourceId = 522bde3387db456c,
+	},
+},
