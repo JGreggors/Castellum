@@ -39,25 +39,25 @@ class LevelToggles:
             
         #sets if a win screen should be played based on whether scores have been stored
         #Win Screen for Tutorials
-        if(self.scores[0] > 0 and self.scores[1] > 0 and self.scores[2] > 0):
+        if(self.scores[0] > 0 and self.scores[1] > 0):
             self.WinTutorial = True
         else:
             self.WinTutorial = False
             
         #Win Screen for Doug Mode
-        if(self.scores[3] > 0 and self.scores[4] > 0 and self.scores[5] > 0):    
+        if(self.scores[2] > 0 and self.scores[3] > 0 and self.scores[4] > 0):    
             self.WinDougMode = True
         else:
             self.WinDougMode = False
             
         #Win Screen for Adventure
-        if(self.scores[6] > 0 and self.scores[7] > 0 and self.scores[8] > 0):
+        if(self.scores[5] > 0 and self.scores[6] > 0 and self.scores[7] > 0):
             self.WinAdventure = True
         else:
             self.WinAdventure = False
             
         #Win Screen for Daredevil
-        if(self.scores[9] > 0 and self.scores[10] > 0 and self.scores[11] > 0):
+        if(self.scores[8] > 0 and self.scores[9] > 0 and self.scores[10] > 0):
             self.WinDaredevil = True
         else:
             self.WinDaredevil = False

@@ -23,12 +23,7 @@ class StartScreenLogic:
             self.swap = True
             self.slideNum += 1
             self.prevSlide = self.Space.FindObjectByName("Slide" + str(self.slideNum-1))
-        #if(Zero.Keyboard.KeyIsPressed(Zero.Keys.Back)):
-        #    if(self.slideNum != 1):
-        #        self.prevSlide = self.slide
-        #        self.slideNum -= 1
-        #        self.swap = True
-        
+
         if(self.swap):
             self.swapSlides()
         

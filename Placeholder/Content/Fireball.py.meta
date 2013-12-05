@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "Fireball",
-		uint64 ResourceId = 52351c3326d91082,
-	},
-},

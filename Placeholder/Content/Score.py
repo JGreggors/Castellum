@@ -7,7 +7,7 @@ class Score:
     tutorial = Property.Bool(True)
     def Initialize(self, initializer):
         Zero.Connect(self.Owner, Events.GameStarted, self.OnGameStarted)
-        self.listOfScores = [0] * 10
+        self.listOfScores = [0] * 11
         self.LevelNumber = 0
         
         

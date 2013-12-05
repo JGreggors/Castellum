@@ -543,7 +543,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level1",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -588,7 +588,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level2",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -633,7 +633,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level3",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -678,7 +678,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level4",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -723,7 +723,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level5",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -768,7 +768,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level6",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -1163,7 +1163,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level6",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -1218,7 +1218,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level6",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -1273,7 +1273,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level6",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -1328,7 +1328,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level6",
+			string Name = "Level",
 		},
 		Transform = 
 		{
@@ -1383,7 +1383,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Level6",
+			string Name = "Level",
 		},
 		Transform = 
 		{

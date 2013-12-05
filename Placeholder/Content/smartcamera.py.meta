@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "smartcamera",
-		uint64 ResourceId = 52dcda69f69c0c96,
-	},
-},
