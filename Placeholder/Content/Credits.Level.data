@@ -55,7 +55,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-22.2625, -5.015, 50],
+			Vec3 Translation = [-2.15322e-006, -5.125, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -67,7 +67,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 45,
+			float Size = 22,
 		},
 		EditorCameraController = 
 		{
@@ -75,7 +75,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-22.2625, -5.015, -9.73126e-007],
+			Vec3 LookTarget = [-2.15322e-006, -5.125, -1.16573e-012],
 		},
 		EditorRenderer = 
 		{
@@ -370,7 +370,7 @@ Level =
 			uint FontSize = 80,
 			Vec4 Color = [0, 0.913726, 0.137255, 1],
 			bool Visible = true,
-			string Text = "Producer/Sound Design/Art",
+			string Text = "Producer/Sound & Level Design/Art",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
@@ -503,7 +503,7 @@ Level =
 			uint FontSize = 80,
 			Vec4 Color = [0, 0.913726, 0.137255, 1],
 			bool Visible = true,
-			string Text = "Lead Programmer/Level Art",
+			string Text = "Lead Programmer/Level Art & Design",
 			bool OnTop = false,
 			BlendMode BlendMode = Alpha,
 			Vec2 Size = [0, 0],
@@ -588,7 +588,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4, -3.81294, 0.2],
+			Vec3 Translation = [4.54574, -3.81294, 0.2],
 			Vec3 Scale = [10.3741, 10.3741, 10.3741],
 			Quat Rotation = [0, 0, 0, 1],
 		},

@@ -145,7 +145,6 @@ ContentLibrary =
 		"NextLevel.py",
 		"NoChaseBat.py",
 		"NoGrapple.TilePaletteSource.bin",
-		"OutLogic.py",
 		"Overheat.SoundCue.data",
 		"Pause.Archetype.data",
 		"PauseBG.Archetype.data",

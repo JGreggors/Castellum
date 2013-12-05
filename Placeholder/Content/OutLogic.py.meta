@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "OutLogic",
-		uint64 ResourceId = 5212c9269c732d7c,
-	},
-},
