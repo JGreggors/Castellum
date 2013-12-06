@@ -1,0 +1,137 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Scroll",
+	},
+	Archetyped = 
+	{
+		string Name = "52169bd7ca548b4e:Scroll",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-15.9552, 0, -39.9],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		string SpriteSource = "52169ac615026706:scroll",
+		bool FlipX = false,
+		bool FlipY = false,
+		Vec4 Color = [0.04, 0.0784002, 1, 1],
+		bool Visible = true,
+		bool OnTop = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Transform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.0691891, -0.0955014, 0.1],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				SpriteGeometryMode GeometryMode = ZPlane,
+				TextPositionMode Position = Centered,
+				string FontName = "52d8b2af097ae33e:anklepants",
+				uint FontSize = 47,
+				Vec4 Color = [1, 1, 1, 1],
+				bool Visible = true,
+				string Text = "with",
+				bool OnTop = false,
+				BlendMode BlendMode = Alpha,
+				Vec2 Size = [0, 0],
+				TextAlign Align = Left,
+				float PixelsPerUnit = 64,
+				bool Smoothing = true,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "Transform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.0691891, 1.25489, 0.1],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				SpriteGeometryMode GeometryMode = ZPlane,
+				TextPositionMode Position = Centered,
+				string FontName = "52d8b2af097ae33e:anklepants",
+				uint FontSize = 47,
+				Vec4 Color = [1, 1, 1, 1],
+				bool Visible = true,
+				string Text = "Scroll",
+				bool OnTop = false,
+				BlendMode BlendMode = Alpha,
+				Vec2 Size = [0, 0],
+				TextAlign Align = Left,
+				float PixelsPerUnit = 64,
+				bool Smoothing = true,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Named = 
+			{
+				string Name = "Transform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.0691891, -1.44589, 0.1],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				SpriteGeometryMode GeometryMode = ZPlane,
+				TextPositionMode Position = Centered,
+				string FontName = "52d8b2af097ae33e:anklepants",
+				uint FontSize = 47,
+				Vec4 Color = [1, 1, 1, 1],
+				bool Visible = true,
+				string Text = "Mouse",
+				bool OnTop = false,
+				BlendMode BlendMode = Alpha,
+				Vec2 Size = [0, 0],
+				TextAlign Align = Left,
+				float PixelsPerUnit = 64,
+				bool Smoothing = true,
+			},
+		},
+	},
+},

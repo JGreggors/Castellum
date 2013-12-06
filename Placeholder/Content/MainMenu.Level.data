@@ -58,7 +58,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.42769, -5.1564, 49.997],
+			Vec3 Translation = [3.72769, -6.2964, 49.997],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -70,7 +70,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33,
+			float Size = 32,
 		},
 		EditorCameraController = 
 		{
@@ -78,7 +78,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.42769, -5.1564, -0.00299815],
+			Vec3 LookTarget = [3.72769, -6.2964, -0.00299814],
 		},
 		EditorRenderer = 
 		{
@@ -535,16 +535,16 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [9.61275, -4.8568, 1],
+			Vec3 Translation = [9.2683, -4.26851, 1],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0.18029, 0.983613],
+			Quat Rotation = [0, 0, 0.170399, 0.985375],
 		},
 		SpriteText = 
 		{
 			SpriteGeometryMode GeometryMode = ZPlane,
 			TextPositionMode Position = Centered,
 			string FontName = "52d8b2af097ae33e:anklepants",
-			uint FontSize = 50,
+			uint FontSize = 37,
 			Vec4 Color = [1, 1, 1, 1],
 			bool Visible = true,
 			string Text = "High Scores",
@@ -578,6 +578,9 @@ Level =
 			uint LevelNumber = 4,
 		},
 		ScaleText = 
+		{
+		},
+		Hierarchy = 
 		{
 		},
 	},

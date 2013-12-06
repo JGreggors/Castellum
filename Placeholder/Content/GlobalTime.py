@@ -95,45 +95,48 @@ class GlobalTime:
                 
             #if Escape is pressed Quit the game
             if(keyboardEvent.Key == Keys.Escape):
+                self.Escape = True
                 Zero.Game.Quit()
                 
             #if M is pressed pause sounds
             if(Zero.Keyboard.KeyIsPressed(Zero.Keys.M)):
                 self.Space.SoundSpace.Pause = not self.Space.SoundSpace.Pause
         
-        #if player presses Esccape
-        if(keyboardEvent.Key == Keys.Escape and self.Escape == False):
+        #If pause menu is not currently up
+        if(self.Pause == False):
+            #if player presses Esccape
+            if(keyboardEvent.Key == Keys.Escape and self.Escape == False):
+                
+                #Create Escape menu items
+                self.Space.CreateAtPosition("PauseBG", vec2)
+                self.Space.CreateAtPosition("EscQuit", vec)
+                self.Space.CreateAtPosition("EscQuitY", vec5)
+                self.Space.CreateAtPosition("EscQuitN", vec3)
+                self.Space.CreateAtPosition("QuitLevel", vec7)
+                
+                #set that the escape state is on
+                self.Escape = True
+                #pause the TimeSpace
+                self.Space.TimeSpace.TogglePause()
             
-            #Create Escape menu items
-            self.Space.CreateAtPosition("PauseBG", vec2)
-            self.Space.CreateAtPosition("EscQuit", vec)
-            self.Space.CreateAtPosition("EscQuitY", vec5)
-            self.Space.CreateAtPosition("EscQuitN", vec3)
-            self.Space.CreateAtPosition("QuitLevel", vec7)
+            #If player presses N (no) while in escape state
+            elif(keyboardEvent.Key == Keys.N and self.Escape == True):
+                
+                #destroy Escape menu items
+                self.Space.FindObjectByName("PauseBG").Destroy()
+                self.Space.FindObjectByName("EscQuit").Destroy()
+                self.Space.FindObjectByName("EscQuitY").Destroy()
+                self.Space.FindObjectByName("EscQuitN").Destroy()
+                self.Space.FindObjectByName("QuitLevel").Destroy()
+                
+                #set that Escape state is off
+                self.Escape = False
+                #unpausethe TimeSpace
+                self.Space.TimeSpace.TogglePause()
             
-            #set that the escape state is on
-            self.Escape = True
-            #pause the TimeSpace
-            self.Space.TimeSpace.TogglePause()
-        
-        #If player presses N (no) while in escape state
-        elif(keyboardEvent.Key == Keys.N and self.Escape == True):
-            
-            #destroy Escape menu items
-            self.Space.FindObjectByName("PauseBG").Destroy()
-            self.Space.FindObjectByName("EscQuit").Destroy()
-            self.Space.FindObjectByName("EscQuitY").Destroy()
-            self.Space.FindObjectByName("EscQuitN").Destroy()
-            self.Space.FindObjectByName("QuitLevel").Destroy()
-            
-            #set that Escape state is off
-            self.Escape = False
-            #unpausethe TimeSpace
-            self.Space.TimeSpace.TogglePause()
-        
-        #If player presses Y (Yes) while in escape state quit the game
-        elif(keyboardEvent.Key == Keys.Y and self.Escape == True):
-            Zero.Game.Quit()
+            #If player presses Y (Yes) while in escape state quit the game
+            elif(keyboardEvent.Key == Keys.Y and self.Escape == True):
+                Zero.Game.Quit()
             
         #if the game is currently in Escape state
         if(self.Escape):

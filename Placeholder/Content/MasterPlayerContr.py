@@ -208,7 +208,7 @@ class MasterPlayerContr:
 
         #if the player has picked up a key place it above players head
         if(self.keyAttached):
-            self.Key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0,.6 * self.Owner.Transform.Scale.y,0)
+            self.Key.Transform.Translation = self.Owner.Transform.Translation + Vec3(0,.6 * self.Owner.Transform.Scale.y,.1)
             
         #if the game is reset destroy HUD and then relaod level
         if(self.ResetIsPressed == True):

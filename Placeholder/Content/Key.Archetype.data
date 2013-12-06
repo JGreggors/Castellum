@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [0.75, 0.85, 1],
+		Vec3 Translation = [-41.5551, -9.02545, 0],
+		Vec3 Scale = [1.88958, 2.14153, 2.51944],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -25,7 +25,7 @@ Cog =
 		bool FlipY = false,
 		Vec4 Color = [1, 1, 1, 1],
 		bool Visible = true,
-		bool OnTop = true,
+		bool OnTop = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
@@ -38,7 +38,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = false,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -96,7 +96,7 @@ Cog =
 				bool Asleep = false,
 				bool Kinematic = false,
 				bool RotationLocked = false,
-				bool Mode2D = false,
+				bool Mode2D = true,
 				bool AllowSleep = false,
 				bool Inherit2DMode = true,
 				Vec3 Velocity = [0, 0, 0],

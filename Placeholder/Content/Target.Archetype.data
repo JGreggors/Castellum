@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-17.3929, 5.59059, 0.1],
+		Vec3 Translation = [-15.3644, 8.26824, 0],
 		Vec3 Scale = [1, 1, 3],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -23,7 +23,7 @@ Cog =
 		string SpriteSource = "52da19bdf4098b1f:Target",
 		bool FlipX = false,
 		bool FlipY = false,
-		Vec4 Color = [0, 0, 0, 1],
+		Vec4 Color = [1, 0.96, 0, 1],
 		bool Visible = true,
 		bool OnTop = true,
 		bool AnimationActive = true,

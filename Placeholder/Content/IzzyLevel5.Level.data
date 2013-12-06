@@ -72,7 +72,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.0441, -5.6528, 50],
+			Vec3 Translation = [-31.8616, -7.2053, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -84,7 +84,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 41,
+			float Size = 29,
 		},
 		EditorCameraController = 
 		{
@@ -92,7 +92,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-13.0441, -5.6528, 4.92078e-007],
+			Vec3 LookTarget = [-31.8616, -7.2053, -3.30461e-007],
 		},
 		EditorRenderer = 
 		{
@@ -242,8 +242,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.932651, -3.62953, -3.8147e-006],
-			Vec3 Scale = [1.34754, 1.34754, 1.79672],
+			Vec3 Translation = [-0.932651, -3.45589, -3.8147e-006],
+			Vec3 Scale = [1.89, 2.142, 1.79672],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -932,6 +932,37 @@ Level =
 		Named = 
 		{
 			string Name = "Gold",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 35,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-31.7608, -6.40511, -20],
+			Vec3 Scale = [0.309439, 0.239943, 0.309439],
+			Quat Rotation = [0, 0, 0.991038, -0.133583],
+		},
+		Sprite = 
+		{
+			string SpriteSource = "5229d6a2a3984626:sign",
+			bool FlipX = true,
+			bool FlipY = false,
+			Vec4 Color = [0.09225, 0.45, 0.10656, 1],
+			bool Visible = true,
+			bool OnTop = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
 		},
 	},
 },

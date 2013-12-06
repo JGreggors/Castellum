@@ -34,8 +34,8 @@ Level =
 			bool Blocking = true,
 			uint Renderer = 1,
 			uint Camera = 2,
-			ViewportScaling Scaling = Fill,
-			Vec2 Resolution = [1280, 720],
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [16, 9],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
