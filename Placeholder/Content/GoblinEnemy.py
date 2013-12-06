@@ -1,9 +1,14 @@
+########################################################################
+##All content (c) 2013 DigiPen (USA) Corporation, all rights reserved.##
+########################################################################
+
 import Zero
 import Events
 import Property
 import VectorMath
 import Color
 
+#shortcut for VectorMath.Vec3
 Vec3 = VectorMath.Vec3
 
 class GoblinEnemy:
@@ -19,14 +24,18 @@ class GoblinEnemy:
     #jumpHeight = Property.Int(1)
     stunDelay = Property.Float(1.0)
     
+    #Startiing position
     HomeQ = True
+    #Whether enemy is stunned
     StunState = False
     
     def Initialize(self, initializer):
-        #We need to update the enemy's behavior every logic update 
-        Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
-        #Initialize member variables 
         
+        #creating update event
+        Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
+        
+        #Initialize member variables
+        #-----------------------------------------------------------------------------
         self.PaceDirection = Vec3(1,0,0)
         self.StartPosition = self.Owner.Transform.Translation
         self.DistanceFromHome = 0.0
@@ -37,35 +46,35 @@ class GoblinEnemy:
         self.ChaseColor = Color.Blue
         self.StunTimer = 0.0
         self.AfterAttack = False
-        #self.StunCounter = 0
         self.alerted = False
         self.nextPing = 0.0
         
-        
+        #Numbers for displaying in game time enemy is stunned
         self.five = False
         self.four = False
         self.three = False
         self.two = False
         self.one = False
+        #-----------------------------------------------------------------------------
         
-        #self.OnGround = False
-        
+        #creaeting a collision event
         Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
 
     def OnLogicUpdate(self, UpdateEvent):
-        #print(self.ChaseDirection)
-        #We will re-evaluate this every logic update 
+        
+        #Countdown for how long enemy should be stunned
         if(self.StunTimer > 0):
             self.StunTimer -= UpdateEvent.Dt
         if(self.StunTimer <= 0):
             self.StunState = False
             self.StunTimer = 0
             
-
-            
+        #if enemy is not currently stunned
         if(self.StunState == False):
             
+            #target is not within range
             targetIsWithinRange = False
+            #object name is goblin (can't grapple to it)
             self.Owner.Name = ("Goblin")
             
             #Logic for updating distance from target and chase direction 
@@ -75,56 +84,70 @@ class GoblinEnemy:
             reachMaxRange = (self.DistanceFromHome >= self.MaxMoveDistance)
             
             #If valid object and target is within range 
-
             if(targetIsWithinRange and self.AfterAttack == False):
+                #Chase player
                 if(reachMaxRange):
                     self.AfterAttack = True
                 else:
                     self.alerted = True
                     self.HomeQ = False
                     self.ChaseTarget(UpdateEvent)
+            #if target is not in range
             else:
+                #if object currently isn't in starting place
                 if(self.HomeQ == False):
+                    #run go home function
                     self.GoHome()
+                #if enemy is in starting place
                 else:
+                    #make sure enemy is not green(grapple)
                     self.Owner.Sprite.Color = self.OriginalColor
+                    #Run logic for pacing back and forth
                     self.PaceBackAndForth(UpdateEvent)
-                    #Logic for pacing back and forth 
+            
+            #Logic for pacing back and forth 
             self.PaceBackAndForth(UpdateEvent)
             
+        #if enemy is stunned
         if(self.StunState == True):
+            #run stun logic
             self.StunLogic()
-            #print("Stun")
+            #change color to green(grapple)
             self.Owner.Sprite.Color = Color.Green
-            #For Grapple
+            #change object name so player can grapple to enemy
             self.Owner.Name = ("Floor")
+            #enemy is not chasing player
             self.alerted = False
             
-            
+        #Logic for playing stun sound effect
         if(UpdateEvent.CurrentTime > self.nextPing):
             self.nextPing = UpdateEvent.CurrentTime + self.stunDelay
             if(self.StunState == True):
                 self.Space.SoundSpace.PlayCue("stun")
-            #if(self.alerted == True):
-            #    self.Space.SoundSpace.PlayCue("alertedenemy")
         
     def GoHome(self):
+        #Function to move back to starting position
         
+        #vector
         direction = (self.StartPosition - self.Owner.Transform.Translation)
         
+        #Once enemy is close to starting position
         if(direction.length() <= 0.5):
+            #enemy is at starting position
             self.HomeQ = True
+            #enemy is not attacking
             self.AfterAttack = False
             self.alerted = False
             
-        
+        #move enemy along the normalized vector
         direction.normalize()
         self.Owner.Transform.Translation += direction * 0.25
         
     def PaceBackAndForth(self, UpdateEvent):
-            
-        displacement = self.Owner.Transform.Translation - self.StartPosition
+        #Logic for pacing/speed while not chasing player
+
         #How far from starting position 
+        displacement = self.Owner.Transform.Translation - self.StartPosition
         distanceFromStart = displacement.length()
         
         #We want to change direction after 
@@ -134,54 +157,24 @@ class GoblinEnemy:
             
             #Only want unti length direction
             self.PaceDirection.normalize()
-            
-        
+  
         #Apply movement 
         self.Owner.Transform.Translation += self.PaceDirection * UpdateEvent.Dt * self.PaceSpeed
         
     def ChaseTarget(self, UpdateEvent):
+        #Logic for chasing player
+        
         #Set Chase Color 
         self.Owner.Sprite.Color = self.ChaseColor
         #Apply movement 
         self.Owner.Transform.Translation += self.ChaseDirection * UpdateEvent.Dt * self.ChaseSpeed
-        #if(self.ChaseDirection.y > self.Owner.Transform.Translation.y):
-            #self.Owner.RigidBody.ApplyLinearVelocity(VectorMath.Vec3(0,self.jumpHeight,0))
             
-#------------------------------------------------------------------------------------------------------------
-    #def CanJump(self):
-    #    canJump = self.OnGround
-    #    return canJump
-        
-    #def UpdateGroundState(self):
-    #    self.OnGround = False
-    #    #Testing if objects are 'ground'
-    #    for ContactHolder in self.Owner.Collider.Contacts:
-    #        #Ignore ghost objects
-    #        if(ContactHolder.IsGhost):
-    #            continue
-    #        objectHit = ContactHolder.OtherObject
-    #        surfaceNormal = -ContactHolder.FirstPoint.WorldNormalTowardsOther
-    #        #If the object is considered walkable
-    #        if(self.IsGround(surfaceNormal)):
-    #            self.OnGround = True
-    #            return
-                
-    #def GetDegreeDifference(self, surfaceNormal):
-    #    #Using angles to test if something is 'Ground'
-    #    UpDirection = Vec3(0,1,0)
-    #    cosTheta = surfaceNormal.dot(UpDirection)
-    #    radians = math.acos(cosTheta)
-    #    degrees = math.degrees(radians)
-    #    return degrees
-        
-    #def IsGround(self, surfaceNormal):
-    #    #defines what is ground
-    #    degrees = self.GetDegreeDifference(surfaceNormal)
-    #    return degrees < 60.0
-        
-#---------------------------------------------------------------------------------------------------------------
     def CalculateChaseDirectionAndDistance(self):
+        #Logic for chasing player
+        
+        #setting player as target
         targetObject = self.Space.FindObjectByName("Player") 
+        
         #Get direction towards target 
         self.ChaseDirection = targetObject.Transform.Translation - self.Owner.Transform.Translation
         self.homeDirection = self.StartPosition - self.Owner.Transform.Translation
@@ -192,13 +185,16 @@ class GoblinEnemy:
         self.homeDirection.normalize()
         self.ChaseDirection.normalize()
         
-        
     def StunLogic(self):
+#----------------------------------------------------------------------------------------------------
+#Creates number visuals in gameto represent how long an enemy will be stunned for
+
         self.five = True
         self.four = True
         self.three = True
         self.two = True
         self.one = True
+        
         if(self.StunTimer > 4.95 and self.StunTimer < 5):
             self.Space.CreateAtPosition("five", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
             self.five = False
@@ -215,14 +211,20 @@ class GoblinEnemy:
             self.Space.CreateAtPosition("one", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
             self.one = False
             False
-           
+            
+#----------------------------------------------------------------------------------------------------
         
     def OnCollisionStart(self, CollisionEvent):
+        #Logic for enemy colliding with player or weapon projectile
         
         if(CollisionEvent.OtherObject.Name == "Projectile"):
+            #enemy is being stunned by player
             self.StunState = True
+            #set stun counter
             self.StunTimer = 5
+            
         if(CollisionEvent.OtherObject.Name == "Player"):
+            #enemy is attacking player
             self.AfterAttack = True
 
 

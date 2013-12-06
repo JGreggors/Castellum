@@ -1,3 +1,7 @@
+########################################################################
+##All content (c) 2013 DigiPen (USA) Corporation, all rights reserved.##
+########################################################################
+
 import Zero
 import Events
 import Property
@@ -6,13 +10,15 @@ import random
 import math
 import Color
 
+#shortcut for VectorMath.Vec3
 Vec3 = VectorMath.Vec3
 
 class BatEnemy:
+#"Bat" type enemy logic
     
-    temp = 0 #stores trajectory
-    ranNum = 0 #numerator for fraction
-    ranDenom = 0 # denominator for fraction
+    #Variables
+    temp = 0 #stores trajectory    
+    #Can change these in properties menu
     maxMoveDistance = Property.Float(5.0)
     ChaseTriggerDistance = Property.Float(7.0)
     ChaseSpeed = Property.Float(5.0)
@@ -22,12 +28,18 @@ class BatEnemy:
     ReturnSpeed = Property.Float(10.0)
     stunDelay = Property.Float(1.0)
     
-    HomeQ = True #is he home?
+    #Startiing position
+    HomeQ = True
+    #Whether enemy is stunned
     StunState = False
-    UpQ = False #Is the bat up?
+    #Is the bat up
+    UpQ = False
+    
     def Initialize(self, initializer):
-        #connects to BatTime
+        
+        #creating Update Event
         Zero.Connect(self.Space, Events.LogicUpdate, self.OnLogicUpdate)
+        
         #set variables
        #-----------------------------------------------------------------------------
         self.StartPosition = self.Owner.Transform.Translation
@@ -39,61 +51,79 @@ class BatEnemy:
         self.player = self.Space.FindObjectByName("Player")
         self.AfterAttack = False
         self.LeaveTime = 0.0
-        
         self.alerted = False
         self.nextPing = 0.0
         
+        #Numbers for displaying in game time enemy is stunned
         self.five = False
         self.four = False
         self.three = False
         self.two = False
         self.one = False
-       #-----------------------------------------------------------------------------
+        #-----------------------------------------------------------------------------
         
+        #Creating a collision event
         Zero.Connect(self.Owner, Events.CollisionStarted, self.OnCollisionStart)
         
     def OnLogicUpdate(self, UpdateEvent):
-        #print(self.AfterAttack)
+        
+        #Whether target iswithin range
         targetIsWithinRange = False
         
+        #Count down for how long enemy should be stunned
         if(self.StunTimer > 0):
             self.StunTimer -= UpdateEvent.Dt
         if(self.StunTimer <= 0):
             self.StunState = False
             self.StunTimer = 0
                     
+        #if enemy is currently stunned
         if(self.StunState):
+            #run stun function
             self.StunLogic()
-            #print("Stun")
+            #change color to green (green = can grapple)
             self.Owner.Sprite.Color = Color.Green
-            #For Grapple
+            #change name so that enemy can be grappled to
             self.Owner.Name = ("Floor")
+            #enemy is no longer chasing player
             self.alerted = False
-
+        
+        #if enemy is not stunned
         else:
             #Logic for updating distance from target and chase direction 
             self.CalculateChaseDirectionAndDistance()
             #Determines whether or not to chase of pace 
             targetIsWithinRange = (self.DistanceFromTarget <= self.ChaseTriggerDistance)
             
-            #If valid object and target is within range 
+            #If valid object and target is within range chase player
             if(targetIsWithinRange and self.AfterAttack == False):
-                self.alerted = True
-                self.HomeQ = False
-                self.ChaseTarget(UpdateEvent)
+                self.alerted = True #enemy is alerted
+                self.HomeQ = False #no longer in home position
+                self.ChaseTarget(UpdateEvent) #begin chase logic
+            
+            #if player is not within range
             else:
-                self.alerted = False
+                self.alerted = False #enemy is not alerted
+                #if enemy is not in starting area
                 if(self.HomeQ == False):
+                    #if enemy is lower than its normal path
                     if(self.UpQ == False):
+                        #run function to make enemy go back up in air
                         self.GoUp(UpdateEvent)
+                    #otherwise use function to move to original spot
                     else:
                         self.GoHome(UpdateEvent)
+                        
+                #if enemy is in the starting area
                 else:
+                    #make sure enemy color is not green for grapple
                     self.Owner.Sprite.Color = self.OriginalColor
+                    #run fuction for pacing
                     self.IdleMovePattern(UpdateEvent)
+            #set name to bat so player can't grapple to it
             self.Owner.Name = ("Bat")
             
-            
+        #Logic for playing sound effects
         if(UpdateEvent.CurrentTime > self.nextPing):
             self.nextPing = UpdateEvent.CurrentTime + self.stunDelay
             if(self.StunState == True):
@@ -102,30 +132,36 @@ class BatEnemy:
                 self.Space.SoundSpace.PlayCue("alertedenemy")
             
     def GoHome(self, UpdateEvent):
+        #Function to move back to starting position
         
+        #vector
         direction = (self.StartPosition - self.Owner.Transform.Translation)
         
+        #Once enemy is close to starting position
         if(direction.length() <= 0.5):
+            #make translation the saved starting position
             self.Owner.Transform.Translation = self.StartPosition
+            #set that the enemy is "home"
             self.HomeQ = True
+            #enemy is not attacking
             self.AfterAttack = False
+            #enemy does not need to move upwards
             self.UpQ = False
+            #enemy is not alerted
             self.alerted = False
         
+        #move enemy along the normalized vector
         direction.normalize()
         self.Owner.Transform.Translation += direction * UpdateEvent.Dt * self.ReturnSpeed
         
     def IdleMovePattern(self, UpdateEvent):
+        
+        #Logic for pacing pattern/speed of enemy
         self.Owner.Transform.Translation += Vec3(math.cos(self.temp * 0.75), math.sin(self.temp), 0) * UpdateEvent.Dt * self.PaceLength
         self.temp += 0.15 * self.PaceSpeed
         
-
-    def GenerateRandomValues(self):
-        self.ranNum = random.randint(1, 50)
-        self.ranDenom = random.randint(2, 5)
-        
-        
     def ChaseTarget(self, UpdateEvent):
+        
         #Set Chase Color 
         self.Owner.Sprite.Color = self.ChaseColor
         #Apply movement 
@@ -136,6 +172,7 @@ class BatEnemy:
         #Set the direction for movment
         UpPoint = Vec3((self.Owner.Transform.Translation.x - self.StartPosition.x) / 2, self.StartPosition.y + 10, 0)
         UpDirection = UpPoint - self.Owner.Transform.Translation
+        
         #Check to see if the distance is greater than a value (Close to the end point)
         if(UpDirection.length() <= 1):
             self.Owner.Transform.Translation = UpPoint
@@ -145,10 +182,13 @@ class BatEnemy:
             UpDirection.normalize()
             self.Owner.Transform.Translation += UpDirection * UpdateEvent.Dt * self.ReturnSpeed
         
-        #If not set UPQ to true, this will make it go home.  BE SURE TO RESET THESE BOOL VALUES IN EACH STEP OF THE WAY 1.CHASETARGET 2.GOUP 3.GOHOME
+        #If not set UPQ to true, this will make it go home. 
+        #Steps for enemy: 1.CHASETARGET 2.GOUP 3.GOHOME
         
         
     def CalculateChaseDirectionAndDistance(self):
+        #logic for chasing player
+        
         #Get direction towards target 
         self.ChaseDirection = self.player.Transform.Translation - self.Owner.Transform.Translation
         #Get distance from target 
@@ -158,7 +198,7 @@ class BatEnemy:
         
     def StunLogic(self):
 #----------------------------------------------------------------------------------------------------
-#Creates numbers to represent how long an enemy will be stunned for
+#Creates number visuals in gameto represent how long an enemy will be stunned for
 
         self.five = True
         self.four = True
@@ -181,14 +221,19 @@ class BatEnemy:
         elif(self.StunTimer > 0.95 and self.StunTimer < 1):
             self.Space.CreateAtPosition("one", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
             self.one = False
+            
 #----------------------------------------------------------------------------------------------------
         
     def OnCollisionStart(self, CollisionEvent):
-        #print("Sup Bitch")
+        #Logic for enemy colliding with player or weapon projectile
+        
         if(CollisionEvent.OtherObject.Name == "Player"):
+            #enemy is attacking player
             self.AfterAttack = True
         if(CollisionEvent.OtherObject.Name == "Projectile"):
+            #enemy is being stunned by player
             self.StunState = True
+            #set stun counter
             self.StunTimer = 5
 
 

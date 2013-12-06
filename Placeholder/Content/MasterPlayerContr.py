@@ -390,6 +390,7 @@ class MasterPlayerContr:
             
         for castResult in castResultRange:
             #asking if the it hit a certain named object
+            #objects with name floor are able to be grappled to
             if(castResult.ObjectHit.Name == "Floor"):
                 #attach to this object
                 if(castResult.Distance >= self.grappleDistance):
