@@ -8,9 +8,6 @@ import Property
 import VectorMath
 
 
-#IS THIS OR KEY RESPAWN BEING USED??????
-
-
 class KeyLogic:
     def Initialize(self, initializer):
         

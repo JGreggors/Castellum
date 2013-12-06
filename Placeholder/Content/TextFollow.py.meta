@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "TextFollow",
-		uint64 ResourceId = 52d8b39322d795ec,
-	},
-},

@@ -71,8 +71,6 @@ class BatEnemy:
             self.alerted = False
 
         else:
-            #print("UnStun")
-            #Ungrapple
             #Logic for updating distance from target and chase direction 
             self.CalculateChaseDirectionAndDistance()
             #Determines whether or not to chase of pace 
@@ -159,11 +157,15 @@ class BatEnemy:
         self.ChaseDirection.normalize()
         
     def StunLogic(self):
+#----------------------------------------------------------------------------------------------------
+#Creates numbers to represent how long an enemy will be stunned for
+
         self.five = True
         self.four = True
         self.three = True
         self.two = True
         self.one = True
+        
         if(self.StunTimer > 4.95 and self.StunTimer < 5):
             self.Space.CreateAtPosition("five", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
             self.five = False
@@ -179,6 +181,7 @@ class BatEnemy:
         elif(self.StunTimer > 0.95 and self.StunTimer < 1):
             self.Space.CreateAtPosition("one", (self.Owner.Transform.Translation + Vec3(0, 0.5, 0)))
             self.one = False
+#----------------------------------------------------------------------------------------------------
         
     def OnCollisionStart(self, CollisionEvent):
         #print("Sup Bitch")

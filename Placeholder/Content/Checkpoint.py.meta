@@ -1,8 +1,0 @@
-TextContent = 
-{
-	PyScriptBuilder = 
-	{
-		string Name = "Checkpoint",
-		uint64 ResourceId = 52ee20941e480d9b,
-	},
-},
